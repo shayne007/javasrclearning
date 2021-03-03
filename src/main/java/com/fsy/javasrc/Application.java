@@ -1,10 +1,6 @@
 package com.fsy.javasrc;
 
 import java.util.Arrays;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -12,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author fengsy
@@ -21,11 +19,13 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
+@Slf4j
 public class Application {
 
     // 创建线程池
-    private ExecutorService excutorService =
+    /*  private ExecutorService excutorService =
         new ThreadPoolExecutor(4096, 4096, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
+     */
     private int counter;
 
     // 以固定的速率向线程池中加入任务

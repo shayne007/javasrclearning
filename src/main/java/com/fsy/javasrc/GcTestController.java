@@ -1,12 +1,13 @@
 package com.fsy.javasrc;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedDeque;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedDeque;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 /**
  * @author fengsy
@@ -14,11 +15,10 @@ import java.util.concurrent.ConcurrentLinkedDeque;
  * @Description
  */
 
-
 @RestController
 public class GcTestController {
 
-    private Queue<Greeting> objCache =  new ConcurrentLinkedDeque<>();
+    private Queue<Greeting> objCache = new ConcurrentLinkedDeque<>();
 
     @RequestMapping("/greeting")
     public Greeting greeting() {

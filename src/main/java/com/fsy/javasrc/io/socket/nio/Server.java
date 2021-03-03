@@ -1,4 +1,4 @@
-package com.fsy.javasrc.io.nio;
+package com.fsy.javasrc.io.socket.nio;
 
 public class Server {
 

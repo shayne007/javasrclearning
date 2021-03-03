@@ -30,7 +30,7 @@ public class Main {
         /**
          * 获取指定方法并调用
          */
-        Method publicMethod = tagetClass.getDeclaredMethod("publicMethod", String.class);
+        Method publicMethod = tagetClass.getMethod("publicMethod", String.class);
 
         publicMethod.invoke(targetObject, "new str");
         /**

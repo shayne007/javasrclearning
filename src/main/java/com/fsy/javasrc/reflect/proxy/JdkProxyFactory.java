@@ -1,4 +1,4 @@
-package com.fsy.javasrc.proxy;
+package com.fsy.javasrc.reflect.proxy;
 
 import java.lang.reflect.Proxy;
 

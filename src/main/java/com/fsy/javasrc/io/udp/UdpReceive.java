@@ -9,7 +9,7 @@ import java.net.DatagramSocket;
  * @Description
  */
 
-public class UdpRecieve {
+public class UdpReceive {
     public static void main(String[] args) throws Exception {
         // 1、建立连接
         DatagramSocket datagramSocket = new DatagramSocket(9887);

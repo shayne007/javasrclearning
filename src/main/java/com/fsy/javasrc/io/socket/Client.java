@@ -1,4 +1,4 @@
-package com.fsy.javasrc.io;
+package com.fsy.javasrc.io.socket;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,6 +19,8 @@ public class Client {
      */
     public void connect() {
         try {
+            // InetAddress inetAddress = InetAddress.getByName(DEFAULT_SERVER_IP);
+            // socket = new Socket(inetAddress, DEFAULT_SERVER_PORT);
             socket = new Socket(DEFAULT_SERVER_IP, DEFAULT_SERVER_PORT);
         } catch (UnknownHostException e) {
             e.printStackTrace();
@@ -40,8 +42,6 @@ public class Client {
         try {
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
-
-            out.println(msg);
             System.out.println("返回消息为：" + in.readLine());
 
         } catch (Exception e) {

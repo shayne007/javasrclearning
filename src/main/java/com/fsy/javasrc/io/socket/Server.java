@@ -1,4 +1,4 @@
-package com.fsy.javasrc.io;
+package com.fsy.javasrc.io.socket;
 
 import java.io.IOException;
 import java.net.ServerSocket;
