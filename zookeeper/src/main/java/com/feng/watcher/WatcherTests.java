@@ -1,15 +1,15 @@
 package com.feng.watcher;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.concurrent.CountDownLatch;
-
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * @author fengsy
@@ -135,6 +135,7 @@ class DefaultWatcher implements Watcher {
         this.tests = tests;
     }
 
+    @Override
     public void process(WatchedEvent event) {
         System.out.printf("event in default watcher: %s\n", event);
         if (event.getType() == Event.EventType.None && event.getState() == Event.KeeperState.SyncConnected) {
@@ -151,7 +152,9 @@ class DefaultWatcher implements Watcher {
     }
 }
 
-/** Watcher for exists method. */
+/**
+ * Watcher for exists method.
+ */
 class ExistsWatcher implements Watcher {
     private WatcherTests tests;
 
@@ -159,6 +162,7 @@ class ExistsWatcher implements Watcher {
         this.tests = tests;
     }
 
+    @Override
     public void process(WatchedEvent event) {
         System.out.printf("event in exists watch: %s\n", event);
         Event.EventType eventType = event.getType();

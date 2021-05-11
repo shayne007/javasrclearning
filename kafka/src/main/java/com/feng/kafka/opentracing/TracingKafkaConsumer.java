@@ -1,17 +1,7 @@
 package com.feng.kafka.opentracing;
 
-import java.time.Duration;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-import java.util.function.BiFunction;
-import java.util.regex.Pattern;
-
+import io.opentracing.Tracer;
 import org.apache.kafka.clients.consumer.Consumer;
-import org.apache.kafka.clients.consumer.ConsumerGroupMetadata;
 import org.apache.kafka.clients.consumer.ConsumerRebalanceListener;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -23,7 +13,15 @@ import org.apache.kafka.common.MetricName;
 import org.apache.kafka.common.PartitionInfo;
 import org.apache.kafka.common.TopicPartition;
 
-import io.opentracing.Tracer;
+import java.time.Duration;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+import java.util.function.BiFunction;
+import java.util.regex.Pattern;
 
 /**
  * @author fengsy
@@ -38,12 +36,12 @@ public class TracingKafkaConsumer<K, V> implements Consumer<K, V> {
     private final BiFunction<String, ConsumerRecord, String> consumerSpanNameProvider;
 
     TracingKafkaConsumer(Consumer<K, V> consumer, Tracer tracer, Collection<SpanDecorator> spanDecorators,
-        BiFunction<String, ConsumerRecord, String> consumerSpanNameProvider) {
+                         BiFunction<String, ConsumerRecord, String> consumerSpanNameProvider) {
         this.consumer = consumer;
         this.tracer = tracer;
         this.spanDecorators = Collections.unmodifiableCollection(spanDecorators);
         this.consumerSpanNameProvider = (consumerSpanNameProvider == null)
-            ? ClientSpanNameProvider.CONSUMER_OPERATION_NAME : consumerSpanNameProvider;
+                ? ClientSpanNameProvider.CONSUMER_OPERATION_NAME : consumerSpanNameProvider;
     }
 
     public TracingKafkaConsumer(Consumer<K, V> consumer, Tracer tracer) {
@@ -54,12 +52,12 @@ public class TracingKafkaConsumer<K, V> implements Consumer<K, V> {
     }
 
     public TracingKafkaConsumer(Consumer<K, V> consumer, Tracer tracer,
-        BiFunction<String, ConsumerRecord, String> consumerSpanNameProvider) {
+                                BiFunction<String, ConsumerRecord, String> consumerSpanNameProvider) {
         this.consumer = consumer;
         this.tracer = tracer;
         this.spanDecorators = Collections.singletonList(SpanDecorator.STANDARD_TAGS);
         this.consumerSpanNameProvider = (consumerSpanNameProvider == null)
-            ? ClientSpanNameProvider.CONSUMER_OPERATION_NAME : consumerSpanNameProvider;
+                ? ClientSpanNameProvider.CONSUMER_OPERATION_NAME : consumerSpanNameProvider;
     }
 
     @Override
@@ -175,16 +173,6 @@ public class TracingKafkaConsumer<K, V> implements Consumer<K, V> {
     }
 
     @Override
-    public Map<TopicPartition, OffsetAndMetadata> committed(Set<TopicPartition> set) {
-        return null;
-    }
-
-    @Override
-    public Map<TopicPartition, OffsetAndMetadata> committed(Set<TopicPartition> set, Duration duration) {
-        return null;
-    }
-
-    @Override
     public Map<MetricName, ? extends Metric> metrics() {
         return consumer.metrics();
     }
@@ -252,11 +240,6 @@ public class TracingKafkaConsumer<K, V> implements Consumer<K, V> {
     @Override
     public Map<TopicPartition, Long> endOffsets(Collection<TopicPartition> collection, Duration duration) {
         return consumer.endOffsets(collection, duration);
-    }
-
-    @Override
-    public ConsumerGroupMetadata groupMetadata() {
-        return null;
     }
 
     @Override

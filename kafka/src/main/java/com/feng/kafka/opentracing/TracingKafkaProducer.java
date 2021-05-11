@@ -1,15 +1,8 @@
 package com.feng.kafka.opentracing;
 
-import java.time.Duration;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.function.BiFunction;
-
-import org.apache.kafka.clients.consumer.ConsumerGroupMetadata;
+import io.opentracing.Span;
+import io.opentracing.SpanContext;
+import io.opentracing.Tracer;
 import org.apache.kafka.clients.consumer.OffsetAndMetadata;
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.Producer;
@@ -21,9 +14,14 @@ import org.apache.kafka.common.PartitionInfo;
 import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.errors.ProducerFencedException;
 
-import io.opentracing.Span;
-import io.opentracing.SpanContext;
-import io.opentracing.Tracer;
+import java.time.Duration;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.function.BiFunction;
 
 /**
  * @author fengsy
@@ -38,12 +36,12 @@ public class TracingKafkaProducer<K, V> implements Producer<K, V> {
     private Collection<SpanDecorator> spanDecorators;
 
     TracingKafkaProducer(Producer<K, V> producer, Tracer tracer, Collection<SpanDecorator> spanDecorators,
-        BiFunction<String, ProducerRecord, String> producerSpanNameProvider) {
+                         BiFunction<String, ProducerRecord, String> producerSpanNameProvider) {
         this.producer = producer;
         this.tracer = tracer;
         this.spanDecorators = Collections.unmodifiableCollection(spanDecorators);
         this.producerSpanNameProvider = (producerSpanNameProvider == null)
-            ? ClientSpanNameProvider.PRODUCER_OPERATION_NAME : producerSpanNameProvider;
+                ? ClientSpanNameProvider.PRODUCER_OPERATION_NAME : producerSpanNameProvider;
     }
 
     public TracingKafkaProducer(Producer<K, V> producer, Tracer tracer) {
@@ -54,12 +52,12 @@ public class TracingKafkaProducer<K, V> implements Producer<K, V> {
     }
 
     public TracingKafkaProducer(Producer<K, V> producer, Tracer tracer,
-        BiFunction<String, ProducerRecord, String> producerSpanNameProvider) {
+                                BiFunction<String, ProducerRecord, String> producerSpanNameProvider) {
         this.producer = producer;
         this.tracer = tracer;
         this.spanDecorators = Collections.singletonList(SpanDecorator.STANDARD_TAGS);
         this.producerSpanNameProvider = (producerSpanNameProvider == null)
-            ? ClientSpanNameProvider.PRODUCER_OPERATION_NAME : producerSpanNameProvider;
+                ? ClientSpanNameProvider.PRODUCER_OPERATION_NAME : producerSpanNameProvider;
     }
 
     @Override
@@ -74,14 +72,8 @@ public class TracingKafkaProducer<K, V> implements Producer<K, V> {
 
     @Override
     public void sendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, String consumerGroupId)
-        throws ProducerFencedException {
+            throws ProducerFencedException {
         producer.sendOffsetsToTransaction(offsets, consumerGroupId);
-    }
-
-    @Override
-    public void sendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> map,
-        ConsumerGroupMetadata consumerGroupMetadata) throws ProducerFencedException {
-        producer.sendOffsetsToTransaction(map, consumerGroupMetadata);
     }
 
     @Override
@@ -120,7 +112,7 @@ public class TracingKafkaProducer<K, V> implements Producer<K, V> {
         */
 
         Span span =
-            TracingKafkaUtils.buildAndInjectSpan(record, tracer, producerSpanNameProvider, parent, spanDecorators);
+                TracingKafkaUtils.buildAndInjectSpan(record, tracer, producerSpanNameProvider, parent, spanDecorators);
         tracer.activeSpan();
         Callback wrappedCallback = new TracingCallback(callback, span, tracer, spanDecorators);
         return producer.send(record, wrappedCallback);
