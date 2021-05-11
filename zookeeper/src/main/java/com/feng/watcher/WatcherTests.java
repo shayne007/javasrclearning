@@ -135,7 +135,6 @@ class DefaultWatcher implements Watcher {
         this.tests = tests;
     }
 
-    @Override
     public void process(WatchedEvent event) {
         System.out.printf("event in default watcher: %s\n", event);
         if (event.getType() == Event.EventType.None && event.getState() == Event.KeeperState.SyncConnected) {
@@ -160,7 +159,6 @@ class ExistsWatcher implements Watcher {
         this.tests = tests;
     }
 
-    @Override
     public void process(WatchedEvent event) {
         System.out.printf("event in exists watch: %s\n", event);
         Event.EventType eventType = event.getType();

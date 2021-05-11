@@ -97,17 +97,17 @@ public class HelloController {
             int id = atomicInteger.incrementAndGet();
             try {
                 threadPool.submit(() -> {
-                    log.info("{} started", id);
+                    // log.info("{} started", id);
                     // 每个任务耗时10秒
                     try {
                         TimeUnit.SECONDS.sleep(10);
                     } catch (InterruptedException e) {
                     }
-                    log.info("{} finished", id);
+                    // log.info("{} finished", id);
                 });
             } catch (Exception ex) {
                 // 提交出现异常的话，打印出错信息并为计数器减一
-                log.error("error submitting task {}", id, ex);
+                // log.error("error submitting task {}", id, ex);
                 atomicInteger.decrementAndGet();
             }
         });
@@ -130,7 +130,7 @@ public class HelloController {
                     TimeUnit.HOURS.sleep(1);
                 } catch (InterruptedException e) {
                 }
-                log.info(payload);
+                // log.info(payload);
             });
         }
 
@@ -140,13 +140,13 @@ public class HelloController {
 
     private void printStats(ThreadPoolExecutor threadPool) {
         Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(() -> {
-            log.info("=========================");
-            log.info("Pool Size: {}", threadPool.getPoolSize());
-            log.info("Active Threads: {}", threadPool.getActiveCount());
-            log.info("Number of Tasks Completed: {}", threadPool.getCompletedTaskCount());
-            log.info("Number of Tasks in Queue: {}", threadPool.getQueue().size());
+            // log.info("=========================");
+            // log.info("Pool Size: {}", threadPool.getPoolSize());
+            // log.info("Active Threads: {}", threadPool.getActiveCount());
+            // log.info("Number of Tasks Completed: {}", threadPool.getCompletedTaskCount());
+            // log.info("Number of Tasks in Queue: {}", threadPool.getQueue().size());
 
-            log.info("=========================");
+            // log.info("=========================");
         }, 0, 1, TimeUnit.SECONDS);
     }
 
