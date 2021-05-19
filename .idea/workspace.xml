@@ -2,16 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f126c315-4b72-4b66-a29e-3cd879c4923e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/ImplicitParameterPassing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/InheritableThreadLocalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/ManagedThreadLocal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/MyInheritableThreadLocal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/MyTransmittableThreadLocal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/SmsVerficationCodeSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/Stu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/ThreadSpecificDateFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/ThreadSpecificSecureRandom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/TransmittableThreadLocalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/CaseRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/ParallelPrimeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/TPSStat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/reusable/AbstractMaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/reusable/RetryInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/reusable/RoundRobinSubTaskDispatchStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/reusable/SlaveSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/reusable/SubTaskDispatchStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/reusable/SubTaskFailureException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/reusable/TaskDivideStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/reusable/WorkerThreadSlave.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/testdatagen/AbstractRequestFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/testdatagen/ChargingRequestFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/testdatagen/LocationRequestFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/testdatagen/LogEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/testdatagen/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/testdatagen/RequestFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/testdatagen/SimulatedRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/testdatagen/SmsRequestFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/testdatagen/TestingDataGen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/stconfinement/FakeWorkerThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/stconfinement/MessageFileDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/stconfinement/ReusableCodeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/stconfinement/SampleClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/stconfinement/WorkerThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/stconfinement/reusable/AbstractSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/stconfinement/reusable/TaskProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/stconfinement/reusable/TerminatableWorkerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jdk/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/pom.xml" afterDir="false" />
     </list>
@@ -60,7 +78,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/immutableobject/mms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -82,11 +100,11 @@
       <recent name="com.fsy.javasrc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave" />
       <recent name="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/immutableobject/mms" />
       <recent name="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/cooperation" />
       <recent name="$PROJECT_DIR$/src/main/java/com/fsy/javasrc/kafka" />
       <recent name="$PROJECT_DIR$/src/main/java/com/fsy/javasrc/io" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.feng.concurrency.patterns.tspecstorage" />
@@ -101,7 +119,21 @@
       <recent name="$PROJECT_DIR$/note/jdk/concurrent" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TransmittableThreadLocalTest">
+  <component name="RunManager" selected="Application.ReusableCodeExample">
+    <configuration name="CaseRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.concurrency.patterns.masterslave.CaseRunner" />
+      <module name="jdk" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.feng.concurrency.patterns.masterslave.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DirectMemoryOOM" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.fsy.javasrc.jvm.DirectMemoryOOM" />
       <module name="javasrclearning" />
@@ -110,13 +142,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InheritableThreadLocalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.concurrency.patterns.tspecstorage.InheritableThreadLocalTest" />
+    <configuration name="ParallelPrimeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.concurrency.patterns.masterslave.ParallelPrimeGenerator" />
       <module name="jdk" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PROGRAM_PARAMETERS" value="10000" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.concurrency.patterns.tspecstorage.*" />
+          <option name="PATTERN" value="com.feng.concurrency.patterns.masterslave.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,27 +156,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmsVerficationCodeSender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.concurrency.patterns.tspecstorage.SmsVerficationCodeSender" />
+    <configuration name="ReusableCodeExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.concurrency.patterns.stconfinement.ReusableCodeExample" />
       <module name="jdk" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.concurrency.patterns.tspecstorage.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SomeService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.concurrency.patterns.twophaseterminate.SomeService" />
-      <module name="jdk" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.feng.concurrency.patterns.twophaseterminate.reusable.*" />
+          <option name="PATTERN" value="com.feng.concurrency.patterns.stconfinement.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,13 +184,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransmittableThreadLocalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.concurrency.patterns.tspecstorage.TransmittableThreadLocalTest" />
+    <configuration name="TestingDataGen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.concurrency.patterns.masterslave.testdatagen.TestingDataGen" />
       <module name="jdk" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.concurrency.patterns.tspecstorage.*" />
+          <option name="PATTERN" value="com.feng.concurrency.patterns.masterslave.testdatagen.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -180,13 +198,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkStealingExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.concurrency.patterns.prodconsumer.WorkStealingExample" />
+    <configuration name="TransmittableThreadLocalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.concurrency.patterns.tspecstorage.TransmittableThreadLocalTest" />
       <module name="jdk" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.concurrency.patterns.prodconsumer.*" />
+          <option name="PATTERN" value="com.feng.concurrency.patterns.tspecstorage.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -234,21 +252,21 @@
     <list>
       <item itemvalue="Application.DirectMemoryOOM" />
       <item itemvalue="Application.TestSerialGCAllocation" />
+      <item itemvalue="Application.TransmittableThreadLocalTest" />
+      <item itemvalue="Application.ParallelPrimeGenerator" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
-      <item itemvalue="Application.SomeService" />
-      <item itemvalue="Application.WorkStealingExample" />
-      <item itemvalue="Application.SmsVerficationCodeSender" />
-      <item itemvalue="Application.InheritableThreadLocalTest" />
-      <item itemvalue="Application.TransmittableThreadLocalTest" />
+      <item itemvalue="Application.TestingDataGen" />
+      <item itemvalue="Application.CaseRunner" />
+      <item itemvalue="Application.ReusableCodeExample" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReusableCodeExample" />
+        <item itemvalue="Application.CaseRunner" />
+        <item itemvalue="Application.TestingDataGen" />
+        <item itemvalue="Application.ParallelPrimeGenerator" />
         <item itemvalue="Application.TransmittableThreadLocalTest" />
-        <item itemvalue="Application.InheritableThreadLocalTest" />
-        <item itemvalue="Application.SmsVerficationCodeSender" />
-        <item itemvalue="Application.WorkStealingExample" />
-        <item itemvalue="Application.SomeService" />
       </list>
     </recent_temporary>
   </component>
@@ -271,21 +289,21 @@
     </state>
     <state x="176" y="43" key="#Project_Structure/0.23.1389.877@0.23.1389.877" timestamp="1620722028716" />
     <state x="176" y="43" key="#Project_Structure/0.23.1391.877@0.23.1391.877" timestamp="1620746551846" />
-    <state x="318" y="119" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620756069609">
-      <screen x="0" y="23" width="1391" height="877" />
+    <state x="318" y="119" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621400028468">
+      <screen x="0" y="23" width="1389" height="877" />
     </state>
     <state x="189" y="224" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1619599638587" />
-    <state x="318" y="119" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1389.877@0.23.1389.877" timestamp="1620728756378" />
+    <state x="318" y="119" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1389.877@0.23.1389.877" timestamp="1621400028468" />
     <state x="318" y="119" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1391.877@0.23.1391.877" timestamp="1620756069609" />
-    <state x="514" y="179" key="#com.intellij.ide.util.MemberChooser" timestamp="1621354176499">
-      <screen x="0" y="23" width="1389" height="877" />
+    <state x="515" y="179" key="#com.intellij.ide.util.MemberChooser" timestamp="1621409453330">
+      <screen x="0" y="23" width="1391" height="877" />
     </state>
     <state x="533" y="160" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1619597538060" />
     <state x="509" y="179" key="#com.intellij.ide.util.MemberChooser/0.23.1376.877@0.23.1376.877" timestamp="1614756581160" />
     <state x="510" y="179" key="#com.intellij.ide.util.MemberChooser/0.23.1379.877@0.23.1379.877" timestamp="1616667648268" />
     <state x="513" y="179" key="#com.intellij.ide.util.MemberChooser/0.23.1387.877@0.23.1387.877" timestamp="1621308645077" />
-    <state x="514" y="179" key="#com.intellij.ide.util.MemberChooser/0.23.1389.877@0.23.1389.877" timestamp="1621354176499" />
-    <state x="515" y="179" key="#com.intellij.ide.util.MemberChooser/0.23.1391.877@0.23.1391.877" timestamp="1621268388868" />
+    <state x="514" y="179" key="#com.intellij.ide.util.MemberChooser/0.23.1389.877@0.23.1389.877" timestamp="1621398859680" />
+    <state x="515" y="179" key="#com.intellij.ide.util.MemberChooser/0.23.1391.877@0.23.1391.877" timestamp="1621409453330" />
     <state x="515" y="179" key="#com.intellij.ide.util.MemberChooser/0.23.1393.877@0.23.1393.877" timestamp="1621319369066" />
     <state x="280" y="394" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1620806912962">
       <screen x="0" y="23" width="1389" height="877" />
@@ -312,86 +330,86 @@
     </state>
     <state x="100" y="123" width="1185" height="677" key="DiffContextDialog/0.23.1389.877@0.23.1389.877" timestamp="1620721508208" />
     <state x="100" y="123" width="1187" height="677" key="DiffContextDialog/0.23.1391.877@0.23.1391.877" timestamp="1620745154485" />
-    <state width="1347" height="184" key="GridCell.Tab.0.bottom" timestamp="1621358752234">
-      <screen x="0" y="23" width="1389" height="877" />
+    <state width="1347" height="249" key="GridCell.Tab.0.bottom" timestamp="1621410778910">
+      <screen x="0" y="23" width="1391" height="877" />
     </state>
     <state width="1398" height="335" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1619603012017" />
     <state width="1398" height="362" key="GridCell.Tab.0.bottom/0.23.1376.877@0.23.1376.877" timestamp="1619088466532" />
     <state width="1398" height="362" key="GridCell.Tab.0.bottom/0.23.1379.877@0.23.1379.877" timestamp="1619252456526" />
     <state width="1334" height="341" key="GridCell.Tab.0.bottom/0.23.1385.877@0.23.1385.877" timestamp="1616470200622" />
     <state width="1345" height="329" key="GridCell.Tab.0.bottom/0.23.1387.877@0.23.1387.877" timestamp="1621309880816" />
-    <state width="1347" height="184" key="GridCell.Tab.0.bottom/0.23.1389.877@0.23.1389.877" timestamp="1621358752234" />
-    <state width="1343" height="329" key="GridCell.Tab.0.bottom/0.23.1391.877@0.23.1391.877" timestamp="1621161842341" />
-    <state width="1347" height="184" key="GridCell.Tab.0.center" timestamp="1621358752233">
-      <screen x="0" y="23" width="1389" height="877" />
+    <state width="1347" height="184" key="GridCell.Tab.0.bottom/0.23.1389.877@0.23.1389.877" timestamp="1621400050616" />
+    <state width="1347" height="249" key="GridCell.Tab.0.bottom/0.23.1391.877@0.23.1391.877" timestamp="1621410778910" />
+    <state width="1347" height="249" key="GridCell.Tab.0.center" timestamp="1621410778909">
+      <screen x="0" y="23" width="1391" height="877" />
     </state>
     <state width="1398" height="335" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1619603012011" />
     <state width="1398" height="362" key="GridCell.Tab.0.center/0.23.1376.877@0.23.1376.877" timestamp="1619088466528" />
     <state width="1398" height="362" key="GridCell.Tab.0.center/0.23.1379.877@0.23.1379.877" timestamp="1619252456525" />
     <state width="1334" height="341" key="GridCell.Tab.0.center/0.23.1385.877@0.23.1385.877" timestamp="1616470200620" />
     <state width="1345" height="329" key="GridCell.Tab.0.center/0.23.1387.877@0.23.1387.877" timestamp="1621309880815" />
-    <state width="1347" height="184" key="GridCell.Tab.0.center/0.23.1389.877@0.23.1389.877" timestamp="1621358752233" />
-    <state width="1343" height="329" key="GridCell.Tab.0.center/0.23.1391.877@0.23.1391.877" timestamp="1621161842340" />
-    <state width="1347" height="184" key="GridCell.Tab.0.left" timestamp="1621358752232">
-      <screen x="0" y="23" width="1389" height="877" />
+    <state width="1347" height="184" key="GridCell.Tab.0.center/0.23.1389.877@0.23.1389.877" timestamp="1621400050616" />
+    <state width="1347" height="249" key="GridCell.Tab.0.center/0.23.1391.877@0.23.1391.877" timestamp="1621410778909" />
+    <state width="1347" height="249" key="GridCell.Tab.0.left" timestamp="1621410778908">
+      <screen x="0" y="23" width="1391" height="877" />
     </state>
     <state width="1398" height="335" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1619603012010" />
     <state width="1398" height="362" key="GridCell.Tab.0.left/0.23.1376.877@0.23.1376.877" timestamp="1619088466527" />
     <state width="1398" height="362" key="GridCell.Tab.0.left/0.23.1379.877@0.23.1379.877" timestamp="1619252456522" />
     <state width="1334" height="341" key="GridCell.Tab.0.left/0.23.1385.877@0.23.1385.877" timestamp="1616470200619" />
     <state width="1345" height="329" key="GridCell.Tab.0.left/0.23.1387.877@0.23.1387.877" timestamp="1621309880815" />
-    <state width="1347" height="184" key="GridCell.Tab.0.left/0.23.1389.877@0.23.1389.877" timestamp="1621358752232" />
-    <state width="1343" height="329" key="GridCell.Tab.0.left/0.23.1391.877@0.23.1391.877" timestamp="1621161842340" />
-    <state width="1347" height="184" key="GridCell.Tab.0.right" timestamp="1621358752234">
-      <screen x="0" y="23" width="1389" height="877" />
+    <state width="1347" height="184" key="GridCell.Tab.0.left/0.23.1389.877@0.23.1389.877" timestamp="1621400050615" />
+    <state width="1347" height="249" key="GridCell.Tab.0.left/0.23.1391.877@0.23.1391.877" timestamp="1621410778908" />
+    <state width="1347" height="249" key="GridCell.Tab.0.right" timestamp="1621410778909">
+      <screen x="0" y="23" width="1391" height="877" />
     </state>
     <state width="1398" height="335" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1619603012012" />
     <state width="1398" height="362" key="GridCell.Tab.0.right/0.23.1376.877@0.23.1376.877" timestamp="1619088466530" />
     <state width="1398" height="362" key="GridCell.Tab.0.right/0.23.1379.877@0.23.1379.877" timestamp="1619252456525" />
     <state width="1334" height="341" key="GridCell.Tab.0.right/0.23.1385.877@0.23.1385.877" timestamp="1616470200621" />
     <state width="1345" height="329" key="GridCell.Tab.0.right/0.23.1387.877@0.23.1387.877" timestamp="1621309880816" />
-    <state width="1347" height="184" key="GridCell.Tab.0.right/0.23.1389.877@0.23.1389.877" timestamp="1621358752234" />
-    <state width="1343" height="329" key="GridCell.Tab.0.right/0.23.1391.877@0.23.1391.877" timestamp="1621161842341" />
-    <state width="1347" height="214" key="GridCell.Tab.1.bottom" timestamp="1621356733278">
-      <screen x="0" y="23" width="1389" height="877" />
+    <state width="1347" height="184" key="GridCell.Tab.0.right/0.23.1389.877@0.23.1389.877" timestamp="1621400050616" />
+    <state width="1347" height="249" key="GridCell.Tab.0.right/0.23.1391.877@0.23.1391.877" timestamp="1621410778909" />
+    <state width="1347" height="214" key="GridCell.Tab.1.bottom" timestamp="1621403944776">
+      <screen x="0" y="23" width="1391" height="877" />
     </state>
     <state width="1398" height="335" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1619603012020" />
     <state width="1337" height="316" key="GridCell.Tab.1.bottom/0.23.1376.877@0.23.1376.877" timestamp="1616584027996" />
     <state width="1343" height="315" key="GridCell.Tab.1.bottom/0.23.1387.877@0.23.1387.877" timestamp="1620898738716" />
     <state width="1347" height="214" key="GridCell.Tab.1.bottom/0.23.1389.877@0.23.1389.877" timestamp="1621356733278" />
-    <state width="1343" height="315" key="GridCell.Tab.1.bottom/0.23.1391.877@0.23.1391.877" timestamp="1620758086181" />
-    <state width="1347" height="214" key="GridCell.Tab.1.center" timestamp="1621356733277">
-      <screen x="0" y="23" width="1389" height="877" />
+    <state width="1347" height="214" key="GridCell.Tab.1.bottom/0.23.1391.877@0.23.1391.877" timestamp="1621403944776" />
+    <state width="1347" height="214" key="GridCell.Tab.1.center" timestamp="1621403944775">
+      <screen x="0" y="23" width="1391" height="877" />
     </state>
     <state width="1398" height="335" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1619603012019" />
     <state width="1337" height="316" key="GridCell.Tab.1.center/0.23.1376.877@0.23.1376.877" timestamp="1616584027995" />
     <state width="1343" height="315" key="GridCell.Tab.1.center/0.23.1387.877@0.23.1387.877" timestamp="1620898738715" />
     <state width="1347" height="214" key="GridCell.Tab.1.center/0.23.1389.877@0.23.1389.877" timestamp="1621356733277" />
-    <state width="1343" height="315" key="GridCell.Tab.1.center/0.23.1391.877@0.23.1391.877" timestamp="1620758086180" />
-    <state width="1347" height="214" key="GridCell.Tab.1.left" timestamp="1621356733277">
-      <screen x="0" y="23" width="1389" height="877" />
+    <state width="1347" height="214" key="GridCell.Tab.1.center/0.23.1391.877@0.23.1391.877" timestamp="1621403944775" />
+    <state width="1347" height="214" key="GridCell.Tab.1.left" timestamp="1621403944775">
+      <screen x="0" y="23" width="1391" height="877" />
     </state>
     <state width="1398" height="335" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1619603012018" />
     <state width="1337" height="316" key="GridCell.Tab.1.left/0.23.1376.877@0.23.1376.877" timestamp="1616584027994" />
     <state width="1343" height="315" key="GridCell.Tab.1.left/0.23.1387.877@0.23.1387.877" timestamp="1620898738715" />
     <state width="1347" height="214" key="GridCell.Tab.1.left/0.23.1389.877@0.23.1389.877" timestamp="1621356733277" />
-    <state width="1343" height="315" key="GridCell.Tab.1.left/0.23.1391.877@0.23.1391.877" timestamp="1620758086179" />
-    <state width="1347" height="214" key="GridCell.Tab.1.right" timestamp="1621356733278">
-      <screen x="0" y="23" width="1389" height="877" />
+    <state width="1347" height="214" key="GridCell.Tab.1.left/0.23.1391.877@0.23.1391.877" timestamp="1621403944775" />
+    <state width="1347" height="214" key="GridCell.Tab.1.right" timestamp="1621403944776">
+      <screen x="0" y="23" width="1391" height="877" />
     </state>
     <state width="1398" height="335" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1619603012020" />
     <state width="1337" height="316" key="GridCell.Tab.1.right/0.23.1376.877@0.23.1376.877" timestamp="1616584027996" />
     <state width="1343" height="315" key="GridCell.Tab.1.right/0.23.1387.877@0.23.1387.877" timestamp="1620898738716" />
     <state width="1347" height="214" key="GridCell.Tab.1.right/0.23.1389.877@0.23.1389.877" timestamp="1621356733278" />
-    <state width="1343" height="315" key="GridCell.Tab.1.right/0.23.1391.877@0.23.1391.877" timestamp="1620758086180" />
-    <state x="142" y="224" key="Maven.ArtifactSearchDialog" timestamp="1621355464283">
-      <screen x="0" y="23" width="1389" height="877" />
+    <state width="1347" height="214" key="GridCell.Tab.1.right/0.23.1391.877@0.23.1391.877" timestamp="1621403944776" />
+    <state x="226" y="123" key="Maven.ArtifactSearchDialog" timestamp="1621409544855">
+      <screen x="0" y="23" width="1391" height="877" />
     </state>
     <state x="234" y="103" key="Maven.ArtifactSearchDialog/0.0.1440.900@0.0.1440.900" timestamp="1618763045346" />
     <state x="224" y="123" key="Maven.ArtifactSearchDialog/0.23.1376.877@0.23.1376.877" timestamp="1613749873510" />
     <state x="225" y="123" key="Maven.ArtifactSearchDialog/0.23.1387.877@0.23.1387.877" timestamp="1620987164895" />
     <state x="142" y="224" key="Maven.ArtifactSearchDialog/0.23.1389.877@0.23.1389.877" timestamp="1621355464283" />
-    <state x="226" y="123" key="Maven.ArtifactSearchDialog/0.23.1391.877@0.23.1391.877" timestamp="1620747692557" />
+    <state x="226" y="123" key="Maven.ArtifactSearchDialog/0.23.1391.877@0.23.1391.877" timestamp="1621409544855" />
     <state x="322" y="168" key="NewModule_or_Project.wizard" timestamp="1620745605718">
       <screen x="0" y="23" width="1391" height="877" />
     </state>
@@ -486,6 +504,16 @@
           <url>file://$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/MyInheritableThreadLocal.java</url>
           <line>12</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/CaseRunner.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/masterslave/TPSStat.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
