@@ -1,4 +1,4 @@
-package com.feng.concurrency.deadlock;
+package com.feng.concurrency.deadlock.philosopher;
 
 /**
  * @author fengsy

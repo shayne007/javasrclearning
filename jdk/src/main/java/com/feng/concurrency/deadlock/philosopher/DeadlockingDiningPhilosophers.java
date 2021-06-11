@@ -1,4 +1,4 @@
-package com.feng.concurrency.deadlock;
+package com.feng.concurrency.deadlock.philosopher;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * @date 5/13/21
  * @Description
  */
-public class FixedDiningPhilosophers {
+public class DeadlockingDiningPhilosophers {
     public static void main(String[] args) throws Exception {
         int ponder = 5;
         if (args.length > 0) {
@@ -25,11 +25,7 @@ public class FixedDiningPhilosophers {
             sticks[i] = new Chopstick();
         }
         for (int i = 0; i < size; i++) {
-            if (i < (size - 1)) {
-                exec.execute(new Philosopher(sticks[i], sticks[i + 1], i, ponder));
-            } else {
-                exec.execute(new Philosopher(sticks[0], sticks[i], i, ponder));
-            }
+            exec.execute(new Philosopher(sticks[i], sticks[(i + 1) % size], i, ponder));
         }
         if (args.length == 3 && args[2].equals("timeout")) {
             TimeUnit.SECONDS.sleep(5);

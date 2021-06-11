@@ -1,4 +1,4 @@
-package com.feng.concurrency.deadlock;
+package com.feng.concurrency.deadlock.philosopher;
 
 import static net.mindview.util.Print.print;
 

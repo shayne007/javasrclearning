@@ -33,9 +33,9 @@ public class LinkedHashMapLRUCache<K, V> extends LinkedHashMap<K, V> {
             cache.put(i, i * i);
         }
         System.out.println(cache);
-        cache.get(7);
-        cache.get(1);
-        System.out.println(cache);
+        System.out.println("get(7): " + cache.get(7));
+        System.out.println("get(1): " + cache.get(1));
+        System.out.println(cache.toString());
         cache.put(1, 1);
         System.out.println(cache);
     }
