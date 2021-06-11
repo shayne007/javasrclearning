@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f126c315-4b72-4b66-a29e-3cd879c4923e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/collection/ArrayListDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/deadlock/philosopher/DeadLockDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/jvm/LifetimeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/jvm/SafepointTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/jvm/escapeanalysis/EscapeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/jvm/escapeanalysis/Foo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/oop/TestSubclassInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/main/java/com/feng/collection/LinkedHashMapLRUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/collection/LinkedHashMapLRUCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/deadlock/Chopstick.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/deadlock/philosopher/Chopstick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/deadlock/DeadlockingDiningPhilosophers.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/deadlock/philosopher/DeadlockingDiningPhilosophers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/deadlock/FixedDiningPhilosophers.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/deadlock/philosopher/FixedDiningPhilosophers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/deadlock/Philosopher.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/deadlock/philosopher/Philosopher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/ThreadSpecificDateFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/patterns/tspecstorage/ThreadSpecificDateFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/deadlock/philosopher/DeadLockDemo.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,4 +1,4 @@
-package com.feng.concurrency.deadlock.philosopher;
+package com.feng.concurrency.deadlock;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadInfo;
