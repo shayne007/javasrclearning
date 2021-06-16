@@ -1,5 +1,8 @@
 package com.feng.queue;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * @author fengsy
  * @date 6/15/21
@@ -30,8 +33,37 @@ public class IntervalOrderedQueue {
         return;
     }
 
+    public static int[] maxSlidingWindow(int[] nums, int k) {
+        int n = nums.length;
+        Deque<Integer> deque = new LinkedList<>();
+        for (int i = 0; i < k; ++i) {
+            while (!deque.isEmpty() && nums[i] >= nums[deque.peekLast()]) {
+                deque.pollLast();
+            }
+            deque.offerLast(i);
+        }
+
+        int[] ans = new int[n - k + 1];
+        ans[0] = nums[deque.peekFirst()];
+        for (int i = k; i < n; ++i) {
+            while (!deque.isEmpty() && nums[i] >= nums[deque.peekLast()]) {
+                deque.pollLast();
+            }
+            deque.offerLast(i);
+            while (deque.peekFirst() <= i - k) {
+                deque.pollFirst();
+            }
+            ans[i - k + 1] = nums[deque.peekFirst()];
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
         int[] arr = {6, 4, 20, 10, 3, 8, 5, 9, 22, 7};
-        interval_max_number(arr, 10, 3);
+        // interval_max_number(arr, 10, 3);
+        int[] result = maxSlidingWindow(arr, 3);
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + ",");
+        }
     }
 }
