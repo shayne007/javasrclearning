@@ -1,4 +1,4 @@
-package com.feng;
+package com.feng.controller;
 
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;
@@ -31,10 +31,10 @@ public class GcTestController {
         }
         return greeting;
     }
-}
 
-@Data
-@AllArgsConstructor
-class Greeting {
-    private String message;
+    @Data
+    @AllArgsConstructor
+    private class Greeting {
+        private String message;
+    }
 }

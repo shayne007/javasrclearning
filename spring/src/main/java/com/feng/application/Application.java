@@ -1,12 +1,16 @@
-package com.feng;
+package com.feng.application;
 
 import java.util.Arrays;
 
+import com.feng.event.publish.MyApplicationEnvironmentPreparedEventListener;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScans;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +24,8 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootApplication
 @EnableScheduling
 @Slf4j
+// @ComponentScan(basePackages = "com.feng.controller")
+@ComponentScans(value = {@ComponentScan(value = "com.feng")})
 public class Application {
 
     // 创建线程池
@@ -40,7 +46,13 @@ public class Application {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(Application.class, args);
+        MyApplicationEnvironmentPreparedEventListener listener = new MyApplicationEnvironmentPreparedEventListener();
+        SpringApplication springApplication =
+            new SpringApplicationBuilder(Application.class).listeners(listener).build();
+        springApplication.run(args);
+
+        // ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+        // context.close();
     }
 
     @Bean
@@ -50,7 +62,7 @@ public class Application {
             String[] beanNames = ctx.getBeanDefinitionNames();
             Arrays.sort(beanNames);
             for (String beanName : beanNames) {
-                System.out.println(beanName);
+                // System.out.println(beanName);
             }
 
         };

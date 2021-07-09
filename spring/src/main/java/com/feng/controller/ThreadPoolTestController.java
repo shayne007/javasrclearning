@@ -1,4 +1,4 @@
-package com.feng;
+package com.feng.controller;
 
 import java.util.UUID;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -29,12 +29,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @Slf4j
-public class HelloController {
-
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
-    }
+public class ThreadPoolTestController {
 
     @RequestMapping(value = "/test0")
     public String test0(HttpServletRequest request) {

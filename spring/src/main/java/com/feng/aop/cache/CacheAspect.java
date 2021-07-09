@@ -30,7 +30,7 @@ public class CacheAspect {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
-    @Around("execution(* com.fsy.javasrc.*.*.*(..))")
+    @Around("execution(* com.feng.aop.*.*.*(..))")
     public Object lzcCacheAspect(ProceedingJoinPoint jp) throws Throwable {
 
         Class<?> cls = jp.getTarget().getClass();
