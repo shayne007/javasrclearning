@@ -1,6 +1,5 @@
 package com.feng.springcore;
 
-import com.feng.springcore.lifecycle.LightMgrService;
 import org.junit.Test;
 
 /**
@@ -10,6 +9,7 @@ import org.junit.Test;
  */
 
 public class LightServiceTest {
+
     @Test
     public void testCheck() {
         // new LightMgrService();

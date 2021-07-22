@@ -1,11 +1,12 @@
 package com.feng.springcore.value;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Value注解可用于读取配置属性、环境变量、系统参数； 处理读取String类型，还可以读取对象及其属性
@@ -17,10 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 public class ValueTestController {
-    @Value("#{xie}")
-    private User user;
+    @Value("#{xiaoming}")
+    private Person person;
 
-    @Value("#{xie.name}")
+    @Value("#{xiaoming.name}")
     private String name;
 
     @Value("${home}")
@@ -40,7 +41,7 @@ public class ValueTestController {
 
     @RequestMapping(path = "user", method = RequestMethod.GET)
     public String getUser() {
-        log.info(user.getName());
+        log.info(person.getName());
         log.info(name);
         log.info(home);
         log.info(usernameSys);
@@ -49,16 +50,16 @@ public class ValueTestController {
         return usernameProp + ":" + password;
     }
 
-    @Bean(name = "xie")
-    public User user() {
-        User user = new User(1, "xie");
-        return user;
+    @Bean(name = "xiaoming")
+    public Person person() {
+        Person person = new Person(1, "xiaoming");
+        return person;
     }
 
-    private class User {
+    private class Person {
         private String name;
 
-        public User(long i, String name) {
+        public Person(long i, String name) {
             this.name = name;
         }
 
