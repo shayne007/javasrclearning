@@ -1,8 +1,5 @@
 package com.feng;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -13,7 +10,6 @@ import redis.clients.jedis.JedisPoolConfig;
  * @Description
  */
 public class RedisLock {
-    private final static Log logger = LogFactory.getLog(RedisLock.class);
     private Jedis jedis;
 
     public RedisLock(Jedis jedis) {
@@ -43,14 +39,34 @@ public class RedisLock {
     }
 
     public static void main(String[] args) {
+
+        for (int i = 0; i < 3; i++) {
+            new Thread(new Runnable() {
+                public void run() {
+                    execute();
+                }
+            }).start();;
+        }
+    }
+
+    private static void execute() {
         JedisPoolConfig jcon = new JedisPoolConfig();
         JedisPool jp = new JedisPool(jcon, "127.0.0.1", 6379);
         Jedis jedis = jp.getResource();
+
         RedisLock lock = new RedisLock(jedis);
         String lockId = "123";
         try {
             if (lock.lock(lockId)) {
                 // 加锁后需要执行的逻辑代码
+                System.out.println(Thread.currentThread().getName() + " 线程加锁成功，执行业务代码。。。");
+                Thread.sleep(300);
+            } else {
+                Thread.sleep(500);
+                if (lock.lock(lockId)) {
+                    // 加锁后需要执行的逻辑代码
+                    System.out.println(Thread.currentThread().getName() + " 线程加锁成功，执行业务代码。。。");
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
