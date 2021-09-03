@@ -1,11 +1,11 @@
-package com.feng.mybatis.service;
+package com.feng.application.service;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-import com.feng.mybatis.DaoUtils;
-import com.feng.mybatis.domain.Product;
-import com.feng.mybatis.mapper.ProductMapper;
+import com.feng.application.DaoUtils;
+import com.feng.application.domain.Product;
+import com.feng.application.mapper.ProductMapper;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
 
@@ -20,7 +20,7 @@ public class ProductService {
         Preconditions.checkArgument(product != null, "product is null");
         Preconditions.checkArgument(!Strings.isNullOrEmpty(product.getName()), "product name is empty");
         Preconditions.checkArgument(!Strings.isNullOrEmpty(product.getDescription()), "description name is empty");
-        Preconditions.checkArgument(product.getPrice().compareTo(new BigDecimal(0)) > 0, "price<=0 error");
+        Preconditions.checkArgument(product.getPrice().getAmount().compareTo(new BigDecimal(0)) > 0, "price<=0 error");
         return DaoUtils.execute(sqlSession -> {
             // 通过ProductMapper中的save()方法完成持久化
             ProductMapper productMapper = sqlSession.getMapper(ProductMapper.class);

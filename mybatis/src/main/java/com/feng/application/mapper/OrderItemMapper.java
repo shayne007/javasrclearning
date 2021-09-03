@@ -1,10 +1,10 @@
-package com.feng.mybatis.mapper;
+package com.feng.application.mapper;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
-import com.feng.mybatis.domain.OrderItem;
+import com.feng.application.domain.OrderItem;
 
 /**
  * Created on 2020-10-29

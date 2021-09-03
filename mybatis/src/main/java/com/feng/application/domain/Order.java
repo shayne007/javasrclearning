@@ -1,4 +1,4 @@
-package com.feng.mybatis.domain;
+package com.feng.application.domain;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

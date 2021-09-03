@@ -1,8 +1,8 @@
-package com.feng.mybatis.mapper;
+package com.feng.application.mapper;
 
 import java.util.List;
 
-import com.feng.mybatis.domain.Product;
+import com.feng.application.domain.Product;
 
 /**
  * @author fengsy

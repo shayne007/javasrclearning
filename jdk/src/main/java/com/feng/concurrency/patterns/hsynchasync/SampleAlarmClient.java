@@ -1,9 +1,10 @@
 package com.feng.concurrency.patterns.hsynchasync;
 
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AlarmType;
+import java.sql.Connection;
+
 import org.apache.log4j.Logger;
 
-import java.sql.Connection;
+import com.feng.concurrency.patterns.twophaseterminate.reusable.AlarmType;
 
 /**
  * @author fengsy
@@ -27,7 +28,6 @@ public class SampleAlarmClient {
         Connection dbConn = null;
         try {
             dbConn = alarmClient.retrieveDBConnection();
-
         } catch (Exception e) {
             final AlarmMgr alarmMgr = AlarmMgr.getInstance();
 

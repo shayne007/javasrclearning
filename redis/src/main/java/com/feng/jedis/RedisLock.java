@@ -1,4 +1,4 @@
-package com.feng;
+package com.feng.jedis;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -9,6 +9,7 @@ import redis.clients.jedis.JedisPoolConfig;
  * @date 2/19/21
  * @Description
  */
+
 public class RedisLock {
     private Jedis jedis;
 
@@ -42,6 +43,7 @@ public class RedisLock {
 
         for (int i = 0; i < 3; i++) {
             new Thread(new Runnable() {
+                @Override
                 public void run() {
                     execute();
                 }

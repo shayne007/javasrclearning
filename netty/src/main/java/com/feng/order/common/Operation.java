@@ -5,6 +5,7 @@ package com.feng.order.common;
  * @date 8/3/21
  * @Description
  */
-public class Operation {
+public abstract class Operation extends MessageBody {
+    public abstract OperationResult execute();
 
 }

@@ -1,19 +1,20 @@
-package com.feng.mybatis;
+package com.feng.application;
 
-import java.math.BigDecimal;
 import java.util.List;
 
+import org.joda.money.CurrencyUnit;
+import org.joda.money.Money;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.feng.mybatis.domain.Address;
-import com.feng.mybatis.domain.Customer;
-import com.feng.mybatis.domain.Order;
-import com.feng.mybatis.domain.OrderItem;
-import com.feng.mybatis.domain.Product;
-import com.feng.mybatis.service.CustomerService;
-import com.feng.mybatis.service.OrderService;
-import com.feng.mybatis.service.ProductService;
+import com.feng.application.domain.Address;
+import com.feng.application.domain.Customer;
+import com.feng.application.domain.Order;
+import com.feng.application.domain.OrderItem;
+import com.feng.application.domain.Product;
+import com.feng.application.service.CustomerService;
+import com.feng.application.service.OrderService;
+import com.feng.application.service.ProductService;
 import com.google.common.collect.Lists;
 
 /**
@@ -54,9 +55,11 @@ public class CustomerServiceTest {
         Product product = new Product();
         product.setName("MyBatis课程");
         product.setDescription("深入MyBatis源码的视频教程");
-        product.setPrice(new BigDecimal(99));
+        product.setPrice(Money.of(CurrencyUnit.of("CNY"), 99.00));
         long productId = productService.createProduct(product);
-        System.out.println("create productId:" + productId);
+        System.out.println("create productId:" + product.getId());
+
+        System.out.println(productService.find(product.getId()));
 
         // 创建一个订单
         Order order = new Order();
@@ -71,6 +74,8 @@ public class CustomerServiceTest {
         System.out.println("create orderId:" + orderId);
 
         Order order2 = orderService.find(orderId);
+        orderService.findByCustomerId(customer.getId());
+
         System.out.println(order2);
     }
 }

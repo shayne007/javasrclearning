@@ -1,6 +1,6 @@
-package com.feng.mybatis.domain;
+package com.feng.application.domain;
 
-import java.math.BigDecimal;
+import org.joda.money.Money;
 
 /**
  * Created on 2020-10-29
@@ -9,7 +9,7 @@ public class OrderItem {
     private long id;
     private Product product;
     private int amount;
-    private BigDecimal price;
+    private Money price;
     private long orderId;
 
     public long getOrderId() {
@@ -44,11 +44,11 @@ public class OrderItem {
         this.amount = amount;
     }
 
-    public BigDecimal getPrice() {
+    public Money getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(Money price) {
         this.price = price;
     }
 }

@@ -1,15 +1,18 @@
-package com.feng.mybatis.service;
+package com.feng.application.service;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-import com.feng.mybatis.DaoUtils;
-import com.feng.mybatis.domain.Address;
-import com.feng.mybatis.domain.Order;
-import com.feng.mybatis.domain.OrderItem;
-import com.feng.mybatis.mapper.AddressMapper;
-import com.feng.mybatis.mapper.OrderItemMapper;
-import com.feng.mybatis.mapper.OrderMapper;
+import org.joda.money.CurrencyUnit;
+import org.joda.money.Money;
+
+import com.feng.application.DaoUtils;
+import com.feng.application.domain.Address;
+import com.feng.application.domain.Order;
+import com.feng.application.domain.OrderItem;
+import com.feng.application.mapper.AddressMapper;
+import com.feng.application.mapper.OrderItemMapper;
+import com.feng.application.mapper.OrderMapper;
 import com.google.common.base.Preconditions;
 
 /**
@@ -65,10 +68,33 @@ public class OrderService {
         List<OrderItem> orderItems = order.getOrderItems();
         BigDecimal totalPrice = new BigDecimal(0);
         for (OrderItem orderItem : orderItems) {
-            BigDecimal itemPrice = orderItem.getProduct().getPrice().multiply(new BigDecimal(orderItem.getAmount()));
-            orderItem.setPrice(itemPrice);
+            BigDecimal itemPrice =
+                orderItem.getProduct().getPrice().getAmount().multiply(new BigDecimal(orderItem.getAmount()));
+            orderItem.setPrice(Money.of(CurrencyUnit.of("CNY"), itemPrice));
             totalPrice.add(itemPrice);
         }
         return totalPrice;
+    }
+
+    public Order findByCustomerId(long customerId) {
+        // 检查orderId参数是否合法
+        Preconditions.checkArgument(customerId > 0, "customerId error");
+        return DaoUtils.execute(sqlSession -> {
+            // 查询该订单关联的全部OrderItem
+            OrderItemMapper orderItemMapper = sqlSession.getMapper(OrderItemMapper.class);
+            List<OrderItem> orderItems = orderItemMapper.findByOrderId(customerId);
+            // 查询订单本身的信息
+            OrderMapper orderMapper = sqlSession.getMapper(OrderMapper.class);
+            List<Order> orderList = orderMapper.findByCustomerId(customerId, 0L, 0L);
+            Order order = orderList.get(0);
+            order.setOrderItems(orderItems);
+            // 计算订单总额
+            order.setTotalPrice(calculateTotalPrice(order));
+            // 查询订单关联的Address
+            AddressMapper addressMapper = sqlSession.getMapper(AddressMapper.class);
+            Address address = addressMapper.find(order.getDeliveryAddress().getId());
+            order.setDeliveryAddress(address);
+            return order;
+        });
     }
 }

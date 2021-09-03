@@ -9,7 +9,6 @@ import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.MappedJdbcTypes;
 import org.apache.ibatis.type.MappedTypes;
-import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 
 /**
@@ -19,30 +18,32 @@ import org.joda.money.Money;
  */
 @MappedTypes(Money.class)
 @MappedJdbcTypes(JdbcType.VARCHAR)
-public class MoneyTypeHandler extends BaseTypeHandler<Money> {
+public class GenericTypeHandler<E extends Money> extends BaseTypeHandler<E> {
+
+    private Class<E> type;
+
+    public GenericTypeHandler(Class<E> type) {
+        this.type = type;
+    }
 
     @Override
-    public void setNonNullParameter(PreparedStatement ps, int i, Money parameter, JdbcType jdbcType)
-        throws SQLException {
+    public void setNonNullParameter(PreparedStatement ps, int i, E parameter, JdbcType jdbcType) throws SQLException {
         ps.setLong(i, parameter.getAmountMinorLong());
     }
 
     @Override
-    public Money getNullableResult(ResultSet rs, String columnName) throws SQLException {
-        return parseMoney(rs.getLong(columnName));
+    public E getNullableResult(ResultSet rs, String columnName) throws SQLException {
+        return null;
     }
 
     @Override
-    public Money getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
-        return parseMoney(rs.getLong(columnIndex));
+    public E getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
+        return null;
     }
 
     @Override
-    public Money getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
-        return parseMoney(cs.getLong(columnIndex));
+    public E getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
+        return null;
     }
 
-    private Money parseMoney(Long value) {
-        return Money.of(CurrencyUnit.of("CNY"), value / 100.0);
-    }
 }

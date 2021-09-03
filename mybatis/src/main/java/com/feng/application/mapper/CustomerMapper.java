@@ -1,6 +1,6 @@
-package com.feng.mybatis.mapper;
+package com.feng.application.mapper;
 
-import com.feng.mybatis.domain.Customer;
+import com.feng.application.domain.Customer;
 
 /**
  * Created on 2020-10-29

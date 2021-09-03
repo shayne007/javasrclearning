@@ -1,4 +1,4 @@
-package com.feng.mybatis;
+package com.feng.application;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,7 +26,7 @@ public class DaoUtils {
             e.printStackTrace();
             System.exit(1);
         }
-        factory = new SqlSessionFactoryBuilder().build(inputStream);
+        factory = new SqlSessionFactoryBuilder().build(inputStream, "development");
     }
 
     public static <R> R execute(Function<SqlSession, R> function) {

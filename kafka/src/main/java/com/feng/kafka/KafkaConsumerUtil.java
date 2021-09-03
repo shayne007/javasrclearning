@@ -1,5 +1,7 @@
 package com.feng.kafka;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,31 +31,27 @@ public class KafkaConsumerUtil {
     /**
      * 初始化consumer实例
      */
-    public static KafkaConsumer<String, String> initConsumerParams(String brokerList, String topic, String groupId,
-        Integer partition) {
+    public static KafkaConsumer<String, String> initConsumerParams(String brokerList, String groupId) {
         Properties props = new Properties();
+        try {
+            props.put(ConsumerConfig.CLIENT_ID_CONFIG, InetAddress.getLocalHost().getHostName());
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, brokerList);
         props.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         props.put(ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG, StickyAssignor.class.getName());
 
+        // 关闭自动提交offset
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
+
         props.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "2000");
 
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-        // 1.创建消费者
         final KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
-        // 指定消费主题
-        // Note that it isn't possible to mix manual partition assignment (i.e. using assign) with dynamic partition
-        // assignment through topic subscription (i.e. using subscribe).
-        consumer.subscribe(Collections.singleton(topic));
 
-        // // 消费topic主题下指定分区partition的消息
-        if (partition != null) {
-            TopicPartition p = new TopicPartition(topic, partition);
-            consumer.assign(Arrays.asList(p));
-        }
         return consumer;
     }
 
@@ -68,9 +66,19 @@ public class KafkaConsumerUtil {
             setTimeout = timeout;
         }
 
-        KafkaConsumer<String, String> kafkaConsumer = initConsumerParams(brokerList, topic, groupId, partition);
-        ConsumerRecords<String, String> poll = kafkaConsumer.poll(Duration.ofSeconds(setTimeout));
-        return poll;
+        KafkaConsumer<String, String> consumer = initConsumerParams(brokerList, groupId);
+        // 指定消费主题
+        consumer.subscribe(Collections.singleton(topic));
+        // // 消费topic主题下指定分区partition的消息
+        if (partition != null) {
+            TopicPartition p = new TopicPartition(topic, partition);
+            // Note that it isn't possible to mix manual partition assignment (i.e. using assign) with dynamic partition
+            // assignment through topic subscription (i.e. using subscribe).
+            consumer.assign(Arrays.asList(p));
+        }
+        ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(setTimeout));
+
+        return records;
     }
 
     /**
@@ -81,20 +89,21 @@ public class KafkaConsumerUtil {
      * @param topic
      * @param groupId
      * @param timeout
-     * @param partition
      */
-    public static void handleDataManualCommitOffsetBetter(String brokerList, String topic, String groupId, Long timeout,
-        Integer partition) {
+    public static void handleDataManualCommitOffsetBetter(String brokerList, String topic, String groupId,
+        Long timeout) {
 
         long setTimeout = 100;
         if (timeout != null) {
             setTimeout = timeout;
         }
 
-        KafkaConsumer<String, String> consumer = initConsumerParams(brokerList, topic, groupId, partition);
+        KafkaConsumer<String, String> consumer = initConsumerParams(brokerList, groupId);
+        // 指定消费主题
+        consumer.subscribe(Collections.singleton(topic));
         try {
             while (true) {
-                ConsumerRecords<String, String> records = consumer.poll(Duration.ofSeconds(setTimeout));
+                ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(setTimeout));
                 for (ConsumerRecord<String, String> record : records) {
                     System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(),
                         record.value());
@@ -121,16 +130,20 @@ public class KafkaConsumerUtil {
      * @param topic
      * @param groupId
      * @param timeout
-     * @param partition
      */
-    public static void handleDataManualCommitOffset(String brokerList, String topic, String groupId, Long timeout,
-        Integer partition) {
-        KafkaConsumer<String, String> consumer = initConsumerParams(brokerList, topic, groupId, partition);
+    public static void handleDataManualCommitOffset(String brokerList, String topic, String groupId, Long timeout) {
+        long setTimeout = 100;
+        if (timeout != null) {
+            setTimeout = timeout;
+        }
 
+        KafkaConsumer<String, String> consumer = initConsumerParams(brokerList, groupId);
+        // 指定消费主题
+        consumer.subscribe(Collections.singleton(topic));
         Map<TopicPartition, OffsetAndMetadata> offsets = new HashMap<>();
         int count = 0;
         while (true) {
-            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(10));
+            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(setTimeout));
             for (ConsumerRecord<String, String> record : records) {
                 // 处理数据
                 // handle()
@@ -155,15 +168,19 @@ public class KafkaConsumerUtil {
      * @param topic
      * @param groupId
      * @param timeout
-     * @param partition
      */
-    public static void batchConsumeData(String brokerList, String topic, String groupId, Long timeout,
-        Integer partition) {
-        KafkaConsumer<String, String> consumer = initConsumerParams(brokerList, topic, groupId, partition);
+    public static void batchConsumeData(String brokerList, String topic, String groupId, Long timeout) {
+        long setTimeout = 100;
+        if (timeout != null) {
+            setTimeout = timeout;
+        }
+        KafkaConsumer<String, String> consumer = initConsumerParams(brokerList, groupId);
+        // 指定消费主题
+        consumer.subscribe(Collections.singleton(topic));
         final int minBatchSize = 200;
         List<ConsumerRecord<String, String>> buffer = new ArrayList<>();
         while (true) {
-            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
+            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(setTimeout));
             for (ConsumerRecord<String, String> record : records) {
                 buffer.add(record);
             }

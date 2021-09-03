@@ -2,23 +2,18 @@ package com.feng.order.client;
 
 import javax.net.ssl.SSLException;
 
+import com.feng.order.client.codec.OperationToRequestMessageEncoder;
 import com.feng.order.client.codec.OrderFrameDecoder;
 import com.feng.order.client.codec.OrderFrameEncoder;
 import com.feng.order.client.codec.OrderProtocolDecoder;
 import com.feng.order.client.codec.OrderProtocolEncoder;
-import com.feng.order.client.handler.ClientIdleCheckHandler;
-import com.feng.order.client.handler.KeepaliveHandler;
-import com.feng.order.common.RequestMessage;
-import com.feng.order.common.auth.AuthOperation;
 import com.feng.order.common.order.OrderOperation;
-import com.feng.order.util.IdUtil;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.nio.NioChannelOption;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
@@ -31,32 +26,23 @@ import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
  * @date 8/3/21
  * @Description
  */
-public class Client {
+public class ClientV1 {
     public static void main(String[] args) throws InterruptedException, SSLException {
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.channel(NioSocketChannel.class);
 
-        bootstrap.option(NioChannelOption.CONNECT_TIMEOUT_MILLIS, 10 * 1000);
-
         NioEventLoopGroup group = new NioEventLoopGroup();
         try {
             bootstrap.group(group);
-            KeepaliveHandler keepaliveHandler = new KeepaliveHandler();
-            LoggingHandler loggingHandler = new LoggingHandler(LogLevel.INFO);
 
             SslContextBuilder sslContextBuilder = SslContextBuilder.forClient();
-            // 下面这行，先直接信任自签证书，以避免没有看到ssl那节课程的同学运行不了；
-            // 学完ssl那节后，可以去掉下面这行代码，安装证书，安装方法参考课程，执行命令参考resources/ssl.txt里面
             sslContextBuilder.trustManager(InsecureTrustManagerFactory.INSTANCE);
-
             SslContext sslContext = sslContextBuilder.build();
 
             bootstrap.handler(new ChannelInitializer<NioSocketChannel>() {
                 @Override
                 protected void initChannel(NioSocketChannel ch) throws Exception {
                     ChannelPipeline pipeline = ch.pipeline();
-
-                    pipeline.addLast(new ClientIdleCheckHandler());
 
                     pipeline.addLast(sslContext.newHandler(ch.alloc()));
 
@@ -66,9 +52,9 @@ public class Client {
                     pipeline.addLast(new OrderProtocolEncoder());
                     pipeline.addLast(new OrderProtocolDecoder());
 
-                    pipeline.addLast(loggingHandler);
+                    pipeline.addLast(new OperationToRequestMessageEncoder());
 
-                    pipeline.addLast(keepaliveHandler);
+                    pipeline.addLast(new LoggingHandler(LogLevel.INFO));
 
                 }
             });
@@ -76,13 +62,9 @@ public class Client {
 
             channelFuture.sync();
 
-            AuthOperation authOperation = new AuthOperation("admin", "password");
+            OrderOperation orderOperation = new OrderOperation(1001, "tudou");
 
-            channelFuture.channel().writeAndFlush(new RequestMessage(IdUtil.nextId(), authOperation));
-
-            RequestMessage requestMessage = new RequestMessage(IdUtil.nextId(), new OrderOperation(1001, "tudou"));
-
-            channelFuture.channel().writeAndFlush(requestMessage);
+            channelFuture.channel().writeAndFlush(orderOperation);
 
             channelFuture.channel().closeFuture().sync();
         } finally {

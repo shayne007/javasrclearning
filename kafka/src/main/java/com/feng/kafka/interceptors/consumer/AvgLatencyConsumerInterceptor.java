@@ -1,4 +1,4 @@
-package com.feng.kafka.interceptors;
+package com.feng.kafka.interceptors.consumer;
 
 import java.util.Map;
 

@@ -2,10 +2,10 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.example.dao.OrderItemMapper">
+<mapper namespace="com.feng.application.mapper.OrderItemMapper">
 
     <!-- 定义t_order_item与OrderItem对象之间的映射关系-->
-    <resultMap id="orderItemtMap" type="OrderItem">
+    <resultMap id="orderItemtMap" type="com.feng.application.domain.OrderItem">
         <id property="id" column="id"/>
         <result property="amount" column="amount"/>
         <result property="orderId" column="order_id"/>

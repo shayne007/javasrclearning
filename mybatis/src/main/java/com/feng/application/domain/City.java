@@ -6,5 +6,5 @@ package com.feng.application.domain;
  * @Description
  */
 public enum City {
-
+    BEIJING, CHANGSHA, SHENZHEN
 }

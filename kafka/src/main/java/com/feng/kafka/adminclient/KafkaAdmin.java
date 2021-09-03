@@ -27,7 +27,7 @@ public class KafkaAdmin {
     public static void main(String[] args) throws InterruptedException, ExecutionException, TimeoutException {
 
         Properties props = new Properties();
-        props.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:55054");
+        props.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
         props.put("request.timeout.ms", 600000);
 
         testTopic(props);

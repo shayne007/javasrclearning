@@ -1,12 +1,13 @@
-package com.feng.mybatis.service;
+package com.feng.application.service;
 
 import java.util.List;
 
-import com.feng.mybatis.DaoUtils;
-import com.feng.mybatis.domain.Address;
-import com.feng.mybatis.domain.Customer;
-import com.feng.mybatis.mapper.AddressMapper;
-import com.feng.mybatis.mapper.CustomerMapper;
+import com.feng.application.DaoUtils;
+import com.feng.application.domain.Address;
+import com.feng.application.domain.City;
+import com.feng.application.domain.Customer;
+import com.feng.application.mapper.AddressMapper;
+import com.feng.application.mapper.CustomerMapper;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
 
@@ -48,7 +49,7 @@ public class CustomerService {
             AddressMapper mapper = sqlSession.getMapper(AddressMapper.class);
             Address address = new Address();
             address.setStreet(street);
-            address.setCity(city);
+            address.setCity(City.BEIJING);
             address.setCountry(country);
             int affected = mapper.save(address, customerId);
             if (affected <= 0) {

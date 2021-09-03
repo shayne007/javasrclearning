@@ -4,15 +4,16 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
-import org.apache.ibatis.datasource.DataSourceFactory;
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
+import org.apache.ibatis.datasource.unpooled.UnpooledDataSourceFactory;
+import org.apache.ibatis.session.TransactionIsolationLevel;
 
 /**
  * @author fengsy
  * @date 7/25/21
  * @Description
  */
-public class OrderDataSourceFactory implements DataSourceFactory {
+public class MyDataSourceFactory extends UnpooledDataSourceFactory {
     private Properties properties;
 
     @Override
@@ -27,8 +28,9 @@ public class OrderDataSourceFactory implements DataSourceFactory {
         properties.put("url", "jdbc:mysql://localhost:3306/test");
         properties.put("username", "root");
         properties.put("password", "123456");
-        DataSource ds = new PooledDataSource((String)properties.get("driver"), (String)properties.get("url"),
+        PooledDataSource ds = new PooledDataSource((String)properties.get("driver"), (String)properties.get("url"),
             (String)properties.get("username"), (String)properties.get("password"));
+        ds.setDefaultTransactionIsolationLevel(TransactionIsolationLevel.REPEATABLE_READ.getLevel());
         return ds;
     }
 }

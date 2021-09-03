@@ -21,6 +21,7 @@ public class BananaPartitioner implements Partitioner {
         int numPartitions = partitions.size();
         if ((keyBytes == null) || (!(key instanceof String))) {
             throw new InvalidRecordException("We expect all messages to have customer name as key");
+
         }
         if (key.equals("Banana")) {
             // Banana will always go to last partition

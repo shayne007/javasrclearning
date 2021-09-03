@@ -1,4 +1,4 @@
-package com.feng;
+package com.feng.jedis;
 
 import java.util.Random;
 
@@ -343,7 +343,8 @@ public class RedisLockV2 {
                 this.shardedJedis.del(key);
             }
         } finally {
-            this.shardedJedisPool.returnResource(this.shardedJedis);
+            // this.shardedJedisPool.returnResource(this.shardedJedis);
+            this.shardedJedisPool.destroy();
         }
     }
 

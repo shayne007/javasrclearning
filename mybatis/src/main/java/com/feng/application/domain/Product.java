@@ -1,17 +1,19 @@
-package com.feng.mybatis.domain;
+package com.feng.application.domain;
 
-import java.math.BigDecimal;
+import java.io.Serializable;
+
+import org.joda.money.Money;
 
 /**
  * @author fengsy
  * @date 7/24/21
  * @Description
  */
-public class Product {
+public class Product implements Serializable {
     private long id;
     private String name;
     private String description;
-    private BigDecimal price;
+    private Money price;
 
     public long getId() {
         return id;
@@ -37,11 +39,17 @@ public class Product {
         this.description = description;
     }
 
-    public BigDecimal getPrice() {
+    public Money getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(Money price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "id=" + id + ", name='" + name + '\'' + ", description='" + description + '\'' + ", price="
+            + price + '}';
     }
 }

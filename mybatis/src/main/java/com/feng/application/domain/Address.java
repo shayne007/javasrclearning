@@ -1,4 +1,4 @@
-package com.feng.mybatis.domain;
+package com.feng.application.domain;
 
 /**
  * Created on 2020-10-29
@@ -6,8 +6,9 @@ package com.feng.mybatis.domain;
 public class Address {
     private long id;
     private String street;
-    private String city;
+    private City city;
     private String country;
+    private Customer customer;
 
     public long getId() {
         return id;
@@ -25,11 +26,11 @@ public class Address {
         this.street = street;
     }
 
-    public String getCity() {
+    public City getCity() {
         return city;
     }
 
-    public void setCity(String city) {
+    public void setCity(City city) {
         this.city = city;
     }
 
@@ -41,14 +42,17 @@ public class Address {
         this.country = country;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Address{");
-        sb.append("id=").append(id);
-        sb.append(", street='").append(street).append('\'');
-        sb.append(", city='").append(city).append('\'');
-        sb.append(", country='").append(country).append('\'');
-        sb.append('}');
-        return sb.toString();
+        return "Address{" + "id=" + id + ", street='" + street + '\'' + ", city=" + city + ", country='" + country
+            + '\'' + ", customer=" + customer + '}';
     }
 }

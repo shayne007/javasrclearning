@@ -11,9 +11,9 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
  * @date 7/31/21
  * @Description
  */
-public class MyKafkaConsumerRunner extends KafkaConsumerRunner<String, String> {
+public class SingleThreadKafkaConsumerRunner extends KafkaConsumerRunner<String, String> {
 
-    public MyKafkaConsumerRunner(KafkaConsumer<String, String> consumer, List<String> topics, Long timeout) {
+    public SingleThreadKafkaConsumerRunner(KafkaConsumer<String, String> consumer, List<String> topics, Long timeout) {
         super(consumer, topics, timeout);
     }
 
