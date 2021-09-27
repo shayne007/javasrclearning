@@ -13,7 +13,7 @@ import org.springframework.context.ApplicationContextAware;
 /**
  * @author fengsy
  * @date 7/28/21
- * @Description
+ * @DescriptionJedis jedis = getJedis();
  */
 @SpringBootApplication
 public class Application implements ApplicationRunner, ApplicationContextAware {

@@ -26,6 +26,8 @@ public class RedisConfig {
     private String host;
     @Value("${spring.redis.port}")
     private String port;
+    @Value("${spring.redis.password}")
+    private String password;
 
     @Bean("redisTemplate")
     RedisTemplate<String, Object> redisTemplate() {
@@ -41,6 +43,7 @@ public class RedisConfig {
         redisTemplate.setKeySerializer(stringSerializer);// key序列化
         redisTemplate.setValueSerializer(jackson2JsonRedisSerializer);// value序列化
         redisTemplate.setConnectionFactory(new JedisConnectionFactory());
+
         return redisTemplate;
     }
 }
