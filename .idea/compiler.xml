@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="redis" />
+        <module name="spring-amqp" />
         <module name="netty" />
         <module name="jvm" />
         <module name="kafka" />

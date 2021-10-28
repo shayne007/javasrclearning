@@ -17,10 +17,13 @@ public class LinkedHashMapDemo {
         h.put("two", 2);
         h.put("three", 3);
         h.put("four", 4);
+        h.put("five", 5);
+        h.put("onf", 5);
         for (String key : h.keySet()) {
             System.out.println("key:" + key + "\t value:" + h.get(key));
         }
 
+        System.out.println("=========================");
         LinkedHashMap<String, Integer> lh = new LinkedHashMap<>(33);
         lh.put("one", 1);
         lh.put("two", 2);
@@ -29,7 +32,7 @@ public class LinkedHashMapDemo {
         for (String key : lh.keySet()) {
             System.out.println("key:" + key + "\t value:" + lh.get(key));
         }
-
+        System.out.println("=========================");
         // 10是初始大小，0.75是装载因子，true是表示按照访问时间排序
         HashMap<Integer, Integer> m = new LinkedHashMap<>(10, 0.75f, true);
         m.put(3, 11);
@@ -46,10 +49,11 @@ public class LinkedHashMapDemo {
         m.forEach((Integer k, Integer v) -> {
             System.out.println("key:" + k + ", value:" + v);
         });
+
         // accessOrder 为 true 时，为了防止并发条件下，遍历的同时链表发生变化，ConcurrentModificationException
-        /*for (Integer integer : m.keySet()) {
+        for (Integer integer : m.keySet()) {
             System.out.println(m.get(integer));
-        }*/
+        }
 
     }
 }

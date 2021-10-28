@@ -1,8 +1,9 @@
 package com.feng.collection;
 
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+
+import com.google.common.collect.Maps;
 
 /**
  * @author fengsy
@@ -12,7 +13,7 @@ import java.util.Map;
 public class HashMapTest {
     public static void main(String[] args) {
         // 创建并赋值 HashMap
-        Map<Integer, String> map = new HashMap();
+        Map<Integer, String> map = Maps.newHashMapWithExpectedSize(7);
         map.put(1, "Java");
         map.put(2, "JDK");
         map.put(3, "Spring Framework");

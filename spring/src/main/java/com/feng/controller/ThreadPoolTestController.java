@@ -1,5 +1,12 @@
 package com.feng.controller;
 
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 import java.util.UUID;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Callable;
@@ -11,17 +18,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
-
-import lombok.extern.slf4j.Slf4j;
-
 /**
+ * 线程池使用错误示例
+ *
  * @author fengsy
  * @date 1/6/21
  * @Description
@@ -47,11 +46,11 @@ public class ThreadPoolTestController {
     }
 
     private static ThreadPoolExecutor threadPool =
-        new ThreadPoolExecutor(2, 2, 1, TimeUnit.HOURS, new ArrayBlockingQueue<>(100),
-            new ThreadFactoryBuilder().setNameFormat("batchfileprocess-threadpool-%d").build(),
-            new ThreadPoolExecutor.CallerRunsPolicy());
+            new ThreadPoolExecutor(2, 2, 1, TimeUnit.HOURS, new ArrayBlockingQueue<>(100),
+                    new ThreadFactoryBuilder().setNameFormat("batchfileprocess-threadpool-%d").build(),
+                    new ThreadPoolExecutor.CallerRunsPolicy());
     private static ThreadPoolExecutor asyncCalcThreadPool = new ThreadPoolExecutor(200, 200, 1, TimeUnit.HOURS,
-        new ArrayBlockingQueue<>(1000), new ThreadFactoryBuilder().setNameFormat("asynccalc-threadpool-%d").build());
+            new ArrayBlockingQueue<>(1000), new ThreadFactoryBuilder().setNameFormat("asynccalc-threadpool-%d").build());
 
     @GetMapping("right2")
     public int right2() throws ExecutionException, InterruptedException {
@@ -76,12 +75,15 @@ public class ThreadPoolTestController {
         AtomicInteger atomicInteger = new AtomicInteger();
         // 创建一个具有2个核心线程、5个最大线程，使用容量为10的ArrayBlockingQueue阻塞队列作为工作队列的线程池，使用默认的AbortPolicy拒绝策略
         ThreadPoolExecutor threadPool = new ThreadPoolExecutor(2, 5, 5, TimeUnit.SECONDS, new ArrayBlockingQueue<>(10),
-            new ThreadFactoryBuilder().setNameFormat("demo-threadpool-%d").build(),
-            new ThreadPoolExecutor.AbortPolicy());
+                new ThreadFactoryBuilder().setNameFormat("demo-threadpool-%d").build(),
+                new ThreadPoolExecutor.AbortPolicy());
 
         // threadPool.prestartAllCoreThreads();
         // threadPool.allowCoreThreadTimeOut(true);
+
+        //打印线程池的状态
         printStats(threadPool);
+
         // 每隔1秒提交一次，一共提交20次任务
         IntStream.rangeClosed(1, 20).forEach(i -> {
             try {
@@ -92,17 +94,17 @@ public class ThreadPoolTestController {
             int id = atomicInteger.incrementAndGet();
             try {
                 threadPool.submit(() -> {
-                    // log.info("{} started", id);
+                    log.info("{} started", id);
                     // 每个任务耗时10秒
                     try {
                         TimeUnit.SECONDS.sleep(10);
                     } catch (InterruptedException e) {
                     }
-                    // log.info("{} finished", id);
+                    log.info("{} finished", id);
                 });
             } catch (Exception ex) {
                 // 提交出现异常的话，打印出错信息并为计数器减一
-                // log.error("error submitting task {}", id, ex);
+                log.error("error submitting task {}", id, ex);
                 atomicInteger.decrementAndGet();
             }
         });
@@ -114,18 +116,22 @@ public class ThreadPoolTestController {
     @GetMapping("oom1")
     public void oom1() throws InterruptedException {
 
-        ThreadPoolExecutor threadPool = (ThreadPoolExecutor)Executors.newFixedThreadPool(1);
+        ThreadPoolExecutor threadPool = (ThreadPoolExecutor) Executors.newFixedThreadPool(1);
+        // threadPool = Executors.newCachedThreadPool();
+
         // 打印线程池的信息，稍后我会解释这段代码
         printStats(threadPool);
-        for (int i = 0; i < 100000000; i++) {
+        for (int i = 0; i < 100_000_000; i++) {
             threadPool.execute(() -> {
-                String payload = IntStream.rangeClosed(1, 1000000).mapToObj(__ -> "a").collect(Collectors.joining(""))
-                    + UUID.randomUUID().toString();
+                String payload = IntStream.rangeClosed(1, 1_000_000)
+                        .mapToObj(__ -> "a")
+                        .collect(Collectors.joining(""))
+                        + UUID.randomUUID().toString();
                 try {
                     TimeUnit.HOURS.sleep(1);
                 } catch (InterruptedException e) {
                 }
-                // log.info(payload);
+                log.info(payload);
             });
         }
 
@@ -135,13 +141,13 @@ public class ThreadPoolTestController {
 
     private void printStats(ThreadPoolExecutor threadPool) {
         Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(() -> {
-            // log.info("=========================");
-            // log.info("Pool Size: {}", threadPool.getPoolSize());
-            // log.info("Active Threads: {}", threadPool.getActiveCount());
-            // log.info("Number of Tasks Completed: {}", threadPool.getCompletedTaskCount());
-            // log.info("Number of Tasks in Queue: {}", threadPool.getQueue().size());
+            log.info("=========================");
+            log.info("Pool Size: {}", threadPool.getPoolSize());
+            log.info("Active Threads: {}", threadPool.getActiveCount());
+            log.info("Number of Tasks Completed: {}", threadPool.getCompletedTaskCount());
+            log.info("Number of Tasks in Queue: {}", threadPool.getQueue().size());
 
-            // log.info("=========================");
+            log.info("=========================");
         }, 0, 1, TimeUnit.SECONDS);
     }
 

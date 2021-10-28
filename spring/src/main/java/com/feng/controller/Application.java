@@ -5,10 +5,10 @@ import java.util.Arrays;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScans;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import lombok.extern.slf4j.Slf4j;
@@ -19,11 +19,11 @@ import lombok.extern.slf4j.Slf4j;
  * @Description
  */
 
-@SpringBootApplication
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableScheduling
 @Slf4j
-// @ComponentScan(basePackages = "com.feng.controller")
-@ComponentScans(value = {@ComponentScan(value = "com.feng")})
+@ComponentScan(basePackages = "com.feng.controller")
+// @ComponentScans(value = {@ComponentScan(value = "com.feng")})
 public class Application {
 
     // 创建线程池
