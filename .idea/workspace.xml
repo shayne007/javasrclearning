@@ -2,30 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f126c315-4b72-4b66-a29e-3cd879c4923e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/concurrency/threading/ThreadPoolHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-amqp/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/RabbitAmqpApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/rpc/AmqpConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/rpc/RPCClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/rpc/RPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/rpc/RabbitAmqpRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/topic/AmqpTopicConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/topic/TopicReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/topic/TopicSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/PublisherConfirms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/RPCClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/RPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/amqp-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/basics/RabbitConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/basics/SpringRabbitUsageApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/CompensationApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/CompensationJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/RabbitConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/deadletter/Consts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/deadletter/DeadLetterApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/deadletter/DeadLetterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/deadletter/MQListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/deadletter/RabbitConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rabbitmqdlx/CommonMistakesApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rabbitmqdlx/Consts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rabbitmqdlx/DeadLetterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rabbitmqdlx/MQListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rabbitmqdlx/RabbitConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rpc/AmqpConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rpc/RPCClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rpc/RPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rpc/RabbitAmqpApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rpc/RabbitAmqpRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/topic/AmqpTopicConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/topic/RabbitAmqpApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/topic/TopicReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/topic/TopicSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/main/java/com/feng/collection/HashMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/collection/HashMapTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/main/java/com/feng/collection/LinkedHashMapDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/main/java/com/feng/collection/LinkedHashMapDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/feng/controller/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/feng/controller/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/feng/controller/JedisMisreuseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/feng/controller/JedisMisreuseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/feng/controller/ThreadPoolTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/feng/controller/ThreadPoolTestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/spring-amqp/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/RabbitAmqpApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/rpc/AmqpConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/rpc/RPCClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/rpc/RPCServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/rpc/RabbitAmqpRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/topic/AmqpTopicConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/topic/TopicReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/java/com/feng/amqp/topic/TopicSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/spring-amqp/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/PublisherConfirms.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/amqp-client/src/main/java/com/feng/rabbit/PublisherConfirms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/RPCClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/amqp-client/src/main/java/com/feng/rabbit/RPCClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/RPCServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/amqp-client/src/main/java/com/feng/rabbit/RPCServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/feng/springcore/autowireQualifier/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/feng/springcore/autowireQualifier/DataController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +59,9 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="ComposerSettings">
     <execution />
@@ -78,14 +106,14 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/netty/src/main/java/com/feng/order/client/codec" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.40717947" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="EclipseFormatter" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -102,18 +130,18 @@
       <recent name="com.fsy.javasrc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp" />
       <recent name="$PROJECT_DIR$/netty/src/main/java/com/feng/order/client/codec" />
       <recent name="$PROJECT_DIR$/mybatis/src/main/resources" />
       <recent name="$PROJECT_DIR$/mybatis/src/main/java/com/feng/mybatis/sqlsession" />
       <recent name="$PROJECT_DIR$/mybatis/src/main/java/com/feng/mybatis/service" />
-      <recent name="$PROJECT_DIR$/mybatis/src/main/java/com/feng/mybatis/domain" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.feng.amqp.basics" />
       <recent name="com.feng.amqp.topic" />
       <recent name="com.feng.jedis" />
       <recent name="com.feng.controller" />
       <recent name="com.feng.http.routelimit" />
-      <recent name="com.feng.http" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.feng.application.domain" />
@@ -123,7 +151,7 @@
       <recent name="com.feng.springcore.initialization" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RabbitAmqpApplication-receiver">
+  <component name="RunManager" selected="Spring Boot.CommonMistakesApplication">
     <configuration name="DirectMemoryOOM" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.fsy.javasrc.jvm.DirectMemoryOOM" />
       <module name="javasrclearning" />
@@ -132,13 +160,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HashMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.collection.HashMapTest" />
-      <module name="jdk" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="RabbitAmqpApplication-server" type="Application" factoryName="Application">
+      <envs>
+        <env name="server.port" value="8081" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.feng.amqp.rpc.RabbitAmqpApplication" />
+      <module name="spring-rabbit" />
+      <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=rpc,server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.collection.*" />
+          <option name="PATTERN" value="com.feng.amqp.rpc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,26 +177,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PublisherConfirms" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PublisherConfirms" />
-      <module name="rabbitmq" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RPCClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RPCClient" />
-      <module name="rabbitmq" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RPCServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RPCServer" />
-      <module name="rabbitmq" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="RabbitAmqpApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.amqp.rpc.RabbitAmqpApplication" />
+      <module name="spring-rabbit" />
+      <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=rpc,client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.feng.amqp.rpc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -248,30 +269,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RabbitAmqpApplication-client" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
-      <module name="spring-amqp" />
+    <configuration name="CommonMistakesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spring-rabbit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.amqp.*" />
+          <option name="PATTERN" value="com.feng.amqp.rabbitmqdlx.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.amqp.RabbitAmqpApplication" />
-      <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=rpc,client" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.amqp.rabbitmqdlx.CommonMistakesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompensationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spring-rabbit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.feng.amqp.compensation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.amqp.compensation.CompensationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeadLetterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spring-rabbit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.feng.amqp.deadletter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.amqp.deadletter.DeadLetterApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="RabbitAmqpApplication-receiver" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="spring-amqp" />
+      <module name="spring-rabbit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.amqp.*" />
+          <option name="PATTERN" value="com.feng.amqp.rpc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.amqp.RabbitAmqpApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.amqp.rpc.RabbitAmqpApplication" />
       <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=topics,receiver" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
@@ -279,14 +324,14 @@
       </method>
     </configuration>
     <configuration name="RabbitAmqpApplication-sender" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="spring-amqp" />
+      <module name="spring-rabbit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.amqp.*" />
+          <option name="PATTERN" value="com.feng.amqp.rpc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.amqp.RabbitAmqpApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.amqp.rpc.RabbitAmqpApplication" />
       <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=topics,sender" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
@@ -294,16 +339,29 @@
       </method>
     </configuration>
     <configuration name="RabbitAmqpApplication-server" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="spring-amqp" />
+      <module name="spring-rabbit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.amqp.*" />
+          <option name="PATTERN" value="com.feng.amqp.rpc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.amqp.RabbitAmqpApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.amqp.rpc.RabbitAmqpApplication" />
       <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=rpc,server" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringRabbitUsageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spring-rabbit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.feng.amqp.basics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.amqp.basics.SpringRabbitUsageApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -320,24 +378,25 @@
     <list>
       <item itemvalue="Application.DirectMemoryOOM" />
       <item itemvalue="Application.TestSerialGCAllocation" />
-      <item itemvalue="Application.HashMapTest" />
-      <item itemvalue="Application.PublisherConfirms" />
-      <item itemvalue="Application.RPCServer" />
-      <item itemvalue="Application.RPCClient" />
+      <item itemvalue="Application.RabbitAmqpApplication-server" />
+      <item itemvalue="Application.RabbitAmqpApplication" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
       <item itemvalue="Spring Boot.RabbitAmqpApplication-server" />
       <item itemvalue="Spring Boot.RabbitAmqpApplication-sender" />
       <item itemvalue="Spring Boot.RabbitAmqpApplication-receiver" />
-      <item itemvalue="Spring Boot.RabbitAmqpApplication-client" />
+      <item itemvalue="Spring Boot.CompensationApplication" />
+      <item itemvalue="Spring Boot.DeadLetterApplication" />
+      <item itemvalue="Spring Boot.SpringRabbitUsageApplication" />
+      <item itemvalue="Spring Boot.CommonMistakesApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.RabbitAmqpApplication-client" />
-        <item itemvalue="Application.RPCClient" />
-        <item itemvalue="Application.RPCServer" />
-        <item itemvalue="Application.PublisherConfirms" />
-        <item itemvalue="Application.HashMapTest" />
+        <item itemvalue="Spring Boot.CommonMistakesApplication" />
+        <item itemvalue="Spring Boot.DeadLetterApplication" />
+        <item itemvalue="Application.RabbitAmqpApplication" />
+        <item itemvalue="Spring Boot.SpringRabbitUsageApplication" />
+        <item itemvalue="Spring Boot.CompensationApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -355,30 +414,34 @@
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="false" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="182" y="21" key="#Project_Structure" timestamp="1628853918924">
+    <state x="354" y="135" key="#Inspections" timestamp="1635534444577">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="182" y="21" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1628853918924" />
+    <state x="354" y="135" key="#Inspections/0.0.1440.900@0.0.1440.900" timestamp="1635534444577" />
+    <state x="182" y="21" key="#Project_Structure" timestamp="1635419451922">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="182" y="21" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1635419451922" />
     <state x="381" y="70" key="#RedisLock" timestamp="1627560632588">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="381" y="70" key="#RedisLock/0.0.1440.900@0.0.1440.900" timestamp="1627560632588" />
-    <state x="262" y="120" width="1178" height="676" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1635414513707">
+    <state x="262" y="120" width="1178" height="676" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1635527109128">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="262" y="120" width="1178" height="676" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1635414513707" />
-    <state x="533" y="160" key="#com.intellij.ide.util.MemberChooser" timestamp="1635410001927">
+    <state x="262" y="120" width="1178" height="676" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1635527109128" />
+    <state x="533" y="160" key="#com.intellij.ide.util.MemberChooser" timestamp="1635533887074">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="533" y="160" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1635410001927" />
+    <state x="533" y="160" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1635533887074" />
     <state x="290" y="381" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1628156979708">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="290" y="381" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1628156979708" />
-    <state x="431" y="322" width="479" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1628058903262">
+    <state x="431" y="322" width="515" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1635419101246">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="431" y="322" width="479" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1628058903262" />
+    <state x="431" y="322" width="515" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1635419101246" />
     <state x="268" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1632296306487">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -391,125 +454,129 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="552" height="466" key="DebuggerActiveHint/0.0.1440.900@0.0.1440.900" timestamp="1635260146948" />
-    <state width="1398" height="256" key="GridCell.Tab.0.bottom" timestamp="1635414643389">
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1635590481952">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1635414643389" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1635590481951" />
+    <state width="1398" height="190" key="GridCell.Tab.0.bottom" timestamp="1635596265905">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="190" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1635596265905" />
     <state width="1398" height="342" key="GridCell.Tab.0.bottom/0.23.1387.877@0.23.1387.877" timestamp="1627377567635" />
-    <state width="1398" height="256" key="GridCell.Tab.0.bottom/0.23.1393.877@0.23.1393.877" timestamp="1635414541681" />
-    <state width="1398" height="191" key="GridCell.Tab.0.bottom/0.23.1394.877@0.23.1394.877" timestamp="1632675886026" />
-    <state width="1398" height="256" key="GridCell.Tab.0.center" timestamp="1635414643387">
+    <state width="1398" height="270" key="GridCell.Tab.0.bottom/0.23.1393.877@0.23.1393.877" timestamp="1635581485220" />
+    <state width="1398" height="270" key="GridCell.Tab.0.bottom/0.23.1394.877@0.23.1394.877" timestamp="1635581167262" />
+    <state width="1398" height="190" key="GridCell.Tab.0.center" timestamp="1635596265903">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1635414643387" />
+    <state width="1398" height="190" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1635596265903" />
     <state width="1398" height="342" key="GridCell.Tab.0.center/0.23.1387.877@0.23.1387.877" timestamp="1627377567633" />
-    <state width="1398" height="256" key="GridCell.Tab.0.center/0.23.1393.877@0.23.1393.877" timestamp="1635414541677" />
-    <state width="1398" height="191" key="GridCell.Tab.0.center/0.23.1394.877@0.23.1394.877" timestamp="1632675886022" />
-    <state width="1398" height="256" key="GridCell.Tab.0.left" timestamp="1635414643386">
+    <state width="1398" height="270" key="GridCell.Tab.0.center/0.23.1393.877@0.23.1393.877" timestamp="1635581485218" />
+    <state width="1398" height="270" key="GridCell.Tab.0.center/0.23.1394.877@0.23.1394.877" timestamp="1635581167259" />
+    <state width="1398" height="190" key="GridCell.Tab.0.left" timestamp="1635596265901">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1635414643386" />
+    <state width="1398" height="190" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1635596265901" />
     <state width="1398" height="342" key="GridCell.Tab.0.left/0.23.1387.877@0.23.1387.877" timestamp="1627377567632" />
-    <state width="1398" height="256" key="GridCell.Tab.0.left/0.23.1393.877@0.23.1393.877" timestamp="1635414541674" />
-    <state width="1398" height="191" key="GridCell.Tab.0.left/0.23.1394.877@0.23.1394.877" timestamp="1632675886020" />
-    <state width="1398" height="256" key="GridCell.Tab.0.right" timestamp="1635414643388">
+    <state width="1398" height="270" key="GridCell.Tab.0.left/0.23.1393.877@0.23.1393.877" timestamp="1635581485216" />
+    <state width="1398" height="270" key="GridCell.Tab.0.left/0.23.1394.877@0.23.1394.877" timestamp="1635581167254" />
+    <state width="1398" height="190" key="GridCell.Tab.0.right" timestamp="1635596265904">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1635414643388" />
+    <state width="1398" height="190" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1635596265904" />
     <state width="1398" height="342" key="GridCell.Tab.0.right/0.23.1387.877@0.23.1387.877" timestamp="1627377567634" />
-    <state width="1398" height="256" key="GridCell.Tab.0.right/0.23.1393.877@0.23.1393.877" timestamp="1635414541679" />
-    <state width="1398" height="191" key="GridCell.Tab.0.right/0.23.1394.877@0.23.1394.877" timestamp="1632675886024" />
-    <state width="1398" height="256" key="GridCell.Tab.1.bottom" timestamp="1635414643393">
+    <state width="1398" height="270" key="GridCell.Tab.0.right/0.23.1393.877@0.23.1393.877" timestamp="1635581485219" />
+    <state width="1398" height="270" key="GridCell.Tab.0.right/0.23.1394.877@0.23.1394.877" timestamp="1635581167260" />
+    <state width="1398" height="190" key="GridCell.Tab.1.bottom" timestamp="1635596265909">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1635414643393" />
+    <state width="1398" height="190" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1635596265909" />
     <state width="1398" height="295" key="GridCell.Tab.1.bottom/0.23.1387.877@0.23.1387.877" timestamp="1626968708348" />
-    <state width="1398" height="256" key="GridCell.Tab.1.bottom/0.23.1393.877@0.23.1393.877" timestamp="1635414541691" />
+    <state width="1398" height="270" key="GridCell.Tab.1.bottom/0.23.1393.877@0.23.1393.877" timestamp="1635581485226" />
     <state width="1398" height="191" key="GridCell.Tab.1.bottom/0.23.1394.877@0.23.1394.877" timestamp="1632675886038" />
     <state width="1398" height="240" key="GridCell.Tab.1.bottom/0.23.1397.877@0.23.1397.877" timestamp="1632584135827" />
-    <state width="1398" height="256" key="GridCell.Tab.1.center" timestamp="1635414643391">
+    <state width="1398" height="190" key="GridCell.Tab.1.center" timestamp="1635596265907">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1635414643391" />
+    <state width="1398" height="190" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1635596265907" />
     <state width="1398" height="295" key="GridCell.Tab.1.center/0.23.1387.877@0.23.1387.877" timestamp="1626968708345" />
-    <state width="1398" height="256" key="GridCell.Tab.1.center/0.23.1393.877@0.23.1393.877" timestamp="1635414541684" />
+    <state width="1398" height="270" key="GridCell.Tab.1.center/0.23.1393.877@0.23.1393.877" timestamp="1635581485223" />
     <state width="1398" height="191" key="GridCell.Tab.1.center/0.23.1394.877@0.23.1394.877" timestamp="1632675886030" />
     <state width="1398" height="240" key="GridCell.Tab.1.center/0.23.1397.877@0.23.1397.877" timestamp="1632584135824" />
-    <state width="1398" height="256" key="GridCell.Tab.1.left" timestamp="1635414643390">
+    <state width="1398" height="190" key="GridCell.Tab.1.left" timestamp="1635596265906">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1635414643390" />
+    <state width="1398" height="190" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1635596265906" />
     <state width="1398" height="295" key="GridCell.Tab.1.left/0.23.1387.877@0.23.1387.877" timestamp="1626968708344" />
-    <state width="1398" height="256" key="GridCell.Tab.1.left/0.23.1393.877@0.23.1393.877" timestamp="1635414541683" />
+    <state width="1398" height="270" key="GridCell.Tab.1.left/0.23.1393.877@0.23.1393.877" timestamp="1635581485222" />
     <state width="1398" height="191" key="GridCell.Tab.1.left/0.23.1394.877@0.23.1394.877" timestamp="1632675886028" />
     <state width="1398" height="240" key="GridCell.Tab.1.left/0.23.1397.877@0.23.1397.877" timestamp="1632584135822" />
-    <state width="1398" height="256" key="GridCell.Tab.1.right" timestamp="1635414643392">
+    <state width="1398" height="190" key="GridCell.Tab.1.right" timestamp="1635596265908">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1635414643392" />
+    <state width="1398" height="190" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1635596265908" />
     <state width="1398" height="295" key="GridCell.Tab.1.right/0.23.1387.877@0.23.1387.877" timestamp="1626968708346" />
-    <state width="1398" height="256" key="GridCell.Tab.1.right/0.23.1393.877@0.23.1393.877" timestamp="1635414541685" />
+    <state width="1398" height="270" key="GridCell.Tab.1.right/0.23.1393.877@0.23.1393.877" timestamp="1635581485224" />
     <state width="1398" height="191" key="GridCell.Tab.1.right/0.23.1394.877@0.23.1394.877" timestamp="1632675886035" />
     <state width="1398" height="240" key="GridCell.Tab.1.right/0.23.1397.877@0.23.1397.877" timestamp="1632584135825" />
-    <state width="1398" height="240" key="GridCell.Tab.2.bottom" timestamp="1632629088545">
+    <state width="1398" height="481" key="GridCell.Tab.2.bottom" timestamp="1635525620042">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="240" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1632629088545" />
+    <state width="1398" height="481" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1635525620042" />
     <state width="1398" height="294" key="GridCell.Tab.2.bottom/0.23.1387.877@0.23.1387.877" timestamp="1626080283314" />
-    <state width="1398" height="240" key="GridCell.Tab.2.center" timestamp="1632629088541">
+    <state width="1398" height="481" key="GridCell.Tab.2.center" timestamp="1635525620040">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="240" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1632629088541" />
+    <state width="1398" height="481" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1635525620040" />
     <state width="1398" height="294" key="GridCell.Tab.2.center/0.23.1387.877@0.23.1387.877" timestamp="1626080283311" />
-    <state width="1398" height="240" key="GridCell.Tab.2.left" timestamp="1632629088540">
+    <state width="1398" height="481" key="GridCell.Tab.2.left" timestamp="1635525620039">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="240" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1632629088540" />
+    <state width="1398" height="481" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1635525620039" />
     <state width="1398" height="294" key="GridCell.Tab.2.left/0.23.1387.877@0.23.1387.877" timestamp="1626080283310" />
-    <state width="1398" height="240" key="GridCell.Tab.2.right" timestamp="1632629088543">
+    <state width="1398" height="481" key="GridCell.Tab.2.right" timestamp="1635525620041">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="240" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1632629088543" />
+    <state width="1398" height="481" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1635525620041" />
     <state width="1398" height="294" key="GridCell.Tab.2.right/0.23.1387.877@0.23.1387.877" timestamp="1626080283312" />
-    <state x="234" y="103" key="Maven.ArtifactSearchDialog" timestamp="1635411388514">
+    <state x="234" y="103" key="Maven.ArtifactSearchDialog" timestamp="1635437055621">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="234" y="103" key="Maven.ArtifactSearchDialog/0.0.1440.900@0.0.1440.900" timestamp="1635411388514" />
-    <state x="334" y="149" width="795" height="587" key="NewModule_or_Project.wizard" timestamp="1629450637780">
+    <state x="234" y="103" key="Maven.ArtifactSearchDialog/0.0.1440.900@0.0.1440.900" timestamp="1635437055621" />
+    <state x="334" y="149" width="795" height="587" key="NewModule_or_Project.wizard" timestamp="1635419036642">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="334" y="149" key="NewModule_or_Project.wizard/0.0.1440.900@0.0.1440.900" timestamp="1629450637780" />
+    <state x="334" y="149" key="NewModule_or_Project.wizard/0.0.1440.900@0.0.1440.900" timestamp="1635419036641" />
     <state x="461" y="159" key="RollbackChangesDialog" timestamp="1632363798139">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="461" y="159" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1632363798139" />
-    <state x="0" y="23" width="1391" height="877" key="SettingsEditor" timestamp="1635306819388">
+    <state x="0" y="23" width="1391" height="877" key="SettingsEditor" timestamp="1635590801877">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="0" y="23" width="1440" height="877" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1635306819388" />
-    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1635335327729">
+    <state x="0" y="23" width="1440" height="877" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1635590801877" />
+    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1635535913804">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.0.1440.900@0.0.1440.900" timestamp="1635335327729" />
+    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.0.1440.900@0.0.1440.900" timestamp="1635535913804" />
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1387.877@0.23.1387.877" timestamp="1626155673132" />
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1391.877@0.23.1391.877" timestamp="1628511790845" />
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1394.877@0.23.1394.877" timestamp="1627635596062" />
-    <state width="720" height="398" key="XDebugger.FullValuePopup" timestamp="1627467226594">
+    <state width="720" height="398" key="XDebugger.FullValuePopup" timestamp="1635511081192">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="720" height="398" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1627467226594" />
+    <state width="720" height="398" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1635511081192" />
     <state x="306" y="52" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1627813769566">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="306" y="52" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1627813769566" />
-    <state x="420" y="207" width="720" height="486" key="find.popup" timestamp="1635413174765">
+    <state x="420" y="207" width="720" height="486" key="find.popup" timestamp="1635441632535">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="420" y="207" width="720" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1635413174765" />
-    <state x="169" y="90" key="new project wizard" timestamp="1635411301133">
+    <state x="420" y="207" width="720" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1635441632535" />
+    <state x="169" y="90" key="new project wizard" timestamp="1635418884420">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="169" y="90" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1635411301133" />
+    <state x="169" y="90" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1635418884420" />
     <state x="163" y="111" key="new project wizard/0.23.1387.877@0.23.1387.877" timestamp="1627113818183" />
     <state x="492" y="217" key="refactoring.ChangeSignatureDialog" timestamp="1627662782720">
       <screen x="0" y="0" width="1440" height="900" />
@@ -519,10 +586,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1632298328950" />
-    <state x="371" y="214" width="677" height="659" key="search.everywhere.popup" timestamp="1635405385613">
+    <state x="371" y="214" width="677" height="659" key="search.everywhere.popup" timestamp="1635534136794">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="371" y="214" width="677" height="659" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1635405385613" />
+    <state x="371" y="214" width="677" height="659" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1635534136794" />
     <state x="371" y="214" width="677" height="659" key="search.everywhere.popup/0.23.1389.877@0.23.1389.877" timestamp="1628479370293" />
     <state x="371" y="214" width="677" height="659" key="search.everywhere.popup/0.23.1394.877@0.23.1394.877" timestamp="1632562862843" />
   </component>
@@ -744,9 +811,34 @@
           <option name="timeStamp" value="141" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/HashMap.java</url>
-          <line>627</line>
-          <option name="timeStamp" value="142" />
+          <url>file://$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rpc/RPCClient.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.1.RELEASE/spring-rabbit-2.2.1.RELEASE-sources.jar!/org/springframework/amqp/rabbit/core/RabbitTemplate.java</url>
+          <line>2003</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.1.RELEASE/spring-rabbit-2.2.1.RELEASE-sources.jar!/org/springframework/amqp/rabbit/core/RabbitTemplate.java</url>
+          <line>2317</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.1.RELEASE/spring-rabbit-2.2.1.RELEASE-sources.jar!/org/springframework/amqp/rabbit/core/RabbitTemplate.java</url>
+          <line>831</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.1.RELEASE/spring-rabbit-2.2.1.RELEASE-sources.jar!/org/springframework/amqp/rabbit/core/RabbitTemplate.java</url>
+          <line>1768</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rabbitmqdlx/MQListener.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="153" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
