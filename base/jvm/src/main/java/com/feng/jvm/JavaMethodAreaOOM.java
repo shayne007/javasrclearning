@@ -1,10 +1,10 @@
 package com.feng.jvm;
 
-import java.lang.reflect.Method;
-
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
+
+import java.lang.reflect.Method;
 
 /**
  * @author fengsy
@@ -28,5 +28,6 @@ public class JavaMethodAreaOOM {
         }
     }
 
-    static class OOMObject {}
+    static class OOMObject {
+    }
 }

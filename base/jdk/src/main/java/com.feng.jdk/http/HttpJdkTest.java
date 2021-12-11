@@ -1,4 +1,4 @@
-package com.feng.http;
+package com.feng.jdk.http;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,7 +20,7 @@ public class HttpJdkTest {
         HttpURLConnection connection = null;
         try {
             URL restServiceUrl = new URL(url);
-            connection = (HttpURLConnection)restServiceUrl.openConnection();
+            connection = (HttpURLConnection) restServiceUrl.openConnection();
 
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Accept", "application/json");

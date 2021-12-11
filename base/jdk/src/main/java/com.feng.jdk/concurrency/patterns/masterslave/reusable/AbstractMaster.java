@@ -1,19 +1,16 @@
-package com.feng.concurrency.patterns.masterslave.reusable;
+package com.feng.jdk.concurrency.patterns.masterslave.reusable;
 
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.Future;
 
 /**
+ * @param <T> 子任务对象类型
+ * @param <V> 子任务的处理结果类型
+ * @param <R> 原始任务处理结果类型
  * @author fengsy
  * @date 5/19/21
  * @Description Master-Slave模式Master参与者的可复用实现。
- * @param <T>
- *            子任务对象类型
- * @param <V>
- *            子任务的处理结果类型
- * @param <R>
- *            原始任务处理结果类型
  */
 public abstract class AbstractMaster<T, V, R> {
     protected volatile Set<? extends SlaveSpec<T, V>> slaves;
@@ -37,8 +34,7 @@ public abstract class AbstractMaster<T, V, R> {
      * 对子类暴露的服务方法。 该类的子类需要定义一个比该方法命名更为具体的服务方法（如downloadFileService）。 由命名含义具体的服务方法（如downloadFileService）调用该方法。
      * 该方法使用了Template（模板）模式、Strategy（策略）模式。
      *
-     * @param params
-     *            客户端代码传递的参数列表
+     * @param params 客户端代码传递的参数列表
      */
     protected R service(Object... params) throws Exception {
         final TaskDivideStrategy<T> taskDivideStrategy = newTaskDivideStrategy(params);
@@ -62,8 +58,7 @@ public abstract class AbstractMaster<T, V, R> {
     /**
      * 留给子类实现。用于创建原始任务分解算法策略。
      *
-     * @param params
-     *            客户端代码调用service方法时传递的参数列表
+     * @param params 客户端代码调用service方法时传递的参数列表
      */
     protected abstract TaskDivideStrategy<T> newTaskDivideStrategy(Object... params);
 
@@ -86,8 +81,7 @@ public abstract class AbstractMaster<T, V, R> {
     /**
      * 留给子类实现。用于合并子任务的处理结果。
      *
-     * @param subResults
-     *            各个子任务处理结果
+     * @param subResults 各个子任务处理结果
      * @return 原始任务的处理结果
      */
     protected abstract R combineResults(Iterator<Future<V>> subResults);

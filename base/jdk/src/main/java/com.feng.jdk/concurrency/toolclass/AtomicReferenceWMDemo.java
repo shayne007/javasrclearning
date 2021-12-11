@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * @Date 11/12/21
  */
 
-public class SafeWM {
+public class AtomicReferenceWMDemo {
     class WMRange {
         final int upper;
         final int lower;

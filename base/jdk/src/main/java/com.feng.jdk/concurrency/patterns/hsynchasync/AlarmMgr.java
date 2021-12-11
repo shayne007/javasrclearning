@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.hsynchasync;
+package com.feng.jdk.concurrency.patterns.hsynchasync;
 
 /**
  * @author fengsy
@@ -6,9 +6,9 @@ package com.feng.concurrency.patterns.hsynchasync;
  * @Description
  */
 
-import com.feng.concurrency.patterns.guardedsuspension.AlarmInfo;
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AlarmType;
-import com.feng.concurrency.util.Debug;
+import com.feng.jdk.concurrency.patterns.guardedsuspension.AlarmInfo;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AlarmType;
+import com.feng.jdk.concurrency.util.Debug;
 
 /**
  * 告警功能入口类。 模式角色：HalfSync/HalfAsync.AsyncTask 模式角色：Two-phaseTermination.ThreadOwner
@@ -36,12 +36,9 @@ public class AlarmMgr {
     /**
      * 发送告警
      *
-     * @param type
-     *            告警类型
-     * @param id
-     *            告警编号
-     * @param extraInfo
-     *            告警参数
+     * @param type      告警类型
+     * @param id        告警编号
+     * @param extraInfo 告警参数
      * @return 由type+id+extraInfo唯一确定的告警信息被提交的次数。-1表示告警管理器已被关闭。
      */
     public int sendAlarm(AlarmType type, String id, String extraInfo) {

@@ -1,4 +1,4 @@
-package com.feng.concurrency.simulation.bankteller;
+package com.feng.jdk.concurrency.simulation.bankteller;
 
 import java.util.concurrent.TimeUnit;
 

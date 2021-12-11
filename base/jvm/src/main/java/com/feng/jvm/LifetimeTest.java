@@ -19,7 +19,7 @@ public class LifetimeTest {
         int length = ALIVE_OBJECT_SIZE / 64;
         ObjectOf64Bytes[] array = new ObjectOf64Bytes[length];
         for (long i = 0; i < G; i++) {
-            array[(int)(i % length)] = new ObjectOf64Bytes();
+            array[(int) (i % length)] = new ObjectOf64Bytes();
         }
     }
 }

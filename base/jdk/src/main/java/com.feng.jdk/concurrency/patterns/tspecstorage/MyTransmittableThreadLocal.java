@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.tspecstorage;
+package com.feng.jdk.concurrency.patterns.tspecstorage;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.ttl.TransmittableThreadLocal;
@@ -12,6 +12,6 @@ public class MyTransmittableThreadLocal<T> extends TransmittableThreadLocal<T> {
     @Override
     public T copy(T parentValue) {
         String s = JSONObject.toJSONString(parentValue);
-        return (T)JSONObject.parseObject(s, parentValue.getClass());
+        return (T) JSONObject.parseObject(s, parentValue.getClass());
     }
 }

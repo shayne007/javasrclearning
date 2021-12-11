@@ -1,4 +1,4 @@
-package com.feng.kafka.config;
+package com.feng.kafka.async;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import org.slf4j.Logger;
@@ -20,9 +20,7 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class ThreadPoolExecutorConfig {
     Logger logger = LoggerFactory.getLogger(this.getClass());
-    /**
-     * 获得Java虚拟机可用的处理器个数 + 1
-     */
+
     private static final int THREADS = Runtime.getRuntime().availableProcessors() + 1;
 
     private int corePoolSize = THREADS;

@@ -1,9 +1,4 @@
-package com.feng.concurrency.toolclass;
-
-import static java.util.concurrent.TimeUnit.MILLISECONDS;
-import static java.util.concurrent.TimeUnit.NANOSECONDS;
-import static net.mindview.util.Print.print;
-import static net.mindview.util.Print.printnb;
+package com.feng.jdk.concurrency.toolclass;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +8,11 @@ import java.util.concurrent.Delayed;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import static java.util.concurrent.TimeUnit.NANOSECONDS;
+import static net.mindview.util.Print.print;
+import static net.mindview.util.Print.printnb;
 
 /**
  * @author fengsy
@@ -54,7 +54,7 @@ class DelayedTask implements Runnable, Delayed {
 
     @Override
     public int compareTo(Delayed arg) {
-        DelayedTask that = (DelayedTask)arg;
+        DelayedTask that = (DelayedTask) arg;
         if (this.trigger < that.trigger) {
             return -1;
         }

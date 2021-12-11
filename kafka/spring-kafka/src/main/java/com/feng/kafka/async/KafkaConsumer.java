@@ -1,50 +1,44 @@
-package com.jiuling.archives.support;
+package com.feng.kafka.async;
 
-import java.util.List;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.Executor;
-
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.google.common.collect.Lists;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.Acknowledgment;
 import org.springframework.stereotype.Component;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import com.google.common.collect.Lists;
-import com.jiuling.archives.domain.dto.ClusterDTO;
-import com.jiuling.archives.service.IQstArchivesService;
-
-import lombok.extern.slf4j.Slf4j;
+import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 /**
- * @author lanjian
- * @date 2020/1/15 6:54 下午
+ * @Description TODO
+ * @Author fengsy
+ * @Date 11/1/21
  */
 @Component
 @Slf4j
 public class KafkaConsumer {
 
     @Autowired
-    IQstArchivesService qstArchivesService;
+    UserService userService;
 
-    @Autowired
-    Executor asyncExecutor;
-
-    @KafkaListener(topics = {"receive_cluster_topic"}, containerFactory = "batchFactory")
+    @KafkaListener(topics = {"topic-test"}, containerFactory = "batchFactory", groupId = "group-test")
     public void listenCluster(List<ConsumerRecord<String, String>> records, Acknowledgment ack) {
+
         Long time1 = System.currentTimeMillis();
-        List<ClusterDTO> clusterDTOList = Lists.newArrayList();
+        List<UserDTO> userDTOList = Lists.newArrayList();
         for (ConsumerRecord<String, String> record : records) {
             JSONObject recordJson = JSON.parseObject(record.value());
             JSONArray data = recordJson.getJSONArray("data");
-            clusterDTOList.addAll(data.toJavaList(ClusterDTO.class));
+            userDTOList.addAll(data.toJavaList(UserDTO.class));
         }
-        CountDownLatch countDownLatch = new CountDownLatch(clusterDTOList.size());
-        for (ClusterDTO clusterDTO : clusterDTOList) {
-            qstArchivesService.handleClusterData(clusterDTO, countDownLatch);
+        CountDownLatch countDownLatch = new CountDownLatch(userDTOList.size());
+        for (UserDTO clusterDTO : userDTOList) {
+            userService.handleData(clusterDTO, countDownLatch);
         }
         try {
             countDownLatch.await();
@@ -53,7 +47,7 @@ public class KafkaConsumer {
         }
         Long time2 = System.currentTimeMillis();
         Long costTime = time2 - time1;
-        log.info("处理50条数据耗时：{}ms", costTime);
+        log.info("处理{}条消息中的{}条数据耗时：{}ms", records.size(), userDTOList.size(), costTime);
         ack.acknowledge();
     }
 

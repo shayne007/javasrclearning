@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.masterslave.reusable;
+package com.feng.jdk.concurrency.patterns.masterslave.reusable;
 
 /**
  * @author fengsy

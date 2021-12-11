@@ -1,14 +1,14 @@
 package com.feng.kafka.multithreads;
 
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
+
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
 
 /**
  * @author fengsy
@@ -17,7 +17,7 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
  */
 public class ThreadPoolKafkaConsumerRunner extends KafkaConsumerRunner<String, String> {
     private ExecutorService executor =
-        new ThreadPoolExecutor(8, 8, 100, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(8));
+            new ThreadPoolExecutor(8, 8, 100, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(8));
 
     public ThreadPoolKafkaConsumerRunner(KafkaConsumer<String, String> consumer, List<String> topics, Long timeout) {
         super(consumer, topics, timeout);

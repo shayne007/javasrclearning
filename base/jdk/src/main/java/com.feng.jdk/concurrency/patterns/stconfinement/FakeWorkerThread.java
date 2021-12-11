@@ -1,7 +1,7 @@
-package com.feng.concurrency.patterns.stconfinement;
+package com.feng.jdk.concurrency.patterns.stconfinement;
 
-import com.feng.concurrency.util.Debug;
-import com.feng.concurrency.util.Tools;
+import com.feng.jdk.concurrency.util.Debug;
+import com.feng.jdk.concurrency.util.Tools;
 import org.apache.commons.net.ftp.FTPClient;
 
 /**
@@ -11,7 +11,7 @@ import org.apache.commons.net.ftp.FTPClient;
  */
 public class FakeWorkerThread extends WorkerThread {
     public FakeWorkerThread(String outputDir, String ftpServer, String userName, String password, String servWorkingDir)
-        throws Exception {
+            throws Exception {
         super(outputDir, ftpServer, userName, password, servWorkingDir);
     }
 

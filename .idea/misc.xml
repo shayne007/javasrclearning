@@ -17,6 +17,11 @@
         <option value="$PROJECT_DIR$/mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/spring-rabbit/pom.xml" />
+        <option value="$PROJECT_DIR$/base/java-base/pom.xml" />
+        <option value="$PROJECT_DIR$/base/jdk/pom.xml" />
+        <option value="$PROJECT_DIR$/base/pom.xml" />
+        <option value="$PROJECT_DIR$/fastdfs/pom.xml" />
+        <option value="$PROJECT_DIR$/elasticsearch/pom.xml" />
       </list>
     </option>
   </component>

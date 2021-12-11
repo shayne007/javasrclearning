@@ -1,4 +1,4 @@
-package com.feng.redis;
+package com.feng.redis.util;
 
 import java.util.concurrent.ThreadLocalRandom;
 

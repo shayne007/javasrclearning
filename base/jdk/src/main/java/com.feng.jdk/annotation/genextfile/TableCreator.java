@@ -1,4 +1,4 @@
-package com.feng.annotation.genextfile;
+package com.feng.jdk.annotation.genextfile;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -37,7 +37,7 @@ public class TableCreator {
                     continue; // Not a db table column
                 }
                 Arrays.asList(anns).stream().filter(t -> t instanceof SQLInteger).forEach(annotation -> {
-                    SQLInteger sInt = (SQLInteger)annotation;
+                    SQLInteger sInt = (SQLInteger) annotation;
                     // Use field name if name not specified
                     if (sInt.name().length() < 1) {
                         columnName[0] = field.getName().toUpperCase();
@@ -47,7 +47,7 @@ public class TableCreator {
                     columnDefs.add(columnName[0] + " INT" + getConstraints(sInt.constraints()));
                 });
                 Arrays.asList(anns).stream().filter(t -> t instanceof SQLString).forEach(annotation -> {
-                    SQLString sString = (SQLString)annotation;
+                    SQLString sString = (SQLString) annotation;
                     // Use field name if name not specified
                     if (sString.name().length() < 1) {
                         columnName[0] = field.getName().toUpperCase();
@@ -55,7 +55,7 @@ public class TableCreator {
                         columnName[0] = sString.name();
                     }
                     columnDefs.add(
-                        columnName[0] + " VARCHAR(" + sString.value() + ")" + getConstraints(sString.constraints()));
+                            columnName[0] + " VARCHAR(" + sString.value() + ")" + getConstraints(sString.constraints()));
                 });
             }
             StringBuilder createCommand = new StringBuilder("CREATE TABLE " + tableName + "(");

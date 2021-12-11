@@ -1,4 +1,4 @@
-package com.feng.rabbit;
+package com.feng.rabbit.producer;
 
 /**
  * @author fengsy

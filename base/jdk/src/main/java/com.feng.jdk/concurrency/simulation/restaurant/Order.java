@@ -1,4 +1,4 @@
-package com.feng.concurrency.simulation.restaurant;
+package com.feng.jdk.concurrency.simulation.restaurant;
 
 /**
  * @author fengsy

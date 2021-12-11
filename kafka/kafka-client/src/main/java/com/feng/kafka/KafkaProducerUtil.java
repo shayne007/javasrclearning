@@ -1,11 +1,6 @@
 package com.feng.kafka;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
-
+import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -16,7 +11,11 @@ import org.apache.kafka.common.errors.OutOfOrderSequenceException;
 import org.apache.kafka.common.errors.ProducerFencedException;
 import org.apache.kafka.common.serialization.StringSerializer;
 
-import lombok.extern.slf4j.Slf4j;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
 
 @Slf4j
 public class KafkaProducerUtil {
@@ -73,7 +72,6 @@ public class KafkaProducerUtil {
 
     /**
      * 推送消息,为了防止数据丢失，使用异步推送消息的方法时，需要添加callback回调，如果发生异常可以进行相应的处理；
-     * 
      */
     public static boolean sendMessage(String topic, String value, String brokerList) {
         boolean result = true;

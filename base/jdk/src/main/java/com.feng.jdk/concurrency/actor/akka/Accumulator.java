@@ -1,12 +1,12 @@
-package com.feng.concurrency.actor.akka;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+package com.feng.jdk.concurrency.actor.akka;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.actor.UntypedAbstractActor;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @author fengsy
@@ -24,7 +24,7 @@ public class Accumulator {
             // 如果接收到的消息是数字类型，执行累加操作，
             // 否则打印counter的值
             if (message instanceof Number) {
-                counter += ((Number)message).intValue();
+                counter += ((Number) message).intValue();
             } else {
                 System.out.println(counter);
             }

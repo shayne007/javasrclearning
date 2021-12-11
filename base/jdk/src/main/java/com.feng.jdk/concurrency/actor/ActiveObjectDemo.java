@@ -1,6 +1,4 @@
-package com.feng.concurrency.actor;
-
-import static net.mindview.util.Print.print;
+package com.feng.jdk.concurrency.actor;
 
 import java.util.List;
 import java.util.Random;
@@ -10,6 +8,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+
+import static net.mindview.util.Print.print;
 
 /**
  * @author fengsy

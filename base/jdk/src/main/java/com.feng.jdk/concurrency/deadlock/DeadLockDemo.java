@@ -1,9 +1,8 @@
-package com.feng.concurrency.deadlock;
+package com.feng.jdk.concurrency.deadlock;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
-import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -14,30 +13,7 @@ import java.util.concurrent.TimeUnit;
  * @Description
  */
 
-public class DeadLockDemo extends Thread {
-    private String first;
-    private String second;
-
-    public DeadLockDemo(String name, String first, String second) {
-        super(name);
-        this.first = first;
-        this.second = second;
-    }
-
-    @Override
-    public void run() {
-        synchronized (first) {
-            System.out.println(this.getName() + " obtained: " + first);
-            try {
-                Thread.sleep(1000L);
-                synchronized (second) {
-                    System.out.println(this.getName() + " obtained: " + second);
-                }
-            } catch (InterruptedException e) {
-                // Do nothing
-            }
-        }
-    }
+public class DeadLockDemo {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -59,11 +35,39 @@ public class DeadLockDemo extends Thread {
         // 死锁样例代码…
         String lockA = "lockA";
         String lockB = "lockB";
-        DeadLockDemo t1 = new DeadLockDemo("Thread1", lockA, lockB);
-        DeadLockDemo t2 = new DeadLockDemo("Thread2", lockB, lockA);
+        Thread t1 = new TaskThread("Thread1", lockA, lockB);
+        Thread t2 = new TaskThread("Thread2", lockB, lockA);
         t1.start();
         t2.start();
         t1.join();
         t2.join();
     }
+
+    static class TaskThread extends Thread {
+        private String first;
+        private String second;
+
+        public TaskThread(String name, String first, String second) {
+            super(name);
+            this.first = first;
+            this.second = second;
+        }
+
+        @Override
+        public void run() {
+            synchronized (first) {
+                System.out.println(this.getName() + " obtained: " + first);
+                try {
+                    Thread.sleep(1000L);
+                    synchronized (second) {
+                        System.out.println(this.getName() + " obtained: " + second);
+                    }
+                } catch (InterruptedException e) {
+                    // Do nothing
+                }
+            }
+        }
+    }
+
+
 }

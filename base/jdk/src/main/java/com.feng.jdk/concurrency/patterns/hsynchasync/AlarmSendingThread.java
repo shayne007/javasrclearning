@@ -1,9 +1,9 @@
-package com.feng.concurrency.patterns.hsynchasync;
+package com.feng.jdk.concurrency.patterns.hsynchasync;
 
-import com.feng.concurrency.patterns.guardedsuspension.AlarmAgent;
-import com.feng.concurrency.patterns.guardedsuspension.AlarmInfo;
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AlarmType;
+import com.feng.jdk.concurrency.patterns.guardedsuspension.AlarmAgent;
+import com.feng.jdk.concurrency.patterns.guardedsuspension.AlarmInfo;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AlarmType;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -78,7 +78,7 @@ public class AlarmSendingThread extends AbstractTerminatableThread {
             AtomicInteger prevSubmittedCounter;
 
             prevSubmittedCounter =
-                submittedAlarmRegistry.putIfAbsent(type.toString() + ':' + id + '@' + extraInfo, new AtomicInteger(0));
+                    submittedAlarmRegistry.putIfAbsent(type.toString() + ':' + id + '@' + extraInfo, new AtomicInteger(0));
             if (null == prevSubmittedCounter) {
                 alarmQueue.put(alarmInfo);
                 terminationToken.reservations.incrementAndGet();

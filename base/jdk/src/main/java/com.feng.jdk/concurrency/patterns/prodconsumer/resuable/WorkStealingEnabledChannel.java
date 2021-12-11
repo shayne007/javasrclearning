@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.prodconsumer.resuable;
+package com.feng.jdk.concurrency.patterns.prodconsumer.resuable;
 
 import java.util.concurrent.BlockingDeque;
 

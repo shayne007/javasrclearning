@@ -1,4 +1,6 @@
-package com.feng.io.file;
+package com.feng.jdk.io.file;
+
+import net.mindview.util.PPrint;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -6,8 +8,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
-
-import net.mindview.util.PPrint;
 
 /**
  * @author fengsy
@@ -67,9 +67,9 @@ public class Directory {
                 result.dirs.add(item);
                 result.addAll(recurseDirs(item, regex));
             } else // Regular file
-            if (item.getName().matches(regex)) {
-                result.files.add(item);
-            }
+                if (item.getName().matches(regex)) {
+                    result.files.add(item);
+                }
         }
         return result;
     }

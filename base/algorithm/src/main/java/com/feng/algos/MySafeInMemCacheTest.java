@@ -77,7 +77,7 @@ public class MySafeInMemCacheTest {
 
         long start = System.currentTimeMillis();
         cache.cleanup();
-        double finish = (double)(System.currentTimeMillis() - start) / 1000.0;
+        double finish = (double) (System.currentTimeMillis() - start) / 1000.0;
 
         System.out.println("Cleanup times for " + size + " objects are " + finish + " s");
 

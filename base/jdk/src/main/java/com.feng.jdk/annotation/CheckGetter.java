@@ -1,4 +1,4 @@
-package com.feng.annotation;
+package com.feng.jdk.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,4 +7,5 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.FIELD, ElementType.TYPE})
 @Retention(RetentionPolicy.SOURCE)
-public @interface CheckGetter {}
+public @interface CheckGetter {
+}

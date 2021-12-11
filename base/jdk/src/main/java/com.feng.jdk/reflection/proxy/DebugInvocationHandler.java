@@ -1,4 +1,4 @@
-package com.feng.reflection.proxy;
+package com.feng.jdk.reflection.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
@@ -21,7 +21,7 @@ public class DebugInvocationHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args)
-        throws InvocationTargetException, IllegalAccessException {
+            throws InvocationTargetException, IllegalAccessException {
         // 调用方法之前，我们可以添加自己的操作
         System.out.println("before method " + method.getName());
         Object result = method.invoke(target, args);

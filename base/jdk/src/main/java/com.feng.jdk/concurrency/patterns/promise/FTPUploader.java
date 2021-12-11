@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.promise;
+package com.feng.jdk.concurrency.patterns.promise;
 
 import java.io.File;
 

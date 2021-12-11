@@ -1,4 +1,4 @@
-package com.feng.jdk.concurrency;
+package com.feng.jdk.concurrency.toolclass;
 
 import java.util.Queue;
 import java.util.concurrent.locks.Condition;
@@ -11,12 +11,12 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Description
  */
 
-public class BlockedQueue<T> {
+public class LockConditionBlockedQueueDemo<T> {
 
     private Queue<T> queue;
     private int capacity;
 
-    BlockedQueue(int capacity) {
+    LockConditionBlockedQueueDemo(int capacity) {
         this.capacity = capacity;
     }
 

@@ -1,6 +1,6 @@
-package com.feng.concurrency.patterns.guardedsuspension;
+package com.feng.jdk.concurrency.patterns.guardedsuspension;
 
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AlarmType;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AlarmType;
 
 /**
  * @author fengsy
@@ -57,7 +57,7 @@ public class AlarmInfo {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        AlarmInfo other = (AlarmInfo)obj;
+        AlarmInfo other = (AlarmInfo) obj;
         if (extraInfo == null) {
             if (other.extraInfo != null)
                 return false;

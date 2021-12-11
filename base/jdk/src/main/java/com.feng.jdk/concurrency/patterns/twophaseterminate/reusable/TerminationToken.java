@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.twophaseterminate.reusable;
+package com.feng.jdk.concurrency.patterns.twophaseterminate.reusable;
 
 import java.lang.ref.WeakReference;
 import java.util.Queue;
@@ -39,8 +39,7 @@ public class TerminationToken {
     /**
      * 通知TerminationToken实例：共享该实例的所有可停止线程中的一个线程停止了， 以便其停止其它未被停止的线程。
      *
-     * @param thread
-     *            已停止的线程
+     * @param thread 已停止的线程
      */
     protected void notifyThreadTermination(Terminatable thread) {
         WeakReference<Terminatable> wrThread;

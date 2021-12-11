@@ -1,9 +1,9 @@
 package com.feng.kafka.opentracing;
 
-import java.util.function.BiFunction;
-
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.producer.ProducerRecord;
+
+import java.util.function.BiFunction;
 
 /**
  * @author fengsy
@@ -14,9 +14,9 @@ public class ClientSpanNameProvider {
 
     // Operation Name as Span Name
     public static BiFunction<String, ConsumerRecord, String> CONSUMER_OPERATION_NAME =
-        (operationName, consumerRecord) -> replaceIfNull(operationName, "unknown");
+            (operationName, consumerRecord) -> replaceIfNull(operationName, "unknown");
     public static BiFunction<String, ProducerRecord, String> PRODUCER_OPERATION_NAME =
-        (operationName, producerRecord) -> replaceIfNull(operationName, "unknown");
+            (operationName, producerRecord) -> replaceIfNull(operationName, "unknown");
 
     public static BiFunction<String, ConsumerRecord, String> CONSUMER_PREFIXED_OPERATION_NAME(final String prefix) {
         return (operationName, consumerRecord) -> replaceIfNull(prefix, "") + replaceIfNull(operationName, "unknown");
@@ -28,9 +28,9 @@ public class ClientSpanNameProvider {
 
     // Topic as Span Name
     public static BiFunction<String, ConsumerRecord, String> CONSUMER_TOPIC =
-        (operationName, consumerRecord) -> replaceIfNull(consumerRecord, "unknown");
+            (operationName, consumerRecord) -> replaceIfNull(consumerRecord, "unknown");
     public static BiFunction<String, ProducerRecord, String> PRODUCER_TOPIC =
-        (operationName, producerRecord) -> replaceIfNull(producerRecord, "unknown");
+            (operationName, producerRecord) -> replaceIfNull(producerRecord, "unknown");
 
     public static BiFunction<String, ConsumerRecord, String> CONSUMER_PREFIXED_TOPIC(final String prefix) {
         return (operationName, consumerRecord) -> replaceIfNull(prefix, "") + replaceIfNull(consumerRecord, "unknown");
@@ -42,20 +42,20 @@ public class ClientSpanNameProvider {
 
     // Operation Name and Topic as Span Name
     public static BiFunction<String, ConsumerRecord, String> CONSUMER_OPERATION_NAME_TOPIC = (operationName,
-        consumerRecord) -> replaceIfNull(operationName, "unknown") + " - " + replaceIfNull(consumerRecord, "unknown");
+                                                                                              consumerRecord) -> replaceIfNull(operationName, "unknown") + " - " + replaceIfNull(consumerRecord, "unknown");
     public static BiFunction<String, ProducerRecord, String> PRODUCER_OPERATION_NAME_TOPIC = (operationName,
-        producerRecord) -> replaceIfNull(operationName, "unknown") + " - " + replaceIfNull(producerRecord, "unknown");
+                                                                                              producerRecord) -> replaceIfNull(operationName, "unknown") + " - " + replaceIfNull(producerRecord, "unknown");
 
     public static BiFunction<String, ConsumerRecord, String>
-        CONSUMER_PREFIXED_OPERATION_NAME_TOPIC(final String prefix) {
+    CONSUMER_PREFIXED_OPERATION_NAME_TOPIC(final String prefix) {
         return (operationName, consumerRecord) -> replaceIfNull(prefix, "") + replaceIfNull(operationName, "unknown")
-            + " - " + replaceIfNull(consumerRecord, "unknown");
+                + " - " + replaceIfNull(consumerRecord, "unknown");
     }
 
     public static BiFunction<String, ProducerRecord, String>
-        PRODUCER_PREFIXED_OPERATION_NAME_TOPIC(final String prefix) {
+    PRODUCER_PREFIXED_OPERATION_NAME_TOPIC(final String prefix) {
         return (operationName, producerRecord) -> replaceIfNull(prefix, "") + replaceIfNull(operationName, "unknown")
-            + " - " + replaceIfNull(producerRecord, "unknown");
+                + " - " + replaceIfNull(producerRecord, "unknown");
     }
 
     private static String replaceIfNull(String input, String replacement) {

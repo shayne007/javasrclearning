@@ -7,11 +7,9 @@ package com.feng.algos.myLruCache;
 
 /**
  * LRU缓存。你需要继承这个抽象类来实现LRU缓存。
- * 
- * @param <K>
- *            数据Key
- * @param <V>
- *            数据值
+ *
+ * @param <K> 数据Key
+ * @param <V> 数据值
  */
 public abstract class LruCache<K, V> implements Storage<K, V> {
     /**

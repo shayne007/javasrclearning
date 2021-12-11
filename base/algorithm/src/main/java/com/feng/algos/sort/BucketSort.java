@@ -11,10 +11,8 @@ public class BucketSort {
     /**
      * 桶排序
      *
-     * @param arr
-     *            数组
-     * @param bucketSize
-     *            桶容量
+     * @param arr        数组
+     * @param bucketSize 桶容量
      */
     public static void bucketSort(int[] arr, int bucketSize) {
         if (arr.length < 2) {
@@ -73,7 +71,7 @@ public class BucketSort {
     }
 
     public static void main(String[] args) {
-        int[] data = new int[] {80, 60, 59, 30, 70, 100, 92, 77, 76, 77, 77, 77, 77, 78, 88};
+        int[] data = new int[]{80, 60, 59, 30, 70, 100, 92, 77, 76, 77, 77, 77, 77, 78, 88};
         bucketSort(data, 5);
         System.out.println(Arrays.toString(data));
     }

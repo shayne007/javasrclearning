@@ -109,39 +109,38 @@ public class PublisherConfirms {
 
             ch.confirmSelect();
 
-            ConcurrentNavigableMap<Long, String> outstandingConfirms = new ConcurrentSkipListMap<>();
+            ConcurrentNavigableMap<Long, String> confirms = new ConcurrentSkipListMap<>();
 
-            ConfirmCallback cleanOutstandingConfirms = (sequenceNumber, multiple) -> {
+            ConfirmCallback cleanConfirms = (sequenceNumber, multiple) -> {
                 if (multiple) {
-                    ConcurrentNavigableMap<Long, String> confirmed = outstandingConfirms.headMap(
+                    ConcurrentNavigableMap<Long, String> confirmed = confirms.headMap(
                             sequenceNumber, true
                     );
                     confirmed.clear();
                 } else {
-                    outstandingConfirms.remove(sequenceNumber);
+                    confirms.remove(sequenceNumber);
                 }
             };
 
             ConfirmCallback nackedCallback = (sequenceNumber, multiple) -> {
-                String body = outstandingConfirms.get(sequenceNumber);
+                String body = confirms.get(sequenceNumber);
                 System.err.format(
                         "Message with body %s has been nack-ed. Sequence number: %d, multiple: %b%n",
                         body, sequenceNumber, multiple
                 );
-                cleanOutstandingConfirms.handle(sequenceNumber, multiple);
+                cleanConfirms.handle(sequenceNumber, multiple);
             };
 
-            ch.addConfirmListener(cleanOutstandingConfirms, nackedCallback);
-
+            ch.addConfirmListener(cleanConfirms, nackedCallback);
             long start = System.nanoTime();
             for (int i = 0; i < MESSAGE_COUNT; i++) {
                 String body = String.valueOf(i);
                 //发送消息前记录sequenceNumber并correlate消息
-                outstandingConfirms.put(ch.getNextPublishSeqNo(), body);
+                confirms.put(ch.getNextPublishSeqNo(), body);
                 ch.basicPublish("", queue, null, body.getBytes());
             }
 
-            if (!waitUntil(Duration.ofSeconds(60), () -> outstandingConfirms.isEmpty())) {
+            if (!waitUntil(Duration.ofSeconds(60), () -> confirms.isEmpty())) {
                 throw new IllegalStateException("All messages could not be confirmed in 60 seconds");
             }
 

@@ -31,7 +31,7 @@ public class KthLargest {
 
     public static void main(String[] args) {
         int k = 3;
-        int[] arr = new int[] {4, 5, 8, 2};
+        int[] arr = new int[]{4, 5, 8, 2};
         KthLargest kthLargest = new KthLargest(k, arr);
 
     }

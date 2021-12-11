@@ -1,12 +1,12 @@
-package com.feng.concurrency.toolclass;
-
-import static net.mindview.util.Print.print;
+package com.feng.jdk.concurrency.toolclass;
 
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+
+import static net.mindview.util.Print.print;
 
 /**
  * @author fengsy

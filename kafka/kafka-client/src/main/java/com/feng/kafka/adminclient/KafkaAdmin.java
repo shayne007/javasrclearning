@@ -1,13 +1,5 @@
 package com.feng.kafka.adminclient;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Map;
-import java.util.Properties;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.apache.kafka.clients.admin.CreateTopicsResult;
@@ -18,22 +10,32 @@ import org.apache.kafka.clients.consumer.OffsetAndMetadata;
 import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.requests.DescribeLogDirsResponse;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Map;
+import java.util.Properties;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
 /**
  * @author fengsy
  * @date 3/24/21
  * @Description
+ * @see AdminClient
  */
 public class KafkaAdmin {
     public static void main(String[] args) throws InterruptedException, ExecutionException, TimeoutException {
 
         Properties props = new Properties();
-        props.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
-        props.put("request.timeout.ms", 600000);
+        props.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "110.42.251.23:9092");
+        props.put(AdminClientConfig.REQUEST_TIMEOUT_MS_CONFIG, 600000);
 
-        testTopic(props);
+//        testTopic(props);
 
-        testGroup(props);
+//        testGroup(props);
 
+        testBroker(props);
     }
 
     private static void testGroup(Properties props) throws InterruptedException, ExecutionException, TimeoutException {
@@ -41,7 +43,7 @@ public class KafkaAdmin {
         try (AdminClient client = AdminClient.create(props)) {
             ListConsumerGroupOffsetsResult result = client.listConsumerGroupOffsets(groupID);
             Map<TopicPartition, OffsetAndMetadata> offsets =
-                result.partitionsToOffsetAndMetadata().get(10, TimeUnit.SECONDS);
+                    result.partitionsToOffsetAndMetadata().get(10, TimeUnit.SECONDS);
             System.out.println(offsets);
         }
     }
@@ -49,7 +51,7 @@ public class KafkaAdmin {
     private static void testTopic(Properties props) throws InterruptedException, ExecutionException, TimeoutException {
         String newTopicName = "test-topic";
         try (AdminClient client = AdminClient.create(props)) {
-            NewTopic newTopic = new NewTopic(newTopicName, 10, (short)3);
+            NewTopic newTopic = new NewTopic(newTopicName, 10, (short) 3);
             CreateTopicsResult result = client.createTopics(Arrays.asList(newTopic));
             result.all().get(10, TimeUnit.SECONDS);
         }
@@ -65,9 +67,9 @@ public class KafkaAdmin {
             long size = 0L;
             for (Map<String, DescribeLogDirsResponse.LogDirInfo> logDirInfoMap : ret.all().get().values()) {
                 size += logDirInfoMap.values().stream().map(logDirInfo -> logDirInfo.replicaInfos)
-                    .flatMap(topicPartitionReplicaInfoMap -> topicPartitionReplicaInfoMap.values().stream()
-                        .map(replicaInfo -> replicaInfo.size))
-                    .mapToLong(Long::longValue).sum();
+                        .flatMap(topicPartitionReplicaInfoMap -> topicPartitionReplicaInfoMap.values().stream()
+                                .map(replicaInfo -> replicaInfo.size))
+                        .mapToLong(Long::longValue).sum();
             }
             System.out.println(size);
         }

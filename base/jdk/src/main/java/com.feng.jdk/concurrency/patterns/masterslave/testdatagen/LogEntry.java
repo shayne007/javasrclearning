@@ -5,7 +5,7 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.masterslave.testdatagen;
+package com.feng.jdk.concurrency.patterns.masterslave.testdatagen;
 
 public class LogEntry {
     public long timeStamp;
@@ -23,8 +23,8 @@ public class LogEntry {
     @Override
     public String toString() {
         return "LogEntry [timeStamp=" + timeStamp + ", interfaceType=" + interfaceType + ", recordType=" + recordType
-            + ", interfaceName=" + interfaceName + ", operationName=" + operationName + ", srcDevice=" + srcDevice
-            + ", dstDevice=" + dstDevice + ", traceId=" + traceId + ", calling=" + calling + ", callee=" + callee + "]";
+                + ", interfaceName=" + interfaceName + ", operationName=" + operationName + ", srcDevice=" + srcDevice
+                + ", dstDevice=" + dstDevice + ", traceId=" + traceId + ", calling=" + calling + ", callee=" + callee + "]";
     }
 
 }

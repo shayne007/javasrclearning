@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.twophaseterminate.reusable;
+package com.feng.jdk.concurrency.patterns.twophaseterminate.reusable;
 
 /**
  * @author fengsy

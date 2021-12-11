@@ -1,5 +1,14 @@
 package com.feng.lock;
 
+import lombok.extern.slf4j.Slf4j;
+import org.apache.zookeeper.CreateMode;
+import org.apache.zookeeper.KeeperException;
+import org.apache.zookeeper.WatchedEvent;
+import org.apache.zookeeper.Watcher;
+import org.apache.zookeeper.ZooDefs;
+import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.data.Stat;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -9,16 +18,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
-
-import org.apache.zookeeper.CreateMode;
-import org.apache.zookeeper.KeeperException;
-import org.apache.zookeeper.WatchedEvent;
-import org.apache.zookeeper.Watcher;
-import org.apache.zookeeper.ZooDefs;
-import org.apache.zookeeper.ZooKeeper;
-import org.apache.zookeeper.data.Stat;
-
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * @ClassName: ZkDistributeLock
@@ -123,7 +122,6 @@ public class ZkDistributeLock implements Lock, Watcher {
     @Override
     public void lock() {
         if (this.tryLock()) {
-
             return;
         } else {
             try {
@@ -132,7 +130,6 @@ public class ZkDistributeLock implements Lock, Watcher {
                 log.error(">>>>>>>>>Exception:{}", e.getMessage());
             }
         }
-
     }
 
     @Override
@@ -146,7 +143,7 @@ public class ZkDistributeLock implements Lock, Watcher {
         try {
             // 创建临时子节点---zookeeper临时有序节点
             myZnode = zk.create(LOCK_ROOT_PATH + "/" + lockName + LOCK_PREFIX, masterIp.getBytes(),
-                ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+                    ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
             // 取出所有子节点
             List<String> subNodes = zk.getChildren(LOCK_ROOT_PATH, false);
             if (subNodes.size() == 1) {
@@ -250,10 +247,8 @@ public class ZkDistributeLock implements Lock, Watcher {
     }
 
     /**
-     * @param waitNode
-     *            等待节点
-     * @param waitTime
-     *            等待时间
+     * @param waitNode 等待节点
+     * @param waitTime 等待时间
      * @return
      * @throws Exception
      */

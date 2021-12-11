@@ -1,10 +1,10 @@
 package com.feng.kafka.interceptors.producer;
 
-import java.util.Map;
-
 import org.apache.kafka.clients.producer.ProducerInterceptor;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
+
+import java.util.Map;
 
 /**
  * @author fengsy
@@ -16,7 +16,7 @@ public class AddTimeStampInterceptor implements ProducerInterceptor {
     public ProducerRecord onSend(ProducerRecord record) {
         // 创建一个新的record，把时间戳写入消息体的最前部
         return new ProducerRecord(record.topic(), record.partition(), record.timestamp(), record.key(),
-            System.currentTimeMillis() + "," + record.value().toString());
+                "time is " + System.currentTimeMillis() + ", and value is " + record.value().toString());
     }
 
     @Override

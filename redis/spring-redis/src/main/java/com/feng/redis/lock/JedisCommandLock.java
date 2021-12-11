@@ -1,27 +1,19 @@
-package com.crazymaker.springcloud.standard.lock;
+package com.feng.redis.lock;
 
-import com.crazymaker.springcloud.common.exception.BusinessException;
-import com.crazymaker.springcloud.common.util.ThreadUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.script.RedisScript;
 import redis.clients.jedis.Jedis;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
 
 @Slf4j
 @Data
 @AllArgsConstructor
 public class JedisCommandLock {
 
-    private  RedisTemplate redisTemplate;
+    private RedisTemplate redisTemplate;
 
     private static final String LOCK_SUCCESS = "OK";
     private static final String SET_IF_NOT_EXIST = "NX";
@@ -29,16 +21,17 @@ public class JedisCommandLock {
 
     /**
      * 尝试获取分布式锁
-     * @param jedis Redis客户端
-     * @param lockKey 锁
-     * @param requestId 请求标识
+     *
+     * @param jedis      Redis客户端
+     * @param lockKey    锁
+     * @param requestId  请求标识
      * @param expireTime 超期时间
      * @return 是否获取成功
      */
-    public static   boolean tryGetDistributedLock(Jedis jedis, String lockKey, String requestId, int expireTime) {
+    public static boolean tryGetDistributedLock(Jedis jedis, String lockKey, String requestId, int expireTime) {
 
-        String result = jedis.set(lockKey, requestId, SET_IF_NOT_EXIST, SET_WITH_EXPIRE_TIME, expireTime);
-
+//        String result = jedis.set(lockKey, requestId, SET_IF_NOT_EXIST, SET_WITH_EXPIRE_TIME, expireTime);
+        String result = jedis.psetex(lockKey, expireTime, requestId);
         if (LOCK_SUCCESS.equals(result)) {
             return true;
         }
@@ -50,8 +43,9 @@ public class JedisCommandLock {
 
     /**
      * 释放分布式锁
-     * @param jedis Redis客户端
-     * @param lockKey 锁
+     *
+     * @param jedis     Redis客户端
+     * @param lockKey   锁
      * @param requestId 请求标识
      * @return 是否释放成功
      */

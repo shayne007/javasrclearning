@@ -1,4 +1,4 @@
-package com.feng.string;
+package com.feng.jdk.string;
 
 /**
  * @author fengsy
@@ -20,7 +20,7 @@ public final class MyString {
     public MyString(final char[] chars) {
         byte[] val = new byte[chars.length];
         for (int i = 0; i < chars.length; i++) {
-            val[i] = (byte)chars[i];
+            val[i] = (byte) chars[i];
         }
         value = val;
     }
@@ -31,7 +31,7 @@ public final class MyString {
             return true;
         }
         if (anObject instanceof MyString) {
-            MyString aString = (MyString)anObject;
+            MyString aString = (MyString) anObject;
             return equals(value, aString.value);
         }
         return false;

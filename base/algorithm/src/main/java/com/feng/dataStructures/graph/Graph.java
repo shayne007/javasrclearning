@@ -18,10 +18,8 @@ public class Graph {
     /**
      * 添加边
      *
-     * @param s
-     *            顶点
-     * @param t
-     *            顶点
+     * @param s 顶点
+     * @param t 顶点
      */
     public void addEdge(int s, int t) { // 无向图一条边存两次
         adj[s].add(t);

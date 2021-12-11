@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.masterslave.reusable;
+package com.feng.jdk.concurrency.patterns.masterslave.reusable;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -15,7 +15,7 @@ public class RoundRobinSubTaskDispatchStrategy<T, V> implements SubTaskDispatchS
 
     @Override
     public Iterator<Future<V>> dispatch(Set<? extends SlaveSpec<T, V>> slaves, TaskDivideStrategy<T> taskDivideStrategy)
-        throws InterruptedException {
+            throws InterruptedException {
         final List<Future<V>> subResults = new LinkedList<Future<V>>();
         T subTask;
 
@@ -26,7 +26,7 @@ public class RoundRobinSubTaskDispatchStrategy<T, V> implements SubTaskDispatchS
 
         while (null != (subTask = taskDivideStrategy.nextChunk())) {
             i = (i + 1) % slaveCount;
-            subTaskResultPromise = ((WorkerThreadSlave<T, V>)arrSlaves[i]).submit(subTask);
+            subTaskResultPromise = ((WorkerThreadSlave<T, V>) arrSlaves[i]).submit(subTask);
             subResults.add(subTaskResultPromise);
         }
 

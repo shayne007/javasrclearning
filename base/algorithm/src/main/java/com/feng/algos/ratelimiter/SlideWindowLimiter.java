@@ -77,7 +77,7 @@ public class SlideWindowLimiter {
     private void slide() {
         long now = System.currentTimeMillis();
         long time = lastNode.getTime();
-        int num = (int)((now - time) / slotTime);
+        int num = (int) ((now - time) / slotTime);
         if (num > slot) {
             num = slot;
         }

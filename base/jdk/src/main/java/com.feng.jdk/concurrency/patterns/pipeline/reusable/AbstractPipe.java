@@ -5,19 +5,16 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.pipeline.reusable;
+package com.feng.jdk.concurrency.patterns.pipeline.reusable;
 
 import java.util.concurrent.TimeUnit;
 
 /**
  * Pipe的抽象实现类。 该类会调用其子类实现的doProcess方法对输入元素进行处理。并将相应的输出作为 下一个Pipe实例的输入。
- * 
- * @author Viscent Huang
  *
- * @param <IN>
- *            输入类型
- * @param <OUT>
- *            输出类型
+ * @param <IN>  输入类型
+ * @param <OUT> 输出类型
+ * @author Viscent Huang
  */
 public abstract class AbstractPipe<IN, OUT> implements Pipe<IN, OUT> {
     protected volatile Pipe<?, ?> nextPipe = null;
@@ -42,9 +39,8 @@ public abstract class AbstractPipe<IN, OUT> implements Pipe<IN, OUT> {
 
     /**
      * 留给子类实现。用于子类实现其任务处理逻辑。
-     * 
-     * @param input
-     *            输入元素（任务）
+     *
+     * @param input 输入元素（任务）
      * @return 任务的处理结果
      * @throws PipeException
      */
@@ -57,7 +53,7 @@ public abstract class AbstractPipe<IN, OUT> implements Pipe<IN, OUT> {
             OUT out = doProcess(input);
             if (null != nextPipe) {
                 if (null != out) {
-                    ((Pipe<OUT, ?>)nextPipe).process(out);
+                    ((Pipe<OUT, ?>) nextPipe).process(out);
                 }
             }
         } catch (InterruptedException e) {

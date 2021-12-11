@@ -1,6 +1,6 @@
-package com.crazymaker.springcloud.standard.properties;
+package com.feng.redis.properties;
 
-import com.crazymaker.springcloud.standard.ratelimit.RedisRateLimitImpl;
+import com.feng.redis.ratelimit.RedisRateLimitImpl;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

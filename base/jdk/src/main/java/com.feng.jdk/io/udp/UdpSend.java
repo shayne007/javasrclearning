@@ -1,4 +1,4 @@
-package com.feng.io.udp;
+package com.feng.jdk.io.udp;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

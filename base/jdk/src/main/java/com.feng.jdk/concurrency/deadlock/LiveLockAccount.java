@@ -1,4 +1,4 @@
-package com.feng.jdk.concurrency.livelock;
+package com.feng.jdk.concurrency.deadlock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -9,21 +9,21 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Date 11/13/21
  */
 
-class Account {
+class LiveLockAccount {
     private int balance;
     private final Lock lock = new ReentrantLock();
 
     // 转账
-    void transfer(Account tar, int amt) {
+    void transfer(LiveLockAccount target, int amt) {
         while (true) {
             if (this.lock.tryLock()) {
                 try {
-                    if (tar.lock.tryLock()) {
+                    if (target.lock.tryLock()) {
                         try {
                             this.balance -= amt;
-                            tar.balance += amt;
+                            target.balance += amt;
                         } finally {
-                            tar.lock.unlock();
+                            target.lock.unlock();
                         }
                     }//if
                 } finally {

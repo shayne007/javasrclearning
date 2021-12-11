@@ -1,11 +1,10 @@
-package com.feng.concurrency.patterns.prodconsumer.resuable;
+package com.feng.jdk.concurrency.patterns.prodconsumer.resuable;
 
 import java.util.concurrent.BlockingQueue;
 
 /**
  * @author fengsy
  * @date 5/18/21
- * 
  * @Description
  */
 public class BlockingQueueChannel<P> implements Channel<P> {

@@ -11,11 +11,9 @@ import java.util.Arrays;
  * @date 3/26/21
  * @Description
  */
-public class Demo {
+public class ConsumerDemo {
     public static void main(String[] args) {
-//        sendMsg();
         consumeMsg();
-
     }
 
     private static void consumeMsg() {
@@ -29,7 +27,7 @@ public class Demo {
         KafkaConsumerRunner runner = new ThreadPoolKafkaConsumerRunner(consumer, Arrays.asList(topic), 2000L);
         new Thread(runner).start();
         try {
-            Thread.sleep(10000);
+            Thread.sleep(100000);
             runner.shutdown();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -37,13 +35,4 @@ public class Demo {
 
     }
 
-    private static void sendMsg() {
-        String topic = "topic-test";
-        String value = "msg string value";
-        String brokerlist = "110.42.251.23:9092";
-        // String brokerlist = "127.0.0.1:55000,127.0.0.1:55001";
-        for (int i = 0; i < 100; i++) {
-            KafkaProducerUtil.sendMessage(topic, value, brokerlist);
-        }
-    }
 }

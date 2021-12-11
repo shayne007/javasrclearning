@@ -1,4 +1,4 @@
-package com.feng.redis;
+package com.feng.redis.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContextAware;

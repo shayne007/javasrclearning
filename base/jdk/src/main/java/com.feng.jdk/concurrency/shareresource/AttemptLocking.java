@@ -1,4 +1,4 @@
-package com.feng.concurrency.shareresource;
+package com.feng.jdk.concurrency.shareresource;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;

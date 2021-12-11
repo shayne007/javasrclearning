@@ -1,4 +1,4 @@
-package com.feng.concurrency.util;
+package com.feng.jdk.concurrency.util;
 
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
@@ -54,9 +54,8 @@ public class Debug {
 
     public static void printf(Label label, String format, Object... args) {
         SimpleDateFormat sdf = sdfWrapper.get();
-        @SuppressWarnings("resource")
-        final PrintStream ps = label == Label.INFO ? System.out : System.err;
+        @SuppressWarnings("resource") final PrintStream ps = label == Label.INFO ? System.out : System.err;
         ps.printf('[' + sdf.format(new Date()) + "][" + label.getName() + "][" + Thread.currentThread().getName() + "]:"
-            + format + " %n", args);
+                + format + " %n", args);
     }
 }

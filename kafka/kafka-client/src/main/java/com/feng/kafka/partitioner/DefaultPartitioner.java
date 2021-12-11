@@ -1,5 +1,10 @@
 package com.feng.kafka.partitioner;
 
+import org.apache.kafka.clients.producer.Partitioner;
+import org.apache.kafka.common.Cluster;
+import org.apache.kafka.common.PartitionInfo;
+import org.apache.kafka.common.utils.Utils;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -7,15 +12,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.kafka.clients.producer.Partitioner;
-import org.apache.kafka.common.Cluster;
-import org.apache.kafka.common.PartitionInfo;
-import org.apache.kafka.common.utils.Utils;
-
 /**
+ * kafka client producer 默认使用的分区路由策略
+ *
  * @author fengsy
  * @date 3/21/21
  * @Description
+ * @see org.apache.kafka.clients.producer.internals.DefaultPartitioner
  */
 public class DefaultPartitioner implements Partitioner {
     private final ConcurrentMap<String, AtomicInteger> topicCounterMap = new ConcurrentHashMap();

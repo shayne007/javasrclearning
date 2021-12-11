@@ -1,4 +1,4 @@
-package com.feng.concurrency.toolclass;
+package com.feng.jdk.concurrency.toolclass;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -169,7 +169,7 @@ public class GreenhouseScheduler {
                 // Calendar must be cloned, otherwise all
                 // DataPoints hold references to the same lastTime.
                 // For a basic object like Calendar, clone() is OK.
-                data.add(new DataPoint((Calendar)lastTime.clone(), lastTemp, lastHumidity));
+                data.add(new DataPoint((Calendar) lastTime.clone(), lastTemp, lastHumidity));
             }
         }
     }

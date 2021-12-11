@@ -1,4 +1,4 @@
-package com.feng.io;
+package com.feng.jdk.io;
 
 import java.nio.ByteBuffer;
 
@@ -27,7 +27,7 @@ public class ByteBufferDemo {
         // 调用rewind()之后将指针移动到下标0即位置1
         // buffer.rewind();
         System.out
-            .println("position:" + buffer.position() + ",limit:" + buffer.limit() + ",capacity:" + buffer.capacity());
+                .println("position:" + buffer.position() + ",limit:" + buffer.limit() + ",capacity:" + buffer.capacity());
         // 执行写入操作,指针会自动移动
         buffer.putChar('a');
         // buffer.put((byte)'a');
@@ -41,7 +41,7 @@ public class ByteBufferDemo {
         // 将当前位置设置为EOF,指针移动到下标0即位置1
         buffer.flip();
         System.out
-            .println("position:" + buffer.position() + ",limit:" + buffer.limit() + ",capacity:" + buffer.capacity());
+                .println("position:" + buffer.position() + ",limit:" + buffer.limit() + ",capacity:" + buffer.capacity());
         // 上一行代码相当于下面两句
         // buffer.limit(4);
         // buffer.position(0);
@@ -51,7 +51,7 @@ public class ByteBufferDemo {
         // 将指针移动到下标1即位置2
         buffer.position(1);
         System.out
-            .println("position:" + buffer.position() + ",limit:" + buffer.limit() + ",capacity:" + buffer.capacity());
+                .println("position:" + buffer.position() + ",limit:" + buffer.limit() + ",capacity:" + buffer.capacity());
 
         // 进行compact压缩操作,compact操作会将EOF位置重置为最大容量10
         // 注意:该压缩操作是将下标1即位置2到位置4的值移动到位置1到位置3,位置4上的值4a不变
@@ -61,13 +61,13 @@ public class ByteBufferDemo {
 
         // 注意:执行压缩compact操作后指针指向下标3即位置4,继续写入数据时会覆盖数据
         System.out
-            .println("position:" + buffer.position() + ",limit:" + buffer.limit() + ",capacity:" + buffer.capacity());
+                .println("position:" + buffer.position() + ",limit:" + buffer.limit() + ",capacity:" + buffer.capacity());
 
     }
 
     /**
      * 输出ByteBuffer内容
-     * 
+     *
      * @param buffer
      */
     public static void printBuffer(ByteBuffer buffer) {

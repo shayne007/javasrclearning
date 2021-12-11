@@ -1,9 +1,11 @@
-package com.feng.es;
+package com.feng.es.util;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.feng.es.domain.Sku;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
@@ -13,7 +15,6 @@ import java.util.List;
 /**
  * Created by memory_fu on 2019/12/26.
  */
-@Service
 @Slf4j
 public class ElasticsearchUtil {
 
@@ -40,22 +41,22 @@ public class ElasticsearchUtil {
     /**
      * 批量插入档案封面数据
      */
-    public int batchInsert(List<ArchiveTitle> datas) throws IOException {
+    public int batchInsert(List<Sku> datas) throws IOException {
 
         if (datas == null || datas.size() == 0) {
             return 0;
         }
 
         JSONObject indexJsonObject = new JSONObject();
-        indexJsonObject.put("_index", "archive_title_result");
+        indexJsonObject.put("_index", "sku");
         indexJsonObject.put("_type", "_doc");
 
         StringBuilder stringBuilder = new StringBuilder();
-        for (ArchiveTitle archiveTitle : datas) {
+        for (Sku sku : datas) {
             JSONObject jsonObject = new JSONObject();
-            JSONObject fromObject = JSONObject.fromObject(archiveTitle);
+            JSONObject fromObject = JSON.parseObject(JSONObject.toJSONString(sku));
             fromObject.remove("combineCluster");
-            indexJsonObject.put("_id", archiveTitle.getClusterIndex());
+            indexJsonObject.put("_id", sku.getSku_id());
             jsonObject.put("index", indexJsonObject);
 
             stringBuilder.append(jsonObject.toString());
@@ -68,7 +69,7 @@ public class ElasticsearchUtil {
 
         String response = HttpClientUtil.doPost(url, stringBuilder.toString(), auth);
 
-        JSONObject responeObject = JSONObject.fromObject(response);
+        JSONObject responeObject = JSONObject.parseObject(response);
         JSONArray items = responeObject.getJSONArray("items");
 
         return items == null ? 0 : items.size();
@@ -94,8 +95,8 @@ public class ElasticsearchUtil {
                 "http://" + esHost + ":" + esPort + "/" + index + "/_update_by_query?pretty";
 
         String response = HttpClientUtil.doPost(url, jsonObject.toString(), auth);
-        JSONObject responseObject = JSONObject.fromObject(response);
-        int updatedCount = responseObject.getInt("updated");
+        JSONObject responseObject = JSONObject.parseObject(response);
+        int updatedCount = responseObject.getInteger("updated");
 
         return updatedCount;
     }
@@ -111,8 +112,8 @@ public class ElasticsearchUtil {
 
         String response = HttpClientUtil.doPost(url, queryObject.toString(), auth);
 
-        JSONObject jsonObject = JSONObject.fromObject(response);
-        int deletedCount = jsonObject.getInt("deleted");
+        JSONObject jsonObject = JSONObject.parseObject(response);
+        int deletedCount = jsonObject.getInteger("deleted");
 
         return deletedCount;
     }

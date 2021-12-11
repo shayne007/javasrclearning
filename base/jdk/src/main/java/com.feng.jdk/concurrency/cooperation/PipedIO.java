@@ -1,6 +1,4 @@
-package com.feng.concurrency.cooperation;
-
-import static net.mindview.util.Print.print;
+package com.feng.jdk.concurrency.cooperation;
 
 import java.io.IOException;
 import java.io.PipedReader;
@@ -9,6 +7,8 @@ import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+
+import static net.mindview.util.Print.print;
 
 /**
  * @author fengsy
@@ -64,7 +64,7 @@ class Receiver implements Runnable {
         try {
             while (true) {
                 // Blocks until characters are there:
-                print("Read: " + (char)in.read() + ", ");
+                print("Read: " + (char) in.read() + ", ");
             }
         } catch (IOException e) {
             print(e + " Receiver read exception");

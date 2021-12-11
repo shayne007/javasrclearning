@@ -5,22 +5,17 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.masterslave;
-
-import com.feng.concurrency.util.Tools;
+package com.feng.jdk.concurrency.patterns.masterslave;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 
  * @author Viscent Huang
- *
  */
 public class CaseRunner {
 
@@ -74,7 +69,7 @@ public class CaseRunner {
          * 将待统计的日志文件的文件列表通过输入流的形式传递给统计程序TPSStat， 这相当于在Linux下使用管道符“|”所产生的效果。
          */
         System.setIn(pipeIn);
-        TPSStat.main(new String[] {strLogFileBaseDir});
+        TPSStat.main(new String[]{strLogFileBaseDir});
     }
 
 }

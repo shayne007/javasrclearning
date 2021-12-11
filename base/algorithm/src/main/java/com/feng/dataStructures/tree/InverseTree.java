@@ -1,13 +1,13 @@
 package com.feng.dataStructures.tree;
 
+import com.feng.dataStructures.tree.binary.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.feng.dataStructures.tree.binary.TreeNode;
-
 /**
  * 翻转二叉树
- * 
+ *
  * @author fengsy
  * @date 6/22/21
  * @Description

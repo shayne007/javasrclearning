@@ -1,15 +1,14 @@
 package com.feng.kafka.opentracing;
 
+import io.opentracing.Span;
+import io.opentracing.tag.Tags;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.producer.ProducerRecord;
+
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.producer.ProducerRecord;
-
-import io.opentracing.Span;
-import io.opentracing.tag.Tags;
 
 /**
  * @author fengsy

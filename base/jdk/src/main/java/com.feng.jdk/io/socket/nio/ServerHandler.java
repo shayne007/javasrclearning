@@ -1,4 +1,4 @@
-package com.feng.io.socket.nio;
+package com.feng.jdk.io.socket.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -77,20 +77,20 @@ public class ServerHandler implements Runnable {
 
     /**
      * 处理事件
-     * 
+     *
      * @param key
      * @throws IOException
      */
     private void handleInput(SelectionKey key) throws IOException {
         if (key.isValid()) {
             if (key.isAcceptable()) {
-                ServerSocketChannel ssc = (ServerSocketChannel)key.channel();
+                ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
                 SocketChannel sc = ssc.accept();
                 sc.configureBlocking(false);
                 sc.register(selector, SelectionKey.OP_READ);
             }
             if (key.isReadable()) {
-                SocketChannel sc = (SocketChannel)key.channel();
+                SocketChannel sc = (SocketChannel) key.channel();
                 ByteBuffer readBuff = ByteBuffer.allocate(1024);
                 // 非阻塞的
                 int read = sc.read(readBuff);
@@ -113,7 +113,7 @@ public class ServerHandler implements Runnable {
 
     /**
      * 异步发送应答消息
-     * 
+     *
      * @param sc
      * @param content
      * @throws IOException

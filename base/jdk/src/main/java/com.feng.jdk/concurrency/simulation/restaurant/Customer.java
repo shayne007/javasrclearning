@@ -1,8 +1,8 @@
-package com.feng.concurrency.simulation.restaurant;
-
-import static net.mindview.util.Print.print;
+package com.feng.jdk.concurrency.simulation.restaurant;
 
 import java.util.concurrent.SynchronousQueue;
+
+import static net.mindview.util.Print.print;
 
 /**
  * @author fengsy

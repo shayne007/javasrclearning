@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.feng</groupId>
-    <artifactId>jdk</artifactId>
+    <artifactId>base</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <build>
@@ -22,6 +22,7 @@
     </build>
     <modules>
         <module>algorithm</module>
+        <module>jdk</module>
         <module>jvm</module>
     </modules>
     <properties>

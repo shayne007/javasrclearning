@@ -1,4 +1,4 @@
-package com.feng.oop;
+package com.feng.jdk.oop;
 
 /**
  * @author fengsy
@@ -49,8 +49,8 @@ public class TestInherit {
     public static void main(String[] args) {
         Animal a = new Duck();
         a.getCategory();
-        ((Duck)a).run();
-        ((Duck)a).fly();
+        ((Duck) a).run();
+        ((Duck) a).fly();
         System.out.println(a.i);
         System.out.println("-------------------");
         Duck d = new Duck();

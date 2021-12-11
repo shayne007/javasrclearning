@@ -1,4 +1,4 @@
-package com.feng.io.udp.chat;
+package com.feng.jdk.io.udp.chat;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;

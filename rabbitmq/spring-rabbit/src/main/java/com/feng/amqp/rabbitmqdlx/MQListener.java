@@ -24,7 +24,7 @@ public class MQListener {
     public void handler(@Payload Message message, Channel channel) throws IOException {
         String m = new String(message.getBody());
         try {
-            log.info("Handler 收到消息：{}", m);
+            log.info("{} Handler 收到消息：{}", System.currentTimeMillis(), m);
             throw new RuntimeException("处理消息失败");
         } catch (Exception e) {
             Map<String, Object> headers = message.getMessageProperties().getHeaders();

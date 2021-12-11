@@ -37,8 +37,7 @@ public class SkipList2 {
     /**
      * 优化了作者zheng的插入方法
      *
-     * @param value
-     *            值
+     * @param value 值
      */
     public void insert(int value) {
         int level = head.forwards[0] == null ? 1 : randomLevel();
@@ -76,8 +75,7 @@ public class SkipList2 {
     /**
      * 优化了作者zheng的插入方法2
      *
-     * @param value
-     *            值
+     * @param value 值
      */
     public void insert2(int value) {
         int level = head.forwards[0] == null ? 1 : randomLevel();
@@ -113,8 +111,7 @@ public class SkipList2 {
      * 作者zheng的插入方法，未优化前，优化后参见上面insert()
      *
      * @param value
-     * @param level
-     *            0 表示随机层数，不为0，表示指定层数，指定层数 可以让每次打印结果不变动，这里是为了便于学习理解
+     * @param level 0 表示随机层数，不为0，表示指定层数，指定层数 可以让每次打印结果不变动，这里是为了便于学习理解
      */
     public void insert(int value, int level) {
         // 随机一个层数

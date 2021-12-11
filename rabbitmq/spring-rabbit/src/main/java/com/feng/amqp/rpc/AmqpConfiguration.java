@@ -38,8 +38,8 @@ public class AmqpConfiguration {
                                                  RabbitTemplate rabbitTemplate) {
             SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
             container.setConnectionFactory(connectionFactory);
-            container.setQueueNames("tut.rpc.replies");
-            rabbitTemplate.setReplyAddress("tut.rpc.replies");
+//            container.setQueueNames("tut.rpc.replies");
+//            rabbitTemplate.setReplyAddress("tut.rpc.replies");
             container.setMessageListener(rabbitTemplate);
             return container;
         }
@@ -54,10 +54,10 @@ public class AmqpConfiguration {
             return new Queue("tut.rpc.requests");
         }
 
-        @Bean
-        public Queue queueReply() {
-            return new Queue("tut.rpc.replies");
-        }
+//        @Bean
+//        public Queue queueReply() {
+//            return new Queue("tut.rpc.replies");
+//        }
 
         @Bean
         public DirectExchange exchange() {

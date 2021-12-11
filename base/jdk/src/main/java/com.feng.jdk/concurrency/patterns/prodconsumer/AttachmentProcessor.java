@@ -1,4 +1,9 @@
-package com.feng.concurrency.patterns.prodconsumer;
+package com.feng.jdk.concurrency.patterns.prodconsumer;
+
+import com.feng.jdk.concurrency.patterns.prodconsumer.resuable.BlockingQueueChannel;
+import com.feng.jdk.concurrency.patterns.prodconsumer.resuable.Channel;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
+import com.feng.jdk.concurrency.util.Tools;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,14 +14,9 @@ import java.nio.file.StandardCopyOption;
 import java.text.Normalizer;
 import java.util.concurrent.ArrayBlockingQueue;
 
-import com.feng.concurrency.patterns.prodconsumer.resuable.BlockingQueueChannel;
-import com.feng.concurrency.patterns.prodconsumer.resuable.Channel;
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
-import com.feng.concurrency.util.Tools;
-
 /**
  * 模式角色：Producer-Consumer.Producer
- * 
+ *
  * @author fengsy
  * @date 5/18/21
  * @Description

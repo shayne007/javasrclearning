@@ -1,11 +1,8 @@
-package com.crazymaker.springcloud.standard.config;
+package com.feng.redis.config;
 
-import com.crazymaker.springcloud.standard.lock.RedisLockService;
-import com.crazymaker.springcloud.standard.properties.RedisRateLimitProperties;
-import com.crazymaker.springcloud.standard.ratelimit.RedisRateLimitImpl;
-import com.crazymaker.springcloud.standard.redis.RedisRepository;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Value;
+import com.feng.redis.properties.RedisRateLimitProperties;
+import com.feng.redis.ratelimit.RedisRateLimitImpl;
+import com.feng.redis.repository.RedisRepository;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -18,18 +15,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.connection.RedisPassword;
-import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
-import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
-import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-import redis.clients.jedis.JedisPoolConfig;
-
-import java.time.Duration;
 
 /**
  * Redis 配置.
@@ -46,8 +36,7 @@ import java.time.Duration;
 @Import({
         JedisConnectionConfiguration.class
 })
-public class CustomedRedisAutoConfiguration
-{
+public class CustomedRedisAutoConfiguration {
 
 //    @Value("${spring.redis.maxTotal}" )
 //    private int maxTotal;
@@ -158,8 +147,7 @@ public class CustomedRedisAutoConfiguration
 
     @Bean
     @ConditionalOnMissingBean({RedisTemplate.class})
-    public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory connectionFactory)
-    {
+    public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
         /*
          * Redis 序列化器.
          *
@@ -190,8 +178,7 @@ public class CustomedRedisAutoConfiguration
 
     @Bean
     @ConditionalOnMissingBean({StringRedisTemplate.class})
-    public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory connectionFactory)
-    {
+    public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory connectionFactory) {
         // 定义RedisTemplate，并设置连接工程
         StringRedisTemplate redisTemplate = new StringRedisTemplate(connectionFactory);
         RedisSerializer stringRedisSerializer = new StringRedisSerializer();
@@ -201,8 +188,7 @@ public class CustomedRedisAutoConfiguration
     }
 
     @Bean
-    public CacheManager initRedisCacheManager(RedisConnectionFactory connectionFactory)
-    {
+    public CacheManager initRedisCacheManager(RedisConnectionFactory connectionFactory) {
         RedisCacheManager.RedisCacheManagerBuilder builder = RedisCacheManager
                 .RedisCacheManagerBuilder.fromConnectionFactory(connectionFactory);
         return builder.build();
@@ -210,20 +196,16 @@ public class CustomedRedisAutoConfiguration
 
 
     @Bean
-    RedisRepository redisRepository(RedisTemplate<Object, Object> redisTemplate)
-    {
+    RedisRepository redisRepository(RedisTemplate<Object, Object> redisTemplate) {
         return new RedisRepository(redisTemplate);
     }
 
 
-    @Bean(name = "redisRateLimitImpl" )
+    @Bean(name = "redisRateLimitImpl")
     RedisRateLimitImpl redisRateLimitImpl(RedisRateLimitProperties redisRateLimitProperties,
-                                        StringRedisTemplate stringRedisTemplate)
-    {
+                                          StringRedisTemplate stringRedisTemplate) {
         return new RedisRateLimitImpl(redisRateLimitProperties, stringRedisTemplate);
     }
-
-
 
 
 }

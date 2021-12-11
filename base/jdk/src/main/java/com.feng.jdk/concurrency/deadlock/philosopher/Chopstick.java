@@ -1,4 +1,4 @@
-package com.feng.concurrency.deadlock.philosopher;
+package com.feng.jdk.concurrency.deadlock.philosopher;
 
 /**
  * @author fengsy

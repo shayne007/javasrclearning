@@ -1,11 +1,10 @@
-package com.feng.concurrency.patterns.masterslave.reusable;
+package com.feng.jdk.concurrency.patterns.masterslave.reusable;
 
 /**
+ * @param <T> 子任务类型
  * @author fengsy
  * @date 5/19/21
  * @Description 对原始任务分解算法策略的抽象。
- * @param <T>
- *            子任务类型
  */
 public interface TaskDivideStrategy<T> {
     /**

@@ -5,9 +5,9 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.masterslave.testdatagen;
+package com.feng.jdk.concurrency.patterns.masterslave.testdatagen;
 
-import com.feng.concurrency.util.Tools;
+import com.feng.jdk.concurrency.util.Tools;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -84,7 +84,7 @@ public class Logger {
                     now = newTimeStamp;
                 }
                 cachedPwr =
-                    new PrintWriter(new FileWriter(LOG_FILE_BASE_DIR + retrieveLogFileName(newTimeStamp)), true);
+                        new PrintWriter(new FileWriter(LOG_FILE_BASE_DIR + retrieveLogFileName(newTimeStamp)), true);
             } catch (IOException e) {
                 e.printStackTrace();
             }

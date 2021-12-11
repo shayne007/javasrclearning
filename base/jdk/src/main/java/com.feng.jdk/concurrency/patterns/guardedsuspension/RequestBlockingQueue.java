@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.guardedsuspension;
+package com.feng.jdk.concurrency.patterns.guardedsuspension;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;

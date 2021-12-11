@@ -1,4 +1,4 @@
-package com.feng.collection;
+package com.feng.jdk.collection;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

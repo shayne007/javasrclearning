@@ -1,12 +1,4 @@
-package com.feng.http;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+package com.feng.jdk.http;
 
 import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -24,6 +16,14 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
 public class HttpClientUtil {
     private static final Logger LOGGER = LoggerFactory.getLogger(HttpClientUtil.class);
 
@@ -35,7 +35,8 @@ public class HttpClientUtil {
         httpPost.addHeader("Content-Type", "application/json");
 
         if (StringUtils.isNotEmpty(auth)) {
-            httpPost.addHeader("Authorization", auth);;
+            httpPost.addHeader("Authorization", auth);
+            ;
         }
 
         if (StringUtils.isNotEmpty(JSONBody)) {
@@ -73,8 +74,8 @@ public class HttpClientUtil {
         if (textMap != null && !textMap.isEmpty()) {
             Iterator<String> it = textMap.keySet().iterator();
             while (it.hasNext()) {
-                String textName = (String)it.next();
-                builder.addTextBody(textName, (String)textMap.get(textName), ContentType.TEXT_PLAIN);
+                String textName = (String) it.next();
+                builder.addTextBody(textName, (String) textMap.get(textName), ContentType.TEXT_PLAIN);
             }
         }
         Map<String, String> tempFileMap = new HashMap<String, String>();
@@ -82,12 +83,12 @@ public class HttpClientUtil {
         if (fileMap != null && !fileMap.isEmpty()) {
             Iterator<String> it = fileMap.keySet().iterator();
             while (it.hasNext()) {
-                String inputName = (String)it.next();
-                File file = (File)fileMap.get(inputName);
+                String inputName = (String) it.next();
+                File file = (File) fileMap.get(inputName);
                 try {
                     tempFileMap.put(inputName, file.getPath());
                     builder.addBinaryBody(inputName, new FileInputStream(file), ContentType.APPLICATION_OCTET_STREAM,
-                        file.getName());
+                            file.getName());
                 } catch (FileNotFoundException e) {
                     LOGGER.error(e.getMessage(), e);
                 }

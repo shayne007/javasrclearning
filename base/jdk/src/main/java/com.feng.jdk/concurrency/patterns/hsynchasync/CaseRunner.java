@@ -1,6 +1,6 @@
-package com.feng.concurrency.patterns.hsynchasync;
+package com.feng.jdk.concurrency.patterns.hsynchasync;
 
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AlarmType;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AlarmType;
 
 /**
  * @author fengsy

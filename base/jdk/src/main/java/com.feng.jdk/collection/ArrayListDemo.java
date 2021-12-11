@@ -1,6 +1,9 @@
-package com.feng.collection;
+package com.feng.jdk.collection;
+
+import jdk.nashorn.internal.ir.debug.ObjectSizeCalculator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
@@ -13,7 +16,8 @@ import java.util.List;
 public class ArrayListDemo {
 
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<String>();
+        Arrays.asList("1", 2);
+        ArrayList<String> list = new ArrayList<String>(10);
         list.add("a");
         list.add("a");
         list.add("b");
@@ -22,6 +26,7 @@ public class ArrayListDemo {
         list.add("c");
         remove(list);// 删除指定的“b”元素
         System.out.println(list);
+        System.out.println("object size: " + ObjectSizeCalculator.getObjectSize(list));
         for (int i = 0; i < list.size(); i++) {
             System.out.println("element : " + list.get(i));
         }
@@ -45,7 +50,7 @@ public class ArrayListDemo {
 
     /**
      * throw ConcurrentModifyException
-     * 
+     *
      * @param list
      */
     public static void remove2(ArrayList<String> list) {

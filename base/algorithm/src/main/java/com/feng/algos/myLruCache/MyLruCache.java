@@ -8,10 +8,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 基于支持访问顺序的LinkedHashMap实现
- * 
+ *
  * @autor fengsy
  * @date 3/19/20
- *
  */
 
 public class MyLruCache<K, V> extends LruCache<K, V> {

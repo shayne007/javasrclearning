@@ -1,11 +1,11 @@
-package com.feng.concurrency.performance;
+package com.feng.jdk.concurrency.performance;
+
+import net.mindview.util.Generated;
+import net.mindview.util.RandomGenerator;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-import net.mindview.util.Generated;
-import net.mindview.util.RandomGenerator;
 
 /**
  * @author fengsy

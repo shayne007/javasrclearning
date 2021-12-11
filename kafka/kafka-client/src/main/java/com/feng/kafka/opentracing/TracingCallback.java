@@ -1,14 +1,13 @@
 package com.feng.kafka.opentracing;
 
-import java.util.Collection;
-import java.util.Collections;
-
-import org.apache.kafka.clients.producer.Callback;
-import org.apache.kafka.clients.producer.RecordMetadata;
-
 import io.opentracing.Scope;
 import io.opentracing.Span;
 import io.opentracing.Tracer;
+import org.apache.kafka.clients.producer.Callback;
+import org.apache.kafka.clients.producer.RecordMetadata;
+
+import java.util.Collection;
+import java.util.Collections;
 
 /**
  * @author fengsy

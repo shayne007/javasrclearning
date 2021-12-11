@@ -1,6 +1,6 @@
-package com.feng.concurrency.patterns.poolworker;
+package com.feng.jdk.concurrency.patterns.poolworker;
 
-import com.feng.concurrency.util.Debug;
+import com.feng.jdk.concurrency.util.Debug;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -15,11 +15,11 @@ public class ThreadPoolSize4IOIntensiveTask {
     public static void main(String[] args) {
 
         ThreadPoolExecutor threadPool = new ThreadPoolExecutor(
-            // 核心线程池大小为1
-            1,
-            // 最大线程池大小为2*Ncpu
-            Runtime.getRuntime().availableProcessors() * 2, 60, TimeUnit.SECONDS,
-            new ArrayBlockingQueue<Runnable>(200));
+                // 核心线程池大小为1
+                1,
+                // 最大线程池大小为2*Ncpu
+                Runtime.getRuntime().availableProcessors() * 2, 60, TimeUnit.SECONDS,
+                new ArrayBlockingQueue<Runnable>(200));
 
         threadPool.submit(new IOIntensiveTask());
 

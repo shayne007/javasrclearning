@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.tspecstorage;
+package com.feng.jdk.concurrency.patterns.tspecstorage;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

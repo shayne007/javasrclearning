@@ -1,9 +1,9 @@
-package com.feng.concurrency.patterns.stconfinement;
+package com.feng.jdk.concurrency.patterns.stconfinement;
 
-import com.feng.concurrency.patterns.stconfinement.reusable.AbstractSerializer;
-import com.feng.concurrency.patterns.stconfinement.reusable.TaskProcessor;
-import com.feng.concurrency.util.Debug;
-import com.feng.concurrency.util.Tools;
+import com.feng.jdk.concurrency.patterns.stconfinement.reusable.AbstractSerializer;
+import com.feng.jdk.concurrency.patterns.stconfinement.reusable.TaskProcessor;
+import com.feng.jdk.concurrency.util.Debug;
+import com.feng.jdk.concurrency.util.Tools;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutionException;
@@ -54,8 +54,8 @@ public class ReusableCodeExample {
 
         @Override
         protected Task makeTask(Object... params) {
-            String message = (String)params[0];
-            int id = (Integer)params[1];
+            String message = (String) params[0];
+            int id = (Integer) params[1];
 
             return new Task(message, id);
         }

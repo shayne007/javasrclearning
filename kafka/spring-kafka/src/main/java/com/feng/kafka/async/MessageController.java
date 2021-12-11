@@ -1,11 +1,8 @@
-package com.feng.kafka.deadletter;
+package com.feng.kafka.async;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.support.Acknowledgment;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * @Description TODO
@@ -30,11 +27,14 @@ public class MessageController {
 
     @GetMapping("/send/{input}")
     public void send(@PathVariable String input) {
-        JSONObject clusterData = new JSONObject();
-        clusterData.put("operate", "add");
-        clusterData.put("data", input);
+        JSONObject userData = new JSONObject();
+        userData.put("operate", "add");
+        ArrayList<UserDTO> list = new ArrayList<>();
+        list.add(new UserDTO());
+        list.add(new UserDTO(input, 22));
+        userData.put("data", list);
 
-        this.template.send("topic-testdlt", clusterData.toJSONString())
+        this.template.send("topic-test", userData.toJSONString())
                 .addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
                     @Override
                     public void onFailure(Throwable e) {
@@ -49,21 +49,5 @@ public class MessageController {
                                 objectObjectSendResult.getRecordMetadata().offset());
                     }
                 });
-    }
-
-    @KafkaListener(id = "webGroup", topics = "topic-testdlt", containerFactory = "containerFactory", groupId = "group-test")
-    public void listen(List<ConsumerRecord<String, String>> records, Acknowledgment ack) {
-        log.info("records count: {}", records.size());
-        for (ConsumerRecord<String, String> record : records) {
-            log.info("input key: {}, value: {}", record.key(), record.value());
-        }
-
-//        throw new RuntimeException("dlt");
-    }
-
-    @KafkaListener(id = "dltGroup", topics = "topic-testdlt.DLT", groupId = "group-test")
-    public void dltListen(String input, Acknowledgment ack) {
-        log.info("receive from DLT, value: {}", input);
-        ack.acknowledge();
     }
 }

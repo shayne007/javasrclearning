@@ -1,4 +1,4 @@
-package com.feng.io.udp.chat;
+package com.feng.jdk.io.udp.chat;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -41,7 +41,7 @@ public class TalkSend implements Runnable {
             try {
                 String s = bufferedReader.readLine();
                 DatagramPacket datagramPacket =
-                    new DatagramPacket(s.getBytes(), 0, s.getBytes().length, new InetSocketAddress(toIp, toPort));
+                        new DatagramPacket(s.getBytes(), 0, s.getBytes().length, new InetSocketAddress(toIp, toPort));
                 // 3、发送数据
                 datagramSocket.send(datagramPacket);
                 if (s.equals("bye")) {

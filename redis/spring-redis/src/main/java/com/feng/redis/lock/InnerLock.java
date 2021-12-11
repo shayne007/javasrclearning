@@ -1,8 +1,7 @@
-package com.crazymaker.springcloud.standard.lock;
+package com.feng.redis.lock;
 
-import com.crazymaker.springcloud.common.exception.BusinessException;
-import com.crazymaker.springcloud.standard.context.SpringContextUtil;
-import com.crazymaker.springcloud.standard.lua.ScriptHolder;
+import com.feng.redis.lua.ScriptHolder;
+import com.feng.redis.util.SpringContextUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.RedisScript;
@@ -58,7 +57,7 @@ public class InnerLock {
             isLocked = false;
         } catch (Exception e) {
             e.printStackTrace();
-            throw BusinessException.builder().errMsg("抢锁失败").build();
+            throw new RuntimeException("抢锁失败");
         }
     }
 

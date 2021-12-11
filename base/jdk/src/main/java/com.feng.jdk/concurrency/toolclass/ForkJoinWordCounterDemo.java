@@ -1,9 +1,6 @@
 package com.feng.jdk.concurrency.toolclass;
 
 
-import org.apache.commons.lang3.time.DateUtils;
-
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ForkJoinPool;
@@ -15,59 +12,79 @@ import java.util.concurrent.RecursiveTask;
  * @Author fengsy
  * @Date 11/8/21
  */
-public class ForkJoinTimeSliceDemo {
+public class ForkJoinWordCounterDemo {
 
     public static void main(String[] args) {
-        //创建分治任务线程池
-        ForkJoinPool pool = new ForkJoinPool(4);
-        //创建分治任务
-
-        TimeSliceTask task = new TimeSliceTask(new Date(), new Date(System.currentTimeMillis() + 600_000));
-        //启动分治任务
-        Map<String, Boolean> result = pool.invoke(task);
+        String[] fc = {"hello world",
+                "hello me",
+                "hello fork",
+                "hello join",
+                "fork join in world"};
+        //创建ForkJoin线程池
+        ForkJoinPool fjp = new ForkJoinPool(Runtime.getRuntime().availableProcessors() + 1);
+        //创建任务
+        MR mr = new MR(fc, 0, fc.length);
+        //启动任务
+        Map<String, Long> result = fjp.invoke(mr);
         //输出结果
-        result.forEach((k, v) -> System.out.println("key: " + k + ", value: " + v));
+        result.forEach((k, v) -> System.out.println(k + ":" + v));
     }
 
-    //递归任务
-    static class TimeSliceTask extends RecursiveTask<Map<String, Boolean>> {
-        final Date start;
-        final Date end;
+    //MR模拟类
+    static class MR extends RecursiveTask<Map<String, Long>> {
+        private String[] fc;
+        private int start, end;
 
-        TimeSliceTask(Date start, Date end) {
-            this.start = start;
-            this.end = end;
+        //构造函数
+        MR(String[] fc, int fr, int to) {
+            this.fc = fc;
+            this.start = fr;
+            this.end = to;
         }
 
         @Override
-        protected Map<String, Boolean> compute() {
-
-            if (DateUtils.addMinutes(start, 1).after(end)) {
-                //处理最终不可分的子任务
-                return calculate(start);
+        protected Map<String, Long> compute() {
+            if (end - start == 1) {
+                return calc(fc[start]);
             } else {
-                Date middleTime = new Date(start.getTime() + ((end.getTime() - start.getTime()) / 2));
-                //创建子任务
-                TimeSliceTask left = new TimeSliceTask(start, middleTime);
-                TimeSliceTask right = new TimeSliceTask(middleTime, end);
-                left.fork();
-                //等待子任务结果，并合并结果
-                return merge(right.compute(), left.join());
-
+                int mid = (start + end) / 2;
+                MR mr1 = new MR(fc, start, mid);
+                mr1.fork();
+                MR mr2 = new MR(fc, mid, end);
+                //计算子任务，并返回合并的结果
+                return merge(mr2.compute(), mr1.join());
             }
         }
 
-        private Map<String, Boolean> calculate(Date start) {
-            Map<String, Boolean> mapper = new HashMap<>();
-            mapper.put(org.apache.http.client.utils.DateUtils.formatDate(start, "yyyyMMddHHmm "), true);
-            return mapper;
+        //合并结果
+        private Map<String, Long> merge(Map<String, Long> r1, Map<String, Long> r2) {
+            Map<String, Long> result = new HashMap<>();
+            result.putAll(r1);
+            //合并结果
+            r2.forEach((k, v) -> {
+                Long c = result.get(k);
+                if (c != null)
+                    result.put(k, c + v);
+                else
+                    result.put(k, v);
+            });
+            return result;
         }
 
-        private Map<String, Boolean> merge(Map<String, Boolean> m1, Map<String, Boolean> m2) {
-            Map<String, Boolean> mapper = new HashMap<>();
-            mapper.putAll(m1);
-            mapper.putAll(m2);
-            return mapper;
+        //统计单词数量
+        private Map<String, Long> calc(String line) {
+            Map<String, Long> result = new HashMap<>();
+            //分割单词
+            String[] words = line.split("\\s+");
+            //统计单词数量
+            for (String w : words) {
+                Long v = result.get(w);
+                if (v != null)
+                    result.put(w, v + 1);
+                else
+                    result.put(w, 1L);
+            }
+            return result;
         }
     }
 }

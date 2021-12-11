@@ -1,4 +1,4 @@
-package com.feng.concurrency;
+package com.feng.jdk.concurrency;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,8 @@ public class MyLock {
     }
 
     static class Allocator { // 单例锁类
-        private Allocator() {}
+        private Allocator() {
+        }
 
         private List<Account> locks = new ArrayList<>();
 

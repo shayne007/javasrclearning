@@ -1,9 +1,9 @@
-package com.feng.concurrency.deadlock.philosopher;
-
-import static net.mindview.util.Print.print;
+package com.feng.jdk.concurrency.deadlock.philosopher;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+
+import static net.mindview.util.Print.print;
 
 /**
  * @author fengsy

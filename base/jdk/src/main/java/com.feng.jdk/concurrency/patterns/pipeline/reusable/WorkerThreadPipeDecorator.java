@@ -5,10 +5,10 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.pipeline.reusable;
+package com.feng.jdk.concurrency.patterns.pipeline.reusable;
 
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
-import com.feng.concurrency.patterns.twophaseterminate.reusable.TerminationToken;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.TerminationToken;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -18,13 +18,10 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 基于工作者线程的Pipe实现类。 提交到该Pipe的任务由指定个数的工作者线程共同处理。 该类使用了Two-phase Termination模式（参见第5章）。
- * 
- * @author Viscent Huang
  *
- * @param <IN>
- *            输入类型
- * @param <OUT>
- *            输出类型
+ * @param <IN>  输入类型
+ * @param <OUT> 输出类型
+ * @author Viscent Huang
  */
 public class WorkerThreadPipeDecorator<IN, OUT> implements Pipe<IN, OUT> {
     protected final BlockingQueue<IN> workQueue;

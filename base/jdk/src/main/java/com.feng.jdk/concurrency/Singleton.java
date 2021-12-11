@@ -1,4 +1,4 @@
-package com.feng.concurrency;
+package com.feng.jdk.concurrency;
 
 /**
  * @author fengsy
@@ -12,7 +12,6 @@ public class Singleton {
     private static volatile Singleton instance;
 
     /**
-     * 
      * @return 单实例对象
      */
     public static Singleton getInstance() {

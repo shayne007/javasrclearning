@@ -5,7 +5,7 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.immutableobject.mms;
+package com.feng.jdk.concurrency.patterns.immutableobject.mms;
 
 /**
  * 与运维中心（Operation and Maintenance Center）对接的类<BR>

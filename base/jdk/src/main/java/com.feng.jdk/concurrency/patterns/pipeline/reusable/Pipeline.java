@@ -5,25 +5,21 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.pipeline.reusable;
+package com.feng.jdk.concurrency.patterns.pipeline.reusable;
 
 /**
  * 对复合Pipe的抽象。 一个Pipeline实例可包含多个Pipe实例。
- * 
- * @author Viscent Huang
  *
- * @param <IN>
- *            输入类型
- * @param <OUT>
- *            输出类型
+ * @param <IN>  输入类型
+ * @param <OUT> 输出类型
+ * @author Viscent Huang
  */
 public interface Pipeline<IN, OUT> extends Pipe<IN, OUT> {
 
     /**
      * 往该Pipeline实例中添加一个Pipe实例。
-     * 
-     * @param pipe
-     *            Pipe实例
+     *
+     * @param pipe Pipe实例
      */
     void addPipe(Pipe<?, ?> pipe);
 }

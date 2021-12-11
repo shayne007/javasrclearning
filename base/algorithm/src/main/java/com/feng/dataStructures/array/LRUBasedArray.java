@@ -21,7 +21,7 @@ public class LRUBasedArray<T> {
 
     public LRUBasedArray(int capacity) {
         this.capacity = capacity;
-        value = (T[])new Object[capacity];
+        value = (T[]) new Object[capacity];
         count = 0;
         holder = new HashMap<>(capacity);
     }
@@ -58,8 +58,7 @@ public class LRUBasedArray<T> {
      * 缓存数据到头部，但要先右移
      *
      * @param object
-     * @param end
-     *            数组右移的边界
+     * @param end    数组右移的边界
      */
     public void cache(T object, int end) {
         rightShift(end);

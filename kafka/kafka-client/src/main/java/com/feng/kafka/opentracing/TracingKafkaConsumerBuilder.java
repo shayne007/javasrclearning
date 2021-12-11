@@ -1,13 +1,12 @@
 package com.feng.kafka.opentracing;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.function.BiFunction;
-
+import io.opentracing.Tracer;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
-import io.opentracing.Tracer;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.function.BiFunction;
 
 /**
  * @author fengsy
@@ -33,7 +32,7 @@ public class TracingKafkaConsumerBuilder<K, V> {
     }
 
     public TracingKafkaConsumerBuilder
-        withSpanNameProvider(BiFunction<String, ConsumerRecord, String> consumerSpanNameProvider) {
+    withSpanNameProvider(BiFunction<String, ConsumerRecord, String> consumerSpanNameProvider) {
         this.consumerSpanNameProvider = consumerSpanNameProvider;
         return this;
     }

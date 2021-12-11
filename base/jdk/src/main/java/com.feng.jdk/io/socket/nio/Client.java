@@ -1,4 +1,4 @@
-package com.feng.io.socket.nio;
+package com.feng.jdk.io.socket.nio;
 
 import java.util.Scanner;
 
@@ -35,7 +35,7 @@ public class Client {
         Client.start();
 
         try {
-            while (Client.sendMsg(new Scanner(System.in).nextLine()));
+            while (Client.sendMsg(new Scanner(System.in).nextLine())) ;
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

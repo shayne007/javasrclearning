@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class BinarySearchTest {
     /**
      * 查找第一个值等于给定值的元素
-     * 
+     *
      * @param a
      * @param n
      * @param value
@@ -37,7 +37,7 @@ public class BinarySearchTest {
 
     /**
      * 查找最后一个值等于给定值的元素
-     * 
+     *
      * @param a
      * @param n
      * @param value
@@ -64,7 +64,7 @@ public class BinarySearchTest {
 
     /**
      * 查找第一个大于等于给定值的元素
-     * 
+     *
      * @param a
      * @param n
      * @param value
@@ -89,7 +89,7 @@ public class BinarySearchTest {
 
     /**
      * 查找最后小于等于给定值的元素
-     * 
+     *
      * @param a
      * @param n
      * @param value
@@ -113,7 +113,7 @@ public class BinarySearchTest {
     }
 
     public static void main(String[] args) {
-        int[] array = new int[] {3, 4, 2, 1, 5, 6, 7, 8};
+        int[] array = new int[]{3, 4, 2, 1, 5, 6, 7, 8};
         Arrays.sort(array);
         System.out.println(Arrays.toString(array));
         int index = Arrays.binarySearch(array, 99);

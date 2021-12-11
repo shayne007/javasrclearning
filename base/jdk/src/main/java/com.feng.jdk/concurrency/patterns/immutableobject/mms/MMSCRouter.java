@@ -5,7 +5,7 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.immutableobject.mms;
+package com.feng.jdk.concurrency.patterns.immutableobject.mms;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -27,7 +27,7 @@ public final class MMSCRouter {
 
     /**
      * 从数据库中读取最新数据，重新生成新的MMSCInfo、MMSCRouter
-     * 
+     *
      * @return
      */
     private static Map<String, MMSCInfo> retrieveRouteMapFromDB() {
@@ -44,9 +44,8 @@ public final class MMSCRouter {
 
     /**
      * 根据手机号码前缀获取对应的彩信中心信息
-     * 
-     * @param msisdnPrefix
-     *            手机号码前缀
+     *
+     * @param msisdnPrefix 手机号码前缀
      * @return 彩信中心信息
      */
     public MMSCInfo getMMSC(String msisdnPrefix) {
@@ -56,9 +55,8 @@ public final class MMSCRouter {
 
     /**
      * 将当前MMSCRouter的实例更新为指定的新实例
-     * 
-     * @param newInstance
-     *            新的MMSCRouter实例
+     *
+     * @param newInstance 新的MMSCRouter实例
      */
     public static void setInstance(MMSCRouter newInstance) {
         instance = newInstance;

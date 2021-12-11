@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.prodconsumer.resuable;
+package com.feng.jdk.concurrency.patterns.prodconsumer.resuable;
 
 import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.BlockingQueue;
@@ -43,7 +43,7 @@ public class WorkStealingChannel<T> implements WorkStealingEnabledChannel<T> {
         if (null == product) {
 
             // 随机”窃取“其它受管队列的”产品“
-            queueIndex = (int)(System.currentTimeMillis() % managedQueues.length);
+            queueIndex = (int) (System.currentTimeMillis() % managedQueues.length);
             targetQueue = managedQueues[queueIndex];
             product = targetQueue.takeLast();
             System.out.println("stealed from " + queueIndex + ":" + product);

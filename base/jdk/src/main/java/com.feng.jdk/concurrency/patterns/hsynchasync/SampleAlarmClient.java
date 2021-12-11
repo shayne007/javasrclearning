@@ -1,10 +1,9 @@
-package com.feng.concurrency.patterns.hsynchasync;
+package com.feng.jdk.concurrency.patterns.hsynchasync;
 
-import java.sql.Connection;
-
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AlarmType;
 import org.apache.log4j.Logger;
 
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AlarmType;
+import java.sql.Connection;
 
 /**
  * @author fengsy
@@ -35,7 +34,7 @@ public class SampleAlarmClient {
             int duplicateSubmissionCount;
             String alarmId = "00000010000020";
             final String alarmExtraInfo =
-                "operation=GetDBConnection;detail=Failed to get DB connection:" + e.getMessage();
+                    "operation=GetDBConnection;detail=Failed to get DB connection:" + e.getMessage();
 
             duplicateSubmissionCount = alarmMgr.sendAlarm(AlarmType.FAULT, alarmId, alarmExtraInfo);
             if (duplicateSubmissionCount < ALARM_MSG_SUPRESS_THRESHOLD) {
@@ -43,7 +42,7 @@ public class SampleAlarmClient {
             } else {
                 if (duplicateSubmissionCount == ALARM_MSG_SUPRESS_THRESHOLD) {
                     logger.error("Alarm[" + alarmId + "] was raised more than " + ALARM_MSG_SUPRESS_THRESHOLD
-                        + " times, it will no longer be logged.");
+                            + " times, it will no longer be logged.");
                 }
             }
             return;

@@ -50,12 +50,9 @@ public class HeapSort {
     /**
      * 堆化
      *
-     * @param arr
-     *            要堆化的数组
-     * @param n
-     *            最后堆元素下标
-     * @param i
-     *            要堆化的元素下标
+     * @param arr 要堆化的数组
+     * @param n   最后堆元素下标
+     * @param i   要堆化的元素下标
      */
     private static void heapify(int[] arr, int n, int i) {
         while (true) {
@@ -90,7 +87,7 @@ public class HeapSort {
     }
 
     public static void main(String[] args) {
-        int[] data = new int[] {4, 6, 5, 3, 7, 1, 2};
+        int[] data = new int[]{4, 6, 5, 3, 7, 1, 2};
         sort(data);
         System.out.println(Arrays.toString(data));
     }

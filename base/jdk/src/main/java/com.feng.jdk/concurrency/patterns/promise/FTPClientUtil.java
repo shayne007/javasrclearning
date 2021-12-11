@@ -5,7 +5,12 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.promise;
+package com.feng.jdk.concurrency.patterns.promise;
+
+import org.apache.commons.net.ftp.FTP;
+import org.apache.commons.net.ftp.FTPClient;
+import org.apache.commons.net.ftp.FTPClientConfig;
+import org.apache.commons.net.ftp.FTPReply;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
@@ -15,11 +20,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.commons.net.ftp.FTP;
-import org.apache.commons.net.ftp.FTPClient;
-import org.apache.commons.net.ftp.FTPClientConfig;
-import org.apache.commons.net.ftp.FTPReply;
 
 // 模式角色：Promise.Result
 public class FTPClientUtil implements FTPUploader {

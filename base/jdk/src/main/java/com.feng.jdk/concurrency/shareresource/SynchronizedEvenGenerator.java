@@ -1,4 +1,4 @@
-package com.feng.concurrency.shareresource;
+package com.feng.jdk.concurrency.shareresource;
 
 /**
  * @author fengsy

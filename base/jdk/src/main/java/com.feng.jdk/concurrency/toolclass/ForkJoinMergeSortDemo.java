@@ -1,8 +1,7 @@
 package com.feng.jdk.concurrency.toolclass;
 
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
@@ -12,77 +11,77 @@ import java.util.concurrent.RecursiveTask;
  * @Author fengsy
  * @Date 11/8/21
  */
-public class ForkJoinWordCounterDemo {
-
+public class ForkJoinMergeSortDemo {
     public static void main(String[] args) {
-        String[] fc = {"hello world",
-                "hello me",
-                "hello fork",
-                "hello join",
-                "fork join in world"};
-        //创建ForkJoin线程池
-        ForkJoinPool fjp = new ForkJoinPool(Runtime.getRuntime().availableProcessors() + 1);
-        //创建任务
-        MR mr = new MR(fc, 0, fc.length);
-        //启动任务
-        Map<String, Long> result = fjp.invoke(mr);
-        //输出结果
-        result.forEach((k, v) -> System.out.println(k + ":" + v));
+        long[] arrs = new long[100_000_000];
+        for (int i = 0; i < 100_000_000; i++) {
+            arrs[i] = (long) (Math.random() * 100_000_000);
+        }
+        long startTime = System.currentTimeMillis();
+        ForkJoinPool forkJoinPool = new ForkJoinPool(Runtime.getRuntime().availableProcessors());
+        MergeSortTask mergeSortTask = new MergeSortTask(arrs);
+        //forkJoin实现递归
+        arrs = forkJoinPool.invoke(mergeSortTask);
+        //传统递归
+//        arrs = mergeSort(arrs);
+        long endTime = System.currentTimeMillis();
+        System.out.println("耗时：" + (endTime - startTime));
     }
 
-    //MR模拟类
-    static class MR extends RecursiveTask<Map<String, Long>> {
-        private String[] fc;
-        private int start, end;
+    /**
+     * 传统递归
+     * 耗时：30508ms
+     */
+    private static long[] mergeSort(long[] arrs) {
+        if (arrs.length < 2) return arrs;
+        int mid = arrs.length / 2;
+        long[] left = Arrays.copyOfRange(arrs, 0, mid);
+        long[] right = Arrays.copyOfRange(arrs, mid, arrs.length);
+        return merge(mergeSort(left), mergeSort(right));
+    }
 
-        //构造函数
-        MR(String[] fc, int fr, int to) {
-            this.fc = fc;
-            this.start = fr;
-            this.end = to;
+    private static long[] merge(long[] left, long[] right) {
+        long[] result = new long[left.length + right.length];
+        for (int i = 0, m = 0, j = 0; m < result.length; m++) {
+            if (i >= left.length) {
+                result[m] = right[j++];
+            } else if (j >= right.length) {
+                result[m] = left[i++];
+            } else if (left[i] > right[j]) {
+                result[m] = right[j++];
+            } else result[m] = left[i++];
+        }
+        return result;
+    }
+
+
+    static class MergeSortTask extends RecursiveTask<long[]> {
+        long[] arrs;
+
+        public MergeSortTask(long[] arrs) {
+            this.arrs = arrs;
         }
 
         @Override
-        protected Map<String, Long> compute() {
-            if (end - start == 1) {
-                return calc(fc[start]);
-            } else {
-                int mid = (start + end) / 2;
-                MR mr1 = new MR(fc, start, mid);
-                mr1.fork();
-                MR mr2 = new MR(fc, mid, end);
-                //计算子任务，并返回合并的结果
-                return merge(mr2.compute(), mr1.join());
-            }
+        protected long[] compute() {
+            if (arrs.length < 2) return arrs;
+            int mid = arrs.length / 2;
+            MergeSortTask left = new MergeSortTask(Arrays.copyOfRange(arrs, 0, mid));
+            left.fork();
+            MergeSortTask right = new MergeSortTask(Arrays.copyOfRange(arrs, mid, arrs.length));
+            return merge(right.compute(), left.join());
         }
 
-        //合并结果
-        private Map<String, Long> merge(Map<String, Long> r1, Map<String, Long> r2) {
-            Map<String, Long> result = new HashMap<>();
-            result.putAll(r1);
-            //合并结果
-            r2.forEach((k, v) -> {
-                Long c = result.get(k);
-                if (c != null)
-                    result.put(k, c + v);
-                else
-                    result.put(k, v);
-            });
-            return result;
-        }
-
-        //统计单词数量
-        private Map<String, Long> calc(String line) {
-            Map<String, Long> result = new HashMap<>();
-            //分割单词
-            String[] words = line.split("\\s+");
-            //统计单词数量
-            for (String w : words) {
-                Long v = result.get(w);
-                if (v != null)
-                    result.put(w, v + 1);
-                else
-                    result.put(w, 1L);
+        private long[] merge(long[] left, long[] right) {
+            long[] result = new long[left.length + right.length];
+            for (int i = 0, m = 0, j = 0; m < result.length; m++) {
+                if (i >= left.length) {
+                    result[m] = right[j++];
+                } else if (j >= right.length) {
+                    result[m] = left[i++];
+                } else if (left[i] > right[j]) {
+                    result[m] = right[j++];
+                } else result[m] = left[i++];
             }
             return result;
         }

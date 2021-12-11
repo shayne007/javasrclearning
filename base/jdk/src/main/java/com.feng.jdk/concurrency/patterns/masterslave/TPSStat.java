@@ -5,10 +5,10 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.masterslave;
+package com.feng.jdk.concurrency.patterns.masterslave;
 
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
-import com.feng.concurrency.util.Debug;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
+import com.feng.jdk.concurrency.util.Debug;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -74,7 +74,7 @@ public class TPSStat {
         static final int WORKER_COUNT = Runtime.getRuntime().availableProcessors();
 
         public Master(String logFileBaseDir, String excludedOperationNames, String includedOperationNames,
-            String destinationSysName) {
+                      String destinationSysName) {
             this.logFileBaseDir = logFileBaseDir;
             this.excludedOperationNames = excludedOperationNames;
             this.includedOperationNames = includedOperationNames;
@@ -181,7 +181,7 @@ public class TPSStat {
         private final String destinationSysName;
 
         public Worker(ConcurrentMap<String, AtomicInteger> repository, String excludedOperationNames,
-            String includedOperationNames, String destinationSysName) {
+                      String includedOperationNames, String destinationSysName) {
             this.repository = repository;
             workQueue = new ArrayBlockingQueue<BufferedReader>(100);
             this.excludedOperationNames = excludedOperationNames;

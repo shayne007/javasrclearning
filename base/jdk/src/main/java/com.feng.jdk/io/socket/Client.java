@@ -1,4 +1,4 @@
-package com.feng.io.socket;
+package com.feng.jdk.io.socket;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,7 +31,7 @@ public class Client {
 
     /**
      * 发送消息
-     * 
+     *
      * @param msg
      */
     public void send(String msg) {

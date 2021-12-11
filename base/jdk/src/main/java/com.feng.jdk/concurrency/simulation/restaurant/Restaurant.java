@@ -1,6 +1,4 @@
-package com.feng.concurrency.simulation.restaurant;
-
-import static net.mindview.util.Print.print;
+package com.feng.jdk.concurrency.simulation.restaurant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +7,8 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
+
+import static net.mindview.util.Print.print;
 
 /**
  * @author fengsy

@@ -52,7 +52,7 @@ public class KthSmallest {
     }
 
     public static void main(String[] args) {
-        int[] array = new int[] {9, 4, 11, 1, 5, 6, 7, 8};
+        int[] array = new int[]{9, 4, 11, 1, 5, 6, 7, 8};
         System.out.println(kthSmallest(array, 3));
     }
 }

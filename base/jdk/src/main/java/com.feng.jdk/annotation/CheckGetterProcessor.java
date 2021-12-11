@@ -1,4 +1,4 @@
-package com.feng.annotation;
+package com.feng.jdk.annotation;
 
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.RoundEnvironment;

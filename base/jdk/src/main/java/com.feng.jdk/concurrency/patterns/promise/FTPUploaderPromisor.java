@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.promise;
+package com.feng.jdk.concurrency.patterns.promise;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
@@ -10,7 +10,7 @@ public class FTPUploaderPromisor {
 
     // 模式角色：Promise.Promisor.compute
     public static Future<FTPUploader> newFTPUploaderPromise(String ftpServer, String ftpUserName, String password,
-        String serverDir) {
+                                                            String serverDir) {
         Executor helperExecutor = new Executor() {
             @Override
             public void execute(Runnable command) {
@@ -23,7 +23,7 @@ public class FTPUploaderPromisor {
 
     // 模式角色：Promise.Promisor.compute
     public static Future<FTPUploader> newFTPUploaderPromise(String ftpServer, String ftpUserName, String password,
-        String serverDir, Executor helperExecutor) {
+                                                            String serverDir, Executor helperExecutor) {
         Callable<FTPUploader> callable = new Callable<FTPUploader>() {
 
             @Override
@@ -34,7 +34,7 @@ public class FTPUploaderPromisor {
                     implClazz = "io.github.viscent.mtpattern.ch6.promise.example" + ".FTPClientUtil";
                 }
                 FTPUploader ftpUploader;
-                ftpUploader = (FTPUploader)Class.forName(implClazz).newInstance();
+                ftpUploader = (FTPUploader) Class.forName(implClazz).newInstance();
                 ftpUploader.init(ftpServer, ftpUserName, password, serverDir);
                 return ftpUploader;
             }

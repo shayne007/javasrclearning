@@ -1,12 +1,12 @@
-package com.feng.concurrency.patterns.masterslave;
+package com.feng.jdk.concurrency.patterns.masterslave;
 
-import com.feng.concurrency.patterns.masterslave.reusable.AbstractMaster;
-import com.feng.concurrency.patterns.masterslave.reusable.RetryInfo;
-import com.feng.concurrency.patterns.masterslave.reusable.SlaveSpec;
-import com.feng.concurrency.patterns.masterslave.reusable.SubTaskFailureException;
-import com.feng.concurrency.patterns.masterslave.reusable.TaskDivideStrategy;
-import com.feng.concurrency.patterns.masterslave.reusable.WorkerThreadSlave;
-import com.feng.concurrency.util.Debug;
+import com.feng.jdk.concurrency.patterns.masterslave.reusable.AbstractMaster;
+import com.feng.jdk.concurrency.patterns.masterslave.reusable.RetryInfo;
+import com.feng.jdk.concurrency.patterns.masterslave.reusable.SlaveSpec;
+import com.feng.jdk.concurrency.patterns.masterslave.reusable.SubTaskFailureException;
+import com.feng.jdk.concurrency.patterns.masterslave.reusable.TaskDivideStrategy;
+import com.feng.jdk.concurrency.patterns.masterslave.reusable.WorkerThreadSlave;
+import com.feng.jdk.concurrency.util.Debug;
 
 import java.math.BigInteger;
 import java.util.HashSet;
@@ -67,7 +67,7 @@ class PrimeGeneratorService extends AbstractMaster<Range, Set<BigInteger>, Set<B
     protected TaskDivideStrategy<Range> newTaskDivideStrategy(final Object... params) {
 
         final int numOfSlaves = slaves.size();
-        final int originalTaskScale = (Integer)params[0];
+        final int originalTaskScale = (Integer) params[0];
         final int subTaskScale = originalTaskScale / numOfSlaves;
         final int subTasksCount = (0 == (originalTaskScale % numOfSlaves)) ? numOfSlaves : numOfSlaves + 1;
 
@@ -121,7 +121,7 @@ class PrimeGeneratorService extends AbstractMaster<Range, Set<BigInteger>, Set<B
                 Throwable cause = e.getCause();
                 if (SubTaskFailureException.class.isInstance(cause)) {
                     @SuppressWarnings("rawtypes")
-                    RetryInfo retryInfo = ((SubTaskFailureException)cause).retryInfo;
+                    RetryInfo retryInfo = ((SubTaskFailureException) cause).retryInfo;
                     Object subTask = retryInfo.subTask;
                     Debug.info("failed subTask:" + subTask);
                     e.printStackTrace();

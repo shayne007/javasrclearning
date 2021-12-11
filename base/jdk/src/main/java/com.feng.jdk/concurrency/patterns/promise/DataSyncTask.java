@@ -5,10 +5,10 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.promise;
+package com.feng.jdk.concurrency.patterns.promise;
 
-import com.feng.concurrency.util.Debug;
-import com.feng.concurrency.util.Tools;
+import com.feng.jdk.concurrency.util.Debug;
+import com.feng.jdk.concurrency.util.Tools;
 
 import java.io.File;
 import java.util.HashSet;
@@ -36,7 +36,7 @@ public class DataSyncTask implements Runnable {
          */
         // 初始化FTP客户端实例
         Future<FTPUploader> ftpClientUtilPromise =
-            FTPUploaderPromisor.newFTPUploaderPromise(ftpServer, ftpUserName, password, serverDir);
+                FTPUploaderPromisor.newFTPUploaderPromise(ftpServer, ftpUserName, password, serverDir);
 
         // 查询数据库生成本地文件
         generateFilesFromDB();

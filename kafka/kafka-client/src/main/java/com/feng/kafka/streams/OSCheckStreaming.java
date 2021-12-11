@@ -1,9 +1,6 @@
 package com.feng.kafka.streams;
 
-import java.time.Duration;
-import java.util.Properties;
-import java.util.concurrent.CountDownLatch;
-
+import com.google.gson.Gson;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
@@ -14,7 +11,9 @@ import org.apache.kafka.streams.kstream.Produced;
 import org.apache.kafka.streams.kstream.TimeWindows;
 import org.apache.kafka.streams.kstream.WindowedSerdes;
 
-import com.google.gson.Gson;
+import java.time.Duration;
+import java.util.Properties;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * @author fengsy
@@ -38,9 +37,9 @@ public class OSCheckStreaming {
 
         KStream<String, String> source = builder.stream("access_log");
         source.mapValues(value -> gson.fromJson(value, LogLine.class)).mapValues(LogLine::getPayload)
-            .groupBy((key, value) -> value.contains("ios") ? "ios" : "android")
-            .windowedBy(TimeWindows.of(Duration.ofSeconds(2L))).count().toStream()
-            .to("os-check", Produced.with(WindowedSerdes.timeWindowedSerdeFrom(String.class), Serdes.Long()));
+                .groupBy((key, value) -> value.contains("ios") ? "ios" : "android")
+                .windowedBy(TimeWindows.of(Duration.ofSeconds(2L))).count().toStream()
+                .to("os-check", Produced.with(WindowedSerdes.timeWindowedSerdeFrom(String.class), Serdes.Long()));
 
         final Topology topology = builder.build();
 

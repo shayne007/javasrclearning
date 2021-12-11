@@ -1,11 +1,11 @@
-package com.feng.concurrency.performance;
+package com.feng.jdk.concurrency.performance;
+
+import net.mindview.util.CountingIntegerList;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-
-import net.mindview.util.CountingIntegerList;
 
 /**
  * @author fengsy

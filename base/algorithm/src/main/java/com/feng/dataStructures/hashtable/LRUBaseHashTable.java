@@ -63,7 +63,8 @@ public class LRUBaseHashTable<K, V> {
          */
         private DNode<K, V> next;
 
-        DNode() {}
+        DNode() {
+        }
 
         DNode(K key, V value) {
             this.key = key;

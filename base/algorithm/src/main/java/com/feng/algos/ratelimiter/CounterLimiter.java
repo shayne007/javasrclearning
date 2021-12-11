@@ -51,7 +51,7 @@ public class CounterLimiter {
     public static void main(String[] args) {
         CounterLimiter counterLimiter = new CounterLimiter(2, 10);
         ThreadPoolExecutor executor =
-            new ThreadPoolExecutor(10, 10, 0, TimeUnit.SECONDS, new LinkedBlockingQueue<>(10));
+                new ThreadPoolExecutor(10, 10, 0, TimeUnit.SECONDS, new LinkedBlockingQueue<>(10));
         for (int i = 0; i < 1000; i++) {
             LockSupport.parkNanos(5 * 1000);
             executor.execute(() -> System.out.println(counterLimiter.isLimited()));

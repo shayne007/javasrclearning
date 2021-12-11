@@ -1,8 +1,8 @@
-package com.feng.concurrency.simulation.carbuilder;
-
-import static net.mindview.util.Print.print;
+package com.feng.jdk.concurrency.simulation.carbuilder;
 
 import java.util.concurrent.TimeUnit;
+
+import static net.mindview.util.Print.print;
 
 /**
  * @author fengsy

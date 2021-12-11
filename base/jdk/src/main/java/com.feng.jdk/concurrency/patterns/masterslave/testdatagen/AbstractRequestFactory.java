@@ -4,7 +4,7 @@
  * 任何对本代码的修改需在代码中以注释的形式注明修改人、修改时间以及修改内容。 本代码可以从以下网址下载： https://github.com/Viscent/javamtp
  * http://www.broadview.com.cn/38245
  */
-package com.feng.concurrency.patterns.masterslave.testdatagen;
+package com.feng.jdk.concurrency.patterns.masterslave.testdatagen;
 
 import java.text.DecimalFormat;
 import java.util.Date;

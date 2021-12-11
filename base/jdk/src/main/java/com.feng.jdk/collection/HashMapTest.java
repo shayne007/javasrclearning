@@ -1,9 +1,9 @@
-package com.feng.collection;
+package com.feng.jdk.collection;
+
+import com.google.common.collect.Maps;
 
 import java.util.Iterator;
 import java.util.Map;
-
-import com.google.common.collect.Maps;
 
 /**
  * @author fengsy

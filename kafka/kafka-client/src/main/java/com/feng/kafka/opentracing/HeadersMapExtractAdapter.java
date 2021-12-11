@@ -1,14 +1,13 @@
 package com.feng.kafka.opentracing;
 
+import io.opentracing.propagation.TextMap;
+import org.apache.kafka.common.header.Header;
+import org.apache.kafka.common.header.Headers;
+
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
-import org.apache.kafka.common.header.Header;
-import org.apache.kafka.common.header.Headers;
-
-import io.opentracing.propagation.TextMap;
 
 /**
  * @author fengsy

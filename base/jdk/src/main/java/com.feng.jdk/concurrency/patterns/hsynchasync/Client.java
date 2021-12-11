@@ -1,7 +1,7 @@
-package com.feng.concurrency.patterns.hsynchasync;
+package com.feng.jdk.concurrency.patterns.hsynchasync;
 
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AlarmType;
-import com.feng.concurrency.util.Debug;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AlarmType;
+import com.feng.jdk.concurrency.util.Debug;
 
 import java.util.Random;
 import java.util.Timer;

@@ -1,4 +1,4 @@
-package com.feng.concurrency.shareresource;
+package com.feng.jdk.concurrency.shareresource;
 
 /**
  * @author fengsy
@@ -11,7 +11,7 @@ public class EvenGenerator extends IntGenerator {
     /**
      * It’s possible for one task to call next( ) after another task has performed the first increment of
      * currentEvenValue but not the second. a
-     * 
+     *
      * @return a int value suppose to an even
      */
     @Override

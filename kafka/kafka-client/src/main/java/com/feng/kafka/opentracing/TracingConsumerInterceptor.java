@@ -1,14 +1,13 @@
 package com.feng.kafka.opentracing;
 
-import java.util.Map;
-
+import io.opentracing.util.GlobalTracer;
 import org.apache.kafka.clients.consumer.ConsumerInterceptor;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.OffsetAndMetadata;
 import org.apache.kafka.common.TopicPartition;
 
-import io.opentracing.util.GlobalTracer;
+import java.util.Map;
 
 /**
  * @author fengsy

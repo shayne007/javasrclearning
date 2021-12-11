@@ -1,4 +1,4 @@
-package com.feng.concurrency.deadlock.philosopher;
+package com.feng.jdk.concurrency.deadlock.philosopher;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

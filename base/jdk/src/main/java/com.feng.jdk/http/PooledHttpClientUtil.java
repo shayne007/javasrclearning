@@ -1,16 +1,4 @@
-package com.feng.http;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TimerTask;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
+package com.feng.jdk.http;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HeaderElement;
@@ -45,6 +33,18 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.protocol.HttpContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TimerTask;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 // HTTP 协议处理帮助类
 public class PooledHttpClientUtil {
@@ -81,8 +81,7 @@ public class PooledHttpClientUtil {
     /**
      * 2 简单的发送请求
      *
-     * @param url
-     *            连接地址
+     * @param url 连接地址
      * @return 请求字符串
      */
     public static String simpleGet(String url) throws IOException {
@@ -92,7 +91,7 @@ public class PooledHttpClientUtil {
         HttpGet httpGet = new HttpGet(url);
         // 3 超时配置
         RequestConfig requestConfig = RequestConfig.custom().setConnectionRequestTimeout(1000).setSocketTimeout(1000)
-            .setConnectTimeout(1000).build();
+                .setConnectTimeout(1000).build();
         httpGet.setConfig(requestConfig);
         // 4 发送请求，处理响应
         return simpleRequestData(url, client, httpGet);
@@ -101,8 +100,7 @@ public class PooledHttpClientUtil {
     /**
      * 2 简单的发送请求
      *
-     * @param url
-     *            连接地址
+     * @param url 连接地址
      * @return 请求字符串
      */
     public static String simplePost(String url) throws IOException {
@@ -112,7 +110,7 @@ public class PooledHttpClientUtil {
         HttpPost httpGet = new HttpPost(url);
         // 3 超时配置
         RequestConfig requestConfig = RequestConfig.custom().setConnectionRequestTimeout(1000).setSocketTimeout(1000)
-            .setConnectTimeout(1000).build();
+                .setConnectTimeout(1000).build();
         httpGet.setConfig(requestConfig);
         // 4 发送请求，处理响应
         return simpleRequestData(url, client, httpGet);
@@ -121,8 +119,7 @@ public class PooledHttpClientUtil {
     /**
      * 仅仅获得内容长度
      *
-     * @param url
-     *            连接地址
+     * @param url 连接地址
      * @return 请求字符串
      */
     public static long justLength(String url) throws IOException {
@@ -132,7 +129,7 @@ public class PooledHttpClientUtil {
         HttpGet request = new HttpGet(url);
         // 3 超时配置
         RequestConfig requestConfig = RequestConfig.custom().setConnectionRequestTimeout(1000).setSocketTimeout(1000)
-            .setConnectTimeout(1000).build();
+                .setConnectTimeout(1000).build();
         request.setConfig(requestConfig);
         // 4 发送请求，处理响应
         CloseableHttpResponse response = null;
@@ -159,10 +156,8 @@ public class PooledHttpClientUtil {
     /**
      * 设置post请求的参数
      *
-     * @param httpPost
-     *            主机ip和端口
-     * @param params
-     *            请求参数
+     * @param httpPost 主机ip和端口
+     * @param params   请求参数
      */
     private static void setPostParams(HttpPost httpPost, Map<String, String> params) {
         if (null == params) {
@@ -183,10 +178,8 @@ public class PooledHttpClientUtil {
     /**
      * 使用连接池中的请求发送
      *
-     * @param url
-     *            连接地址
-     * @param params
-     *            参数
+     * @param url    连接地址
+     * @param params 参数
      * @return 请求字符串
      */
     public static String post(String url, Map<String, String> params) {
@@ -200,10 +193,8 @@ public class PooledHttpClientUtil {
     /**
      * 直接发送请求
      *
-     * @param url
-     *            连接地址
-     * @param params
-     *            参数
+     * @param url    连接地址
+     * @param params 参数
      * @return 请求字符串
      */
     public static String simplePost(String url, Map<String, String> params) throws IOException {
@@ -217,16 +208,13 @@ public class PooledHttpClientUtil {
     /**
      * 内部的请求发送
      *
-     * @param url
-     *            连接地址
-     * @param client
-     *            客户端
-     * @param request
-     *            post 或者 getStr 或者其他请求
+     * @param url     连接地址
+     * @param client  客户端
+     * @param request post 或者 getStr 或者其他请求
      * @return 请求字符串
      */
     private static String simpleRequestData(String url, CloseableHttpClient client, HttpRequest request)
-        throws IOException {
+            throws IOException {
         CloseableHttpResponse response = null;
         InputStream in = null;
         String result = null;
@@ -251,16 +239,13 @@ public class PooledHttpClientUtil {
     /**
      * 内部的请求发送
      *
-     * @param url
-     *            连接地址
-     * @param client
-     *            客户端
-     * @param request
-     *            post 或者 getStr 或者其他请求
+     * @param url     连接地址
+     * @param client  客户端
+     * @param request post 或者 getStr 或者其他请求
      * @return 请求字符串
      */
     private static String getRequestContent(String url, CloseableHttpClient client, HttpRequest request)
-        throws IOException {
+            throws IOException {
         CloseableHttpResponse response = null;
         InputStream in = null;
         String result = null;
@@ -284,13 +269,10 @@ public class PooledHttpClientUtil {
 
     /**
      * 使用带连接池的HTTP客户端，发送请求
-     * 
-     * @param url
-     *            连接地址
-     * @param client
-     *            客户端
-     * @param request
-     *            post、get或者其他请求
+     *
+     * @param url     连接地址
+     * @param client  客户端
+     * @param request post、get或者其他请求
      * @return 响应字符串
      */
     private static String poolRequestData(String url, CloseableHttpClient client, HttpRequest request) {
@@ -321,9 +303,8 @@ public class PooledHttpClientUtil {
 
     /**
      * 从url中获取HttpHost实例，含主机和端口
-     * 
-     * @param url
-     *            url 地址
+     *
+     * @param url url 地址
      * @return HttpHost
      */
     private static HttpHost getHost(String url) {
@@ -340,9 +321,8 @@ public class PooledHttpClientUtil {
 
     /**
      * 使用带连接池的HTTP客户端，发送GET请求
-     * 
-     * @param url
-     *            连接地址
+     *
+     * @param url 连接地址
      * @return 请求字符串
      */
     public static String get(String url) {
@@ -395,7 +375,7 @@ public class PooledHttpClientUtil {
                 // 则客户端也设置连接的保持时长为60秒
                 // 目的：确保客户端与服务端在长连接的保持时长一致
                 HeaderElementIterator it =
-                    new BasicHeaderElementIterator(response.headerIterator(HTTP.CONN_KEEP_ALIVE));
+                        new BasicHeaderElementIterator(response.headerIterator(HTTP.CONN_KEEP_ALIVE));
                 while (it.hasNext()) {
                     HeaderElement he = it.nextElement();
                     String param = he.getName();
@@ -439,12 +419,12 @@ public class PooledHttpClientUtil {
         LayeredConnectionSocketFactory sslSocketFactory = SSLConnectionSocketFactory.getSocketFactory();
         // 根据应用层协议，为其注册传输层的套接字工厂
         Registry<ConnectionSocketFactory> registry = RegistryBuilder.<ConnectionSocketFactory>create()
-            .register("http", plainSocketFactory).register("https", sslSocketFactory).build();
+                .register("http", plainSocketFactory).register("https", sslSocketFactory).build();
         // 创建连接池管理器
         httpClientConnectionManager = new PoolingHttpClientConnectionManager(registry, // 传输层套接字注册器
-            null, null, dnsResolver, // DNS解析器
-            KEEP_ALIVE_DURATION, // 长连接的连接保持时长
-            TimeUnit.MILLISECONDS); // 保持时长的时间单位
+                null, null, dnsResolver, // DNS解析器
+                KEEP_ALIVE_DURATION, // 长连接的连接保持时长
+                TimeUnit.MILLISECONDS); // 保持时长的时间单位
 
         // 在从连接池获取连接时，连接不活跃多长时间后需要进行一次验证
         // 默认为2s TimeUnit.MILLISECONDS
@@ -490,8 +470,7 @@ public class PooledHttpClientUtil {
     /**
      * 安静的关闭可关闭对象
      *
-     * @param closeable
-     *            可关闭对象
+     * @param closeable 可关闭对象
      */
     private static void quietlyClose(java.io.Closeable closeable) {
         if (null == closeable)

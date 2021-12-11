@@ -1,4 +1,4 @@
-package com.feng.concurrency.performance;
+package com.feng.jdk.concurrency.performance;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -22,7 +22,7 @@ public class SimpleMicroBenchmark {
         long lockTime = test(new LockingTest());
         System.out.printf("synchronized: %1$10d\n", synchTime);
         System.out.printf("Lock:         %1$10d\n", lockTime);
-        System.out.printf("Lock/synchronized = %1$.3f", (double)lockTime / (double)synchTime);
+        System.out.printf("Lock/synchronized = %1$.3f", (double) lockTime / (double) synchTime);
     }
 }
 

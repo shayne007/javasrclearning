@@ -1,13 +1,13 @@
-package com.feng.concurrency.patterns.prodconsumer;
+package com.feng.jdk.concurrency.patterns.prodconsumer;
+
+import com.feng.jdk.concurrency.patterns.prodconsumer.resuable.WorkStealingChannel;
+import com.feng.jdk.concurrency.patterns.prodconsumer.resuable.WorkStealingEnabledChannel;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.TerminationToken;
 
 import java.util.Random;
 import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.LinkedBlockingDeque;
-
-import com.feng.concurrency.patterns.prodconsumer.resuable.WorkStealingChannel;
-import com.feng.concurrency.patterns.prodconsumer.resuable.WorkStealingEnabledChannel;
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
-import com.feng.concurrency.patterns.twophaseterminate.reusable.TerminationToken;
 
 /**
  * @author fengsy

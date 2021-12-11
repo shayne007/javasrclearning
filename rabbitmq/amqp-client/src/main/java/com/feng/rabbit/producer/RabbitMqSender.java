@@ -1,4 +1,4 @@
-package com.feng.rabbit;
+package com.feng.rabbit.producer;
 
 import com.feng.rabbit.config.MqConfigProperties;
 import com.rabbitmq.client.AMQP;
@@ -70,5 +70,10 @@ public class RabbitMqSender implements MqSender {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+
+    public static void main(String[] args) {
+        new RabbitMqSender(new MqConfigProperties()).sendMessage("testxxxxx", "test", "test");
     }
 }

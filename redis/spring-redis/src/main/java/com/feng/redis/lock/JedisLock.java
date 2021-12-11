@@ -1,6 +1,6 @@
-package com.crazymaker.springcloud.standard.lock;
+package com.feng.redis.lock;
 
-import com.crazymaker.springcloud.common.util.ThreadUtil;
+import com.feng.redis.util.ThreadUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.guardedsuspension.reusable;
+package com.feng.jdk.concurrency.patterns.guardedsuspension.reusable;
 
 /**
  * @author fengsy

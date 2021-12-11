@@ -1,6 +1,6 @@
-package com.feng.concurrency.patterns.masterslave.reusable;
+package com.feng.jdk.concurrency.patterns.masterslave.reusable;
 
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
@@ -59,8 +59,7 @@ public abstract class WorkerThreadSlave<T, V> extends AbstractTerminatableThread
     /**
      * 留给子类实现。用于实现子任务的处理逻辑。
      *
-     * @param task
-     *            子任务
+     * @param task 子任务
      * @return 子任务的处理结果
      * @throws Exception
      */

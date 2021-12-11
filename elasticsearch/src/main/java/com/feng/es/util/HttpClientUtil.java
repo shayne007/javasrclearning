@@ -1,4 +1,4 @@
-package com.feng.es;
+package com.feng.es.util;
 
 import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -25,7 +25,6 @@ public class HttpClientUtil {
 
         if (StringUtils.isNotEmpty(auth)) {
             httpPost.addHeader("Authorization", auth);
-            ;
         }
 
         if (StringUtils.isNotEmpty(JSONBody)) {

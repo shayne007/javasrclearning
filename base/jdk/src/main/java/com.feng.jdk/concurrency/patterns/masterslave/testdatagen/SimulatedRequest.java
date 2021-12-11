@@ -5,7 +5,7 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.masterslave.testdatagen;
+package com.feng.jdk.concurrency.patterns.masterslave.testdatagen;
 
 public interface SimulatedRequest {
     public void printLogs(Logger logger);

@@ -26,7 +26,7 @@ public class Array {
 
     /**
      * 插入数据时，移动数组的元素从末尾开始往前
-     * 
+     *
      * @param index
      * @param value
      * @return
@@ -50,7 +50,7 @@ public class Array {
 
     /**
      * 删除数据时，移动数组中的元素从前往后
-     * 
+     *
      * @param index
      * @return
      */

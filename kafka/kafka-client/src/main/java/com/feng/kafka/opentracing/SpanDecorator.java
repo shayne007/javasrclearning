@@ -1,9 +1,8 @@
 package com.feng.kafka.opentracing;
 
+import io.opentracing.Span;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.producer.ProducerRecord;
-
-import io.opentracing.Span;
 
 public interface SpanDecorator {
     /**

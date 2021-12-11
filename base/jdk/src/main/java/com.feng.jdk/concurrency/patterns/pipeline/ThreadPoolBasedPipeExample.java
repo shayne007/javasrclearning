@@ -5,14 +5,14 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.pipeline;
+package com.feng.jdk.concurrency.patterns.pipeline;
 
-import com.feng.concurrency.patterns.pipeline.reusable.AbstractPipe;
-import com.feng.concurrency.patterns.pipeline.reusable.Pipe;
-import com.feng.concurrency.patterns.pipeline.reusable.PipeException;
-import com.feng.concurrency.patterns.pipeline.reusable.SimplePipeline;
-import com.feng.concurrency.util.Debug;
-import com.feng.concurrency.util.Tools;
+import com.feng.jdk.concurrency.patterns.pipeline.reusable.AbstractPipe;
+import com.feng.jdk.concurrency.patterns.pipeline.reusable.Pipe;
+import com.feng.jdk.concurrency.patterns.pipeline.reusable.PipeException;
+import com.feng.jdk.concurrency.patterns.pipeline.reusable.SimplePipeline;
+import com.feng.jdk.concurrency.util.Debug;
+import com.feng.jdk.concurrency.util.Tools;
 
 import java.util.Random;
 import java.util.concurrent.SynchronousQueue;
@@ -24,7 +24,7 @@ public class ThreadPoolBasedPipeExample {
     public static void main(String[] args) {
         final ThreadPoolExecutor executorSerivce;
         executorSerivce = new ThreadPoolExecutor(1, Runtime.getRuntime().availableProcessors() * 2, 60,
-            TimeUnit.MINUTES, new SynchronousQueue<Runnable>(), new ThreadPoolExecutor.CallerRunsPolicy());
+                TimeUnit.MINUTES, new SynchronousQueue<Runnable>(), new ThreadPoolExecutor.CallerRunsPolicy());
 
         final SimplePipeline<String, String> pipeline = new SimplePipeline<String, String>();
         Pipe<String, String> pipe = new AbstractPipe<String, String>() {

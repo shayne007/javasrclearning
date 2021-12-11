@@ -1,10 +1,10 @@
-package com.feng.concurrency.patterns.twophaseterminate;
+package com.feng.jdk.concurrency.patterns.twophaseterminate;
+
+import com.feng.jdk.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
+import com.feng.jdk.concurrency.util.Tools;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
-
-import com.feng.concurrency.patterns.twophaseterminate.reusable.AbstractTerminatableThread;
-import com.feng.concurrency.util.Tools;
 
 /**
  * @author fengsy
@@ -26,7 +26,9 @@ public class SomeService {
             consumer.terminationToken.reservations.incrementAndGet();
         }
 
-    };
+    }
+
+    ;
 
     private class Consumer extends AbstractTerminatableThread {
 

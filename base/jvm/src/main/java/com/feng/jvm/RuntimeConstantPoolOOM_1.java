@@ -7,7 +7,6 @@ import java.util.Set;
  * @author fengsy
  * @date 1/26/21
  * @Description VM Args： jdk6: -XX:PermSize=6M -XX:MaxPermSize=6M jdk7: -XX:MaxPermSize=6M jdk8: -XX:MaxMetaspaceSize=6M
- * 
  */
 public class RuntimeConstantPoolOOM_1 {
 

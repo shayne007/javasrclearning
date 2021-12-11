@@ -1,12 +1,11 @@
 package com.feng.kafka.opentracing;
 
-import java.util.Map;
-
+import io.opentracing.util.GlobalTracer;
 import org.apache.kafka.clients.producer.ProducerInterceptor;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 
-import io.opentracing.util.GlobalTracer;
+import java.util.Map;
 
 /**
  * @author fengsy
@@ -22,7 +21,8 @@ public class TracingProducerInterceptor<K, V> implements ProducerInterceptor<K, 
     }
 
     @Override
-    public void onAcknowledgement(RecordMetadata recordMetadata, Exception e) {}
+    public void onAcknowledgement(RecordMetadata recordMetadata, Exception e) {
+    }
 
     @Override
     public void close() {

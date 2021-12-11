@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.tspecstorage;
+package com.feng.jdk.concurrency.patterns.tspecstorage;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -40,7 +40,7 @@ public class TransmittableThreadLocalTest {
             System.out.println("7子线程:" + threadlocal.get());
         });
         TimeUnit.SECONDS.sleep(1);
-
+        System.out.println(threadlocal.get());
         executorService.shutdown();
     }
 }

@@ -1,11 +1,11 @@
-package com.feng.concurrency.patterns.prodconsumer.resuable;
+package com.feng.jdk.concurrency.patterns.prodconsumer.resuable;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Semaphore;
 
 /**
  * 基于Semaphore实现流量控制的channel
- * 
+ *
  * @author fengsy
  * @date 5/18/21
  * @Description
@@ -15,11 +15,8 @@ public class SemaphoreBasedChannel<P> implements Channel<P> {
     private final Semaphore semaphore;
 
     /**
-     *
-     * @param queue
-     *            阻塞队列，通常是一个无界阻塞队列。
-     * @param flowLimit
-     *            流量限制数
+     * @param queue     阻塞队列，通常是一个无界阻塞队列。
+     * @param flowLimit 流量限制数
      */
     public SemaphoreBasedChannel(BlockingQueue<P> queue, int flowLimit) {
         this.queue = queue;

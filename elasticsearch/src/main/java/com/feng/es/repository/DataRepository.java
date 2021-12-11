@@ -1,22 +1,14 @@
-package com.feng.es.dao;
+package com.feng.es.repository;
 
-import com.feng.es.util.ElasticsearchUtil;
-
-import java.util.List;
-import java.util.Map;
+import com.feng.es.domain.Sku;
+import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * @Description TODO
  * @Author fengsy
  * @Date 12/2/21
  */
-public class DataRepository {
-
-    public <T> Map<Integer, List<T>> batchInsert(Map<String, String> map, Class<T> tClass) {
-        ElasticsearchUtil
-    }
-
-    public <T> List<T> query(String idName, String id, Class<T> tClass) {
-        return null;
-    }
+@Repository
+public interface DataRepository extends ElasticsearchRepository<Sku, Long> {
 }

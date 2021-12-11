@@ -4,9 +4,9 @@ import com.feng.dataStructures.tree.binary.TreeNode;
 
 /**
  * Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
- * 
+ * <p>
  * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
- * 
+ *
  * @author fengsy
  * @date 6/22/21
  * @Description
@@ -24,7 +24,7 @@ public class LowestCommonAncestor {
         int[] treeVals = {1, 2, 3, 4, 5, 6, 7, 8};
         LowestCommonAncestor lca = new LowestCommonAncestor();
         TreeNode ans = lca.lowestCommonAncestor(lca.insertLevelOrder(treeVals, new TreeNode(1), 0), new TreeNode(7),
-            new TreeNode(8));
+                new TreeNode(8));
         System.out.println(ans.data);
         lca.inOrder(ans);
     }

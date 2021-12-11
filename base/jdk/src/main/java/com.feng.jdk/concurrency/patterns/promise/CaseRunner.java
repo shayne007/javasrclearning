@@ -5,7 +5,7 @@
  * http://www.broadview.com.cn/38245
  */
 
-package com.feng.concurrency.patterns.promise;
+package com.feng.jdk.concurrency.patterns.promise;
 
 import java.util.HashMap;
 import java.util.Map;

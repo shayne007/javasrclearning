@@ -1,10 +1,10 @@
 package com.feng.kafka.multithreads;
 
-import java.util.List;
-
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+
+import java.util.List;
 
 /**
  * @author fengsy

@@ -1,6 +1,6 @@
-package com.feng.concurrency.patterns.hsynchasync;
+package com.feng.jdk.concurrency.patterns.hsynchasync;
 
-import com.feng.concurrency.util.Debug;
+import com.feng.jdk.concurrency.util.Debug;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -37,16 +37,16 @@ public class SampleAsyncTask {
 
         @Override
         protected String doInBackground(Object... params) {
-            String message = (String)params[0];
-            int sequence = (Integer)params[1];
+            String message = (String) params[0];
+            int sequence = (Integer) params[1];
             Debug.info("doInBackground:" + message);
             return "message " + sequence + ":" + message;
         }
 
         @Override
         protected void onPreExecute(Object... params) {
-            String message = (String)params[0];
-            int sequence = (Integer)params[1];
+            String message = (String) params[0];
+            int sequence = (Integer) params[1];
             Debug.info("onPreExecute:[" + sequence + "]" + message);
         }
 

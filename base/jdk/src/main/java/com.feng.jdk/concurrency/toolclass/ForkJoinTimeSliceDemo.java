@@ -1,5 +1,11 @@
 package com.feng.jdk.concurrency.toolclass;
 
+
+import org.apache.commons.lang3.time.DateUtils;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
@@ -9,37 +15,59 @@ import java.util.concurrent.RecursiveTask;
  * @Author fengsy
  * @Date 11/8/21
  */
-public class ForkJoinDemo {
+public class ForkJoinTimeSliceDemo {
 
     public static void main(String[] args) {
         //创建分治任务线程池
-        ForkJoinPool fjp = new ForkJoinPool(4);
+        ForkJoinPool pool = new ForkJoinPool(Runtime.getRuntime().availableProcessors() + 1);
         //创建分治任务
-        FibonacciTask fib = new FibonacciTask(30);
+
+        TimeSliceTask task = new TimeSliceTask(new Date(), new Date(System.currentTimeMillis() + 600_000));
         //启动分治任务
-        Integer result = fjp.invoke(fib);
+        Map<String, Boolean> result = pool.invoke(task);
         //输出结果
-        System.out.println(result);
+        result.forEach((k, v) -> System.out.println("key: " + k + ", value: " + v));
     }
 
     //递归任务
-    static class FibonacciTask extends RecursiveTask<Integer> {
-        final int n;
+    static class TimeSliceTask extends RecursiveTask<Map<String, Boolean>> {
+        final Date start;
+        final Date end;
 
-        FibonacciTask(int n) {
-            this.n = n;
+        TimeSliceTask(Date start, Date end) {
+            this.start = start;
+            this.end = end;
         }
 
         @Override
-        protected Integer compute() {
-            if (n <= 1)
-                return n;
-            FibonacciTask f1 = new FibonacciTask(n - 1);
-            //创建子任务
-            f1.fork();
-            FibonacciTask f2 = new FibonacciTask(n - 2);
-            //等待子任务结果，并合并结果
-            return f2.compute() + f1.join();
+        protected Map<String, Boolean> compute() {
+
+            if (DateUtils.addMinutes(start, 1).after(end)) {
+                //处理最终不可分的子任务
+                return calculate(start);
+            } else {
+                Date middleTime = new Date(start.getTime() + ((end.getTime() - start.getTime()) / 2));
+                //创建子任务
+                TimeSliceTask left = new TimeSliceTask(start, middleTime);
+                TimeSliceTask right = new TimeSliceTask(middleTime, end);
+                left.fork();
+                //等待子任务结果，并合并结果
+                return merge(right.compute(), left.join());
+
+            }
+        }
+
+        private Map<String, Boolean> calculate(Date start) {
+            Map<String, Boolean> mapper = new HashMap<>();
+            mapper.put(org.apache.http.client.utils.DateUtils.formatDate(start, "yyyyMMddHHmm "), true);
+            return mapper;
+        }
+
+        private Map<String, Boolean> merge(Map<String, Boolean> m1, Map<String, Boolean> m2) {
+            Map<String, Boolean> mapper = new HashMap<>();
+            mapper.putAll(m1);
+            mapper.putAll(m2);
+            return mapper;
         }
     }
 }

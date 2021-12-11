@@ -1,6 +1,6 @@
-package com.feng.concurrency.patterns.stconfinement;
+package com.feng.jdk.concurrency.patterns.stconfinement;
 
-import com.feng.concurrency.util.Tools;
+import com.feng.jdk.concurrency.util.Tools;
 
 /**
  * @author fengsy
@@ -9,6 +9,7 @@ import com.feng.concurrency.util.Tools;
  */
 public class SampleClient {
     private static final MessageFileDownloader DOWNLOADER;
+
     static {
 
         // 请根据实际情况修改构造器MessageFileDownloader的参数

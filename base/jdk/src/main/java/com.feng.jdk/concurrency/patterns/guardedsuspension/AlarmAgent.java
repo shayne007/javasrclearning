@@ -1,17 +1,17 @@
-package com.feng.concurrency.patterns.guardedsuspension;
+package com.feng.jdk.concurrency.patterns.guardedsuspension;
+
+import com.feng.jdk.concurrency.patterns.guardedsuspension.reusable.Blocker;
+import com.feng.jdk.concurrency.patterns.guardedsuspension.reusable.ConditionVarBlocker;
+import com.feng.jdk.concurrency.patterns.guardedsuspension.reusable.GuardedAction;
+import com.feng.jdk.concurrency.patterns.guardedsuspension.reusable.Predicate;
+import com.feng.jdk.concurrency.util.Debug;
+import com.feng.jdk.concurrency.util.Tools;
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
-import com.feng.concurrency.patterns.guardedsuspension.reusable.Blocker;
-import com.feng.concurrency.patterns.guardedsuspension.reusable.ConditionVarBlocker;
-import com.feng.concurrency.patterns.guardedsuspension.reusable.GuardedAction;
-import com.feng.concurrency.patterns.guardedsuspension.reusable.Predicate;
-import com.feng.concurrency.util.Debug;
-import com.feng.concurrency.util.Tools;
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 /**
  * 使用Guarded Suspension模式实现告警代理模块： 主线程发送告警信息给告警服务器； 发送消息前需要与服务器建立连接； 定时检测连接状态
@@ -32,11 +32,11 @@ public class AlarmAgent {
     private final Blocker blocker = new ConditionVarBlocker();
 
     ScheduledExecutorService executorService = new ScheduledThreadPoolExecutor(1,
-        new ThreadFactoryBuilder().setNameFormat("example-schedule-pool-%d").setDaemon(true).build());
+            new ThreadFactoryBuilder().setNameFormat("example-schedule-pool-%d").setDaemon(true).build());
 
     /**
      * 每次调用都会创建一个新的GuardedAction，会增加JVM中Eden区垃圾回收的负担
-     * 
+     *
      * @param alarm
      * @throws Exception
      */

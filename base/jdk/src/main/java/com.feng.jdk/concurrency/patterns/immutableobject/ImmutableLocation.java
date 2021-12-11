@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.immutableobject;
+package com.feng.jdk.concurrency.patterns.immutableobject;
 
 /**
  * @author fengsy

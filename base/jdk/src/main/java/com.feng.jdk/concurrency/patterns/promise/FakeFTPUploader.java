@@ -1,7 +1,7 @@
-package com.feng.concurrency.patterns.promise;
+package com.feng.jdk.concurrency.patterns.promise;
 
-import com.feng.concurrency.util.Debug;
-import com.feng.concurrency.util.Tools;
+import com.feng.jdk.concurrency.util.Debug;
+import com.feng.jdk.concurrency.util.Tools;
 
 import java.io.File;
 

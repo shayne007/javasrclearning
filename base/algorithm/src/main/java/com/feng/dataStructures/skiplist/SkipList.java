@@ -2,7 +2,7 @@ package com.feng.dataStructures.skiplist;
 
 /**
  * 跳表的一种实现方法。 跳表中存储的是正整数，并且存储的是不重复的
- * 
+ *
  * @author fengsy
  * @date 6/17/21
  * @Description

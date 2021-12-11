@@ -1,4 +1,4 @@
-package com.feng.concurrency.patterns.immutableobject;
+package com.feng.jdk.concurrency.patterns.immutableobject;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

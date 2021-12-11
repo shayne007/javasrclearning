@@ -1,4 +1,4 @@
-package com.feng.annotation.genextfile;
+package com.feng.jdk.annotation.genextfile;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -2,7 +2,7 @@ package com.feng.jvm;
 
 /**
  * VM参数：-XX:+UseSerialGC
- * 
+ *
  * @author zzm
  */
 public class TestSerialGCAllocation {

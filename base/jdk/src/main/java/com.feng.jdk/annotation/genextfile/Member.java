@@ -1,4 +1,4 @@
-package com.feng.annotation.genextfile;
+package com.feng.jdk.annotation.genextfile;
 
 /**
  * @author fengsy

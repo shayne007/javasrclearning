@@ -30,7 +30,7 @@ public class RabbitConfiguration implements RabbitListenerConfigurer {
         messageHandlerMethodFactory.setMessageConverter(consumerJackson2MessageConverter());
         return messageHandlerMethodFactory;
     }
- 
+
     @Bean
     public MappingJackson2MessageConverter consumerJackson2MessageConverter() {
         return new MappingJackson2MessageConverter();
