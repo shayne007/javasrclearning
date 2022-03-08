@@ -17,6 +17,7 @@
         <module name="spring" />
         <module name="mybatis" />
         <module name="zookeeper" />
+        <module name="hdfs" />
         <module name="fastdfs" />
         <module name="spring-rabbit" />
         <module name="algorithm" />

@@ -22,6 +22,7 @@
         <option value="$PROJECT_DIR$/base/pom.xml" />
         <option value="$PROJECT_DIR$/fastdfs/pom.xml" />
         <option value="$PROJECT_DIR$/elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/hdfs/pom.xml" />
       </list>
     </option>
   </component>
