@@ -44,4 +44,16 @@ public abstract class Message<T extends MessageBody> {
     }
 
     public abstract Class<T> getMessageBodyDecodeClass(int opcode);
+
+    public void setHeader(MessageHeader header) {
+        this.header = header;
+    }
+
+    public MessageHeader getHeader() {
+        return this.header;
+    }
+
+    public void setBody(T body) {
+        this.body = body;
+    }
 }

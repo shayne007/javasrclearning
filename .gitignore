@@ -3,3 +3,4 @@
 **/target
 **/devops
 **/${boot-jar-output}/
+/.vscode/

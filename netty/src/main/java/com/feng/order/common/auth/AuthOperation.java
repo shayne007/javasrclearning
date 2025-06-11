@@ -14,6 +14,11 @@ public class AuthOperation extends Operation {
     private final String userName;
     private final String password;
 
+    public AuthOperation(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+
     @Override
     public AuthOperationResult execute() {
         if ("admin".equalsIgnoreCase(this.userName)) {

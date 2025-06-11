@@ -12,4 +12,16 @@ import lombok.Data;
 @Data
 public class AuthOperationResult extends OperationResult {
     private final boolean passAuth;
+
+    public AuthOperationResult(boolean passAuth) {
+        this.passAuth = passAuth;
+    }
+
+    public AuthOperationResult() {
+        this.passAuth = false;
+    }
+
+    public boolean isPassAuth() {
+        return passAuth;
+    }
 }

@@ -4,12 +4,14 @@ import com.feng.order.common.ResponseMessage;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author fengsy
  * @date 8/4/21
  * @Description
  */
+@Slf4j
 public class ResponseDispatcherHandler extends SimpleChannelInboundHandler<ResponseMessage> {
     private RequestPendingCenter requestPendingCenter;
 
