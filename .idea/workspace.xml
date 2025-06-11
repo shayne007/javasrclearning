@@ -335,6 +335,7 @@
       <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/escapeanalysis/EscapeTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/escapeanalysis/Foo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/base/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/elasticsearch/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/elasticsearch/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-storage/fastdfs/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/file-storage/fastdfs/src/main/java/com/feng/fdfs/FastDfsApplication.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/file-storage/fastdfs/src/main/java/com/feng/fdfs/FastDfsClient.java" beforeDir="false" />
@@ -1064,7 +1065,14 @@
       <option name="project" value="LOCAL" />
       <updated>1749638861325</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[fix] fix all the compile problems">
+      <created>1749639486961</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749639486961</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
