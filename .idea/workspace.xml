@@ -122,6 +122,16 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.TestInheritInstantial">
+    <configuration default="true" type="lua.app" factoryName="Lua Application">
+      <option name="program" value="lua" />
+      <option name="file" value="" />
+      <option name="workingDir" value="$PROJECT_DIR$/jdk/algorithm/src/main/java" />
+      <option name="debuggerType" value="2" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="true" />
+      <method v="2" />
+    </configuration>
     <configuration name="BestPartner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.feng.algos.other.BestPartner" />
       <module name="algorithm" />
@@ -269,7 +279,6 @@
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -383,16 +392,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="lua.app" factoryName="Lua Application">
-      <option name="program" value="lua" />
-      <option name="file" value="" />
-      <option name="workingDir" value="$PROJECT_DIR$/jdk/algorithm/src/main/java" />
-      <option name="debuggerType" value="2" />
-      <option name="params" value="" />
-      <option name="charset" value="UTF-8" />
-      <option name="showConsole" value="true" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.CompletableFutureDemo" />
       <item itemvalue="Application.ConsumerDemo" />
@@ -404,12 +403,6 @@
       <item itemvalue="Application.WordLadder" />
       <item itemvalue="Application.TestInheritStaticMethod" />
       <item itemvalue="Application.TestInheritInstantial" />
-      <item itemvalue="Spring Boot.Application" />
-      <item itemvalue="Spring Boot.Application (1)" />
-      <item itemvalue="Spring Boot.RabbitAmqpApplication-server" />
-      <item itemvalue="Spring Boot.RabbitAmqpApplication-sender" />
-      <item itemvalue="Spring Boot.RabbitAmqpApplication-receiver" />
-      <item itemvalue="Spring Boot.FastDfsApplication" />
     </list>
     <recent_temporary>
       <list>
