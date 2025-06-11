@@ -8,15 +8,18 @@
     <packaging>pom</packaging>
     <modules>
         <module>algorithm</module>
-        <module>orm</module>
-        <module>jvm</module>
-        <module>file-storage</module>
-        <module>mq</module>
-        <module>nosql</module>
-        <module>zookeeper</module>
-        <module>spring-family</module>
-        <module>netty</module>
+        <module>elasticsearch</module>
+        <module>fastdfs</module>
+        <module>hdfs</module>
         <module>jdk</module>
+        <module>jvm</module>
+        <module>kafka</module>
+        <module>mybatis</module>
+        <module>netty</module>
+        <module>rabbitmq</module>
+        <module>redis</module>
+        <module>spring</module>
+        <module>zookeeper</module>
     </modules>
 
     <modelVersion>4.0.0</modelVersion>

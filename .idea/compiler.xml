@@ -9,13 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jvm" />
         <module name="zookeeper" />
-        <module name="spring-kafka" />
         <module name="mybatis" />
         <module name="spring-rabbit" />
         <module name="jdk" />
         <module name="kafka-client" />
         <module name="spring" />
-        <module name="elasticsearch" />
         <module name="jedis" />
         <module name="hdfs" />
         <module name="fastdfs" />
@@ -24,11 +22,32 @@
         <module name="netty" />
         <module name="algorithm" />
       </profile>
+      <profile name="Annotation profile for javasrclearning" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.16/lombok-1.18.16.jar" />
+        </processorPath>
+        <module name="elasticsearch" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="algorithm (1)" target="1.8" />
+      <module name="base" target="1.8" />
+      <module name="file-storage" target="1.8" />
+      <module name="jdk (1)" target="1.8" />
+      <module name="jvm (1)" target="1.8" />
+      <module name="mq" target="1.8" />
+      <module name="nosql" target="1.8" />
+      <module name="orm" target="1.8" />
+      <module name="spring-family" target="1.8" />
+      <module name="spring-kafka" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="elasticsearch" options="" />
+      <module name="elasticsearch" options="-parameters --add-opens jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED" />
       <module name="fastdfs" options="-parameters" />
       <module name="jedis" options="-parameters" />
       <module name="kafka" options="" />

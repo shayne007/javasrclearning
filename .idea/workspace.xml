@@ -1,14 +1,642 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f126c315-4b72-4b66-a29e-3cd879c4923e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/oop/TestInheritInstantial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/oop/TestInheritStaticMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfs/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfs/src/main/java/com.feng.hdfs/HdfsClient.java" afterDir="false" />
+    <list default="true" id="f126c315-4b72-4b66-a29e-3cd879c4923e" name="Default" comment="[fix] fix all the compile problems">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/MySafeInMemCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/MySafeInMemCacheTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/Prime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/binarysearch/BinarySearchTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/myLruCache/LruCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/myLruCache/MyLruCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/myLruCache/Storage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/other/BestEfficience.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/other/BestPartner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/other/CarToServiceStations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/other/PowerDivider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/other/WordLadder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/ratelimiter/CounterLimiter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/ratelimiter/SlideWindowLimiter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/sort/BubbleSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/sort/BucketSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/sort/CountingSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/sort/HeapSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/sort/InsertionSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/sort/KthSmallest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/sort/MergeSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/sort/QuickSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/sort/RadixSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/sort/SelectionSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/string/ReverseStr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/string/ReverseWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/algos/string/StrToInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/array/Array.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/array/GenericArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/array/LRUBasedArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/graph/Graph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/hashtable/HashTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/hashtable/LRUBaseHashTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/linkedlist/LRUBaseLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/linkedlist/LinkedListAlgo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/linkedlist/SinglyLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/queue/ArrayQueueSimple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/queue/CircularQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/queue/IntervalOrderedQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/queue/KthLargest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/queue/QueueBasedOnLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/skiplist/SkipList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/skiplist/SkipList2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/stack/ArrayStackSimple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/stack/SampleBrowser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/stack/StackBasedOnLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/tree/InverseTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/tree/LevelOrderTraverse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/tree/LowestCommonAncestor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/tree/LowestCommonAncestorBST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/tree/PathSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/tree/binary/BST/BinarySearchTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/tree/binary/BST/BinarySearchTreeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/algorithm/src/main/java/com/feng/dataStructures/tree/binary/TreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/CheckGetter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/CheckGetterProcessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/SimulatingNull.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/genextfile/Constraints.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/genextfile/DBTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/genextfile/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/genextfile/SQLInteger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/genextfile/SQLString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/genextfile/TableCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/genextfile/Uniqueness.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/testcase/PasswordUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/testcase/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/testcase/UseCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/annotation/testcase/UseCaseTracker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/arrayandlist/ContainerComparison.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/collection/ArrayListDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/collection/HashMapBenchmark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/collection/HashMapTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/collection/LinkedHashMapDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/collection/LinkedHashMapLRUCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/collection/TreeSetDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/MyLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/NettyEchoDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/SafeVector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/Singleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/TestThreadLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/actor/ActiveObjectDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/actor/akka/Accumulator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/actor/akka/ActorDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/cooperation/PipedIO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/cooperation/Restaurant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/cooperation/TestBlockingQueues.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/cooperation/ToastOMatic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/cooperation/WaxOMatic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/cooperation/WaxOMatic2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/deadlock/Allocator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/deadlock/DeadLockDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/deadlock/LiveLockAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/deadlock/philosopher/Chopstick.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/deadlock/philosopher/DeadlockingDiningPhilosophers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/deadlock/philosopher/FixedDiningPhilosophers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/deadlock/philosopher/Philosopher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/guardedsuspension/AlarmAgent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/guardedsuspension/AlarmInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/guardedsuspension/RequestBlockingQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/guardedsuspension/RequestQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/guardedsuspension/reusable/Blocker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/guardedsuspension/reusable/ConditionVarBlocker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/guardedsuspension/reusable/GuardedAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/guardedsuspension/reusable/Predicate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/hsynchasync/AlarmMgr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/hsynchasync/AlarmSendingThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/hsynchasync/AsyncTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/hsynchasync/CaseRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/hsynchasync/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/hsynchasync/SampleAlarmClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/hsynchasync/SampleAsyncTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/immutableobject/ImmutableLocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/immutableobject/VehicleTracker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/immutableobject/mms/MMSCInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/immutableobject/mms/MMSCRouter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/immutableobject/mms/OMCAgent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/CaseRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/ParallelPrimeGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/TPSStat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/reusable/AbstractMaster.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/reusable/RetryInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/reusable/RoundRobinSubTaskDispatchStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/reusable/SlaveSpec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/reusable/SubTaskDispatchStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/reusable/SubTaskFailureException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/reusable/TaskDivideStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/reusable/WorkerThreadSlave.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/testdatagen/AbstractRequestFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/testdatagen/ChargingRequestFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/testdatagen/LocationRequestFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/testdatagen/LogEntry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/testdatagen/Logger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/testdatagen/RequestFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/testdatagen/SimulatedRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/testdatagen/SmsRequestFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/masterslave/testdatagen/TestingDataGen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/pipeline/ThreadPoolBasedPipeExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/pipeline/reusable/AbstractParallelPipe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/pipeline/reusable/AbstractPipe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/pipeline/reusable/Pipe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/pipeline/reusable/PipeContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/pipeline/reusable/PipeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/pipeline/reusable/Pipeline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/pipeline/reusable/SimplePipeline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/pipeline/reusable/ThreadPoolPipeDecorator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/pipeline/reusable/WorkerThreadPipeDecorator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/poolworker/ReEnqueueRejectedExecutionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/poolworker/ThreadPoolDeadLockAvoidance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/poolworker/ThreadPoolSize4IOIntensiveTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/prodconsumer/AttachmentProcessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/prodconsumer/CaseRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/prodconsumer/WorkStealingExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/prodconsumer/resuable/BlockingQueueChannel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/prodconsumer/resuable/Channel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/prodconsumer/resuable/SemaphoreBasedChannel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/prodconsumer/resuable/WorkStealingChannel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/prodconsumer/resuable/WorkStealingEnabledChannel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/promise/CaseRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/promise/DataSyncTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/promise/FTPClientUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/promise/FTPUploader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/promise/FTPUploaderPromisor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/promise/FakeFTPUploader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/stconfinement/FakeWorkerThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/stconfinement/MessageFileDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/stconfinement/ReusableCodeExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/stconfinement/SampleClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/stconfinement/WorkerThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/stconfinement/reusable/AbstractSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/stconfinement/reusable/TaskProcessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/stconfinement/reusable/TerminatableWorkerThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/tspecstorage/ImplicitParameterPassing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/tspecstorage/InheritableThreadLocalTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/tspecstorage/ManagedThreadLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/tspecstorage/MyInheritableThreadLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/tspecstorage/MyTransmittableThreadLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/tspecstorage/SmsVerficationCodeSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/tspecstorage/Stu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/tspecstorage/ThreadSpecificDateFormat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/tspecstorage/ThreadSpecificSecureRandom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/tspecstorage/TransmittableThreadLocalTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/twophaseterminate/SomeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/twophaseterminate/reusable/AbstractTerminatableThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/twophaseterminate/reusable/AlarmType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/twophaseterminate/reusable/DelegatingTerminatableThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/twophaseterminate/reusable/Terminatable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/patterns/twophaseterminate/reusable/TerminationToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/performance/ListComparisons.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/performance/MapComparisons.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/performance/ReaderWriterList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/performance/SimpleMicroBenchmark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/performance/SynchronizationComparisons.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/performance/Tester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/shareresource/AtomicIntegerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/shareresource/AttemptLocking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/shareresource/EvenChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/shareresource/EvenGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/shareresource/IntGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/shareresource/MutexEvenGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/shareresource/SynchronizedEvenGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/shareresource/ThreadLocalVariableHolder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/bankteller/BankTellerSimulation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/bankteller/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/bankteller/CustomerGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/bankteller/CustomerLine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/bankteller/Teller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/bankteller/TellerManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/carbuilder/Assembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/carbuilder/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/carbuilder/CarBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/carbuilder/CarQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/carbuilder/ChassisBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/carbuilder/DriveTrainRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/carbuilder/EngineRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/carbuilder/Reporter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/carbuilder/Robot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/carbuilder/RobotPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/carbuilder/WheelRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/restaurant/Chef.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/restaurant/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/restaurant/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/restaurant/Food.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/restaurant/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/restaurant/Plate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/restaurant/Restaurant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/restaurant/RestaurantWithQueues.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/simulation/restaurant/WaitPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/terminating/Interrupting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/terminating/Interrupting2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/terminating/InterruptingIdiom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/terminating/NIOInterruption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/terminating/OrnamentalGarden.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/BasicThreads.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/CachedThreadPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/CallableDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/CaptureUncaughtException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/FixedThreadPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/Joining.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/LiftOff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/MainThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/MoreBasicThreads.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/SelfManagedThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/SimplePriorities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/threading/ThreadPoolHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/AtomicReferenceWMDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/CompletableFutureDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/CompletionServiceDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/CountDownLatchDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/DelayQueueDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/ExchangerDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/ForkJoinDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/ForkJoinMergeSortDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/ForkJoinTimeSliceDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/ForkJoinWordCounterDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/FutureTaskDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/GreenhouseScheduler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/HorseRace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/LockConditionBlockedQueueDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/LockConditionRPCDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/PriorityBlockingQueueDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/ReadWriteLockCacheDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/ReadWriteLockDegradeDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/SemaphoreDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/SemaphoreObjPoolDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/toolclass/StampedLockPointDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/util/Debug.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/concurrency/util/Tools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/generic/InstanceFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/http/HTTPKeepAliveTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/http/HttpClientUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/http/HttpJdkTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/http/HttpsClientUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/http/PooledHttpClientUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/ByteBufferDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/file/DirList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/file/DirList2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/file/DirList3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/file/Directory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/file/MakeDirectories.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/file/ProcessFiles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/socket/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/socket/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/socket/ServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/socket/nio/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/socket/nio/ClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/socket/nio/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/socket/nio/ServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/udp/UdpReceive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/udp/UdpSend.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/udp/chat/TalkReceive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/udp/chat/TalkSend.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/udp/chat/TalkStudent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/io/udp/chat/TalkTeacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/oop/TestInherit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/oop/TestInheritInstantial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/oop/TestInheritStaticMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/oop/TestInnerClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/oop/TestSubclassInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/reflection/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/reflection/TargetClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/reflection/proxy/DebugInvocationHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/reflection/proxy/JdkProxyFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/reflection/proxy/SmsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/reflection/proxy/SmsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/reflection/reflection.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/string/MyString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/string/TestImmutable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/java/com.feng.jdk/string/TestIntern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/resources/conf.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jdk/src/main/resources/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/ClassLoaderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/DirectMemoryOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/HeapOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/JavaMethodAreaOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/LifetimeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/RuntimeConstantPoolOOM_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/RuntimeConstantPoolOOM_2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/SafepointTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/TestSerialGCAllocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/escapeanalysis/EscapeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/jvm/src/main/java/com/feng/jvm/escapeanalysis/Foo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-storage/fastdfs/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-storage/fastdfs/src/main/java/com/feng/fdfs/FastDfsApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-storage/fastdfs/src/main/java/com/feng/fdfs/FastDfsClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-storage/fastdfs/src/main/java/com/feng/fdfs/TestFdfsClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-storage/fastdfs/src/main/java/com/feng/fdfs/config/FdfsConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-storage/fastdfs/src/main/java/com/feng/fdfs/controller/FileUploadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-storage/fastdfs/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-storage/hdfs/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-storage/hdfs/src/main/java/com.feng.hdfs/HdfsClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-storage/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/ConsumerDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/KafkaConsumerUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/KafkaProducerUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/LagMonitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/ProducerDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/adminclient/KafkaAdmin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/callback/LoggingOffsetCommitCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/callback/ProducerCallBack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/interceptors/consumer/AvgLatencyConsumerInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/interceptors/producer/AddTimeStampInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/interceptors/producer/AvgLatencyProducerInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/interceptors/producer/UpdateCounterInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/multithreads/KafkaConsumerRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/multithreads/KafkaConsumerThreadPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/multithreads/SingleThreadKafkaConsumerRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/multithreads/ThreadPoolKafkaConsumerRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/ClientSpanNameProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/HeadersMapExtractAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/HeadersMapInjectAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/SpanDecorator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/StandardSpanDecorator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/TracingCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/TracingConsumerInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/TracingKafkaConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/TracingKafkaConsumerBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/TracingKafkaProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/TracingKafkaProducerBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/TracingKafkaTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/TracingKafkaUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/opentracing/TracingProducerInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/partitioner/BananaPartitioner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/partitioner/DefaultPartitioner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/partitioner/KeyOrderingPartitioner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/partitioner/RandomPartitioner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/partitioner/RegionPartitioner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/streams/OSCheckStreaming.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/java/com/feng/kafka/streams/WordCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/kafka-client/src/main/resources/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/async/KafkaConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/async/KafkaConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/async/MessageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/async/SpringKafkaDemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/async/ThreadPoolExecutorConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/async/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/async/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/config/KafkaConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/controller/MessageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/controller/SpringKafkaDemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/deadletter/KafkaConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/deadletter/MessageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/java/com/feng/kafka/deadletter/SpringKafkaDemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/test/java/com/feng/kafka/MessageControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/kafka/spring-kafka/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/amqp-client/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/amqp-client/src/main/java/com/feng/rabbit/PublisherConfirms.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/amqp-client/src/main/java/com/feng/rabbit/cases/RabbitMQReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/amqp-client/src/main/java/com/feng/rabbit/cases/RabbitMQSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/amqp-client/src/main/java/com/feng/rabbit/config/MqConfigProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/amqp-client/src/main/java/com/feng/rabbit/producer/MqSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/amqp-client/src/main/java/com/feng/rabbit/producer/RabbitMqSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/amqp-client/src/main/java/com/feng/rabbit/rpc/RPCClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/amqp-client/src/main/java/com/feng/rabbit/rpc/RPCServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/basics/Consts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/basics/MQListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/basics/RabbitConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/basics/SpringRabbitUsageApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/basics/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/CompensationApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/CompensationJob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/MemberService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/RabbitConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/compensation/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/deadletter/Consts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/deadletter/DeadLetterApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/deadletter/DeadLetterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/deadletter/MQListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/deadletter/RabbitConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rabbitmqdlx/CommonMistakesApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rabbitmqdlx/Consts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rabbitmqdlx/DeadLetterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rabbitmqdlx/MQListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rabbitmqdlx/RabbitConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rpc/AmqpConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rpc/RPCClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rpc/RPCServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rpc/RabbitAmqpApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/rpc/RabbitAmqpRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/topic/AmqpTopicConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/topic/RabbitAmqpApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/topic/TopicReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/java/com/feng/amqp/topic/TopicSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/spring-rabbit/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/elasticsearch/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/elasticsearch/src/main/java/com/feng/es/ElasticsearchApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/elasticsearch/src/main/java/com/feng/es/config/ElasticsearchRestTemplateConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/elasticsearch/src/main/java/com/feng/es/controller/SkuController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/elasticsearch/src/main/java/com/feng/es/domain/Sku.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/elasticsearch/src/main/java/com/feng/es/repository/DataRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/elasticsearch/src/main/java/com/feng/es/service/EsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/elasticsearch/src/main/java/com/feng/es/util/ElasticsearchUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/elasticsearch/src/main/java/com/feng/es/util/HttpClientUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/elasticsearch/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/jedis/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/jedis/src/main/java/com/feng/jedis/RedisLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/jedis/src/main/java/com/feng/jedis/RedisLockV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/jedis/src/main/java/com/feng/jedis/RedisUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/jedis/src/main/java/com/feng/jedis/SharedJedisPoolUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/cache/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/cache/CacheService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/cache/RedisConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/config/CustomedRedisAutoConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/config/JedisConnectionConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/config/RedisConnectionConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/lock/InnerLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/lock/JedisCommandLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/lock/JedisLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/lock/JedisMultiSegmentLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/lock/RedisLockService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/lua/ScriptHolder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/properties/RedisRateLimitProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/publishsubscribe/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/publishsubscribe/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/publishsubscribe/MessageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/publishsubscribe/MessageServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/publishsubscribe/MessageVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/publishsubscribe/NewMessageListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/publishsubscribe/SpringSessionRedisConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/ratelimit/RedisRateLimitImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/repository/RedisRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/util/IOUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/util/RandomUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/util/SpringContextUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/util/ThreadUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/java/com/feng/redis/util/UUIDUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/resources/script/limiter.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/resources/script/lock.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/resources/script/rate_limiter.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/resources/script/seckill.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nosql/redis/spring-redis/src/main/resources/script/unlock.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/create_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/DaoUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/domain/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/domain/City.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/domain/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/domain/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/domain/OrderItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/domain/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/handler/GenericTypeHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/handler/MoneyTypeHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/mapper/AddressMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/mapper/CustomerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/mapper/OrderItemMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/mapper/OrderMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/mapper/ProductMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/application/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/mybatis/cache/MyCustomCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/mybatis/objectfactory/MyObjectFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/mybatis/plugin/MyPlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/mybatis/sqlsession/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/java/com/feng/mybatis/sqlsession/MyDataSourceFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/resources/mapper/AddressMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/resources/mapper/CustomerMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/resources/mapper/OrderItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/resources/mapper/OrderMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/resources/mapper/ProductMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/main/resources/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/test/java/com/feng/application/CustomerServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/mybatis/src/test/resources/TestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/ElectricController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/cache/Cache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/cache/CacheAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/cache/JsonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/exposeProxy/AopConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/exposeProxy/ElectricService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/priorityDisorder/AspectServiceFirst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/priorityDisorder/AspectServiceOrderByMethodName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/priorityDisorder/AspectServiceOrderByPriority.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/priorityDisorder/AspectServiceSecond.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/proxyAttributeUnreachable/AdminAopConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/proxyAttributeUnreachable/AdminElectricService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/proxyAttributeUnreachable/AdminUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/proxyAttributeUnreachable/TestNewInstanceStyle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/proxyAttributeUnreachable/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/aop/ratelimiter/MyRateLimit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/application/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/application/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/controller/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/controller/GcTestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/controller/HttpClientNotReuseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/controller/JedisMisreuseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/controller/ThreadPoolTestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/event/multiListener/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/event/multiListener/MyEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/event/multiListener/MyEventController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/event/multiListener/MyFirstEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/event/multiListener/MySecondEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/event/publish/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/event/publish/MyApplicationEnvironmentPreparedEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/event/publish/MyContextRefreshEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/event/publish/MyContextStartedEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/event/publish/PublishEventController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/http/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/http/HelloWorldController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/http/client/RestTemplateDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/http/routelimit/RouteLimitController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/reactive/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/reactive/ReactiveHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/reactive/ReactiveRouter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/autowireQualifier/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/autowireQualifier/CassandraDataService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/autowireQualifier/DataController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/autowireQualifier/DataService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/autowireQualifier/OracleDataService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/autowireQualifier/SQLiteDataService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/definition/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/definition/StringArrayService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/definition/StringService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/definition/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/definition/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/lifecycle/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/lifecycle/BeanConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/lifecycle/LightMgrService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/lifecycle/LightService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/prototype/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/prototype/PrototypeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/prototype/PrototypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/value/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springcore/value/ValueTestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springdata/SpringdataApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springtest/ApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springtest/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springtest/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springtest/HelloWorldService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/ParamValidationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/PrintRequestBodyAdviceAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/SpringWebApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/WebBodyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/WebRequestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/WebURLController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/exception/MyExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/exception/NotAllowException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/exception/NotAllowExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/exception/PermissionFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/exception/SpringWebApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/exception/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/filter/AuthFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/filter/DemoFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/filter/FilterConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/filter/MetricsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/filter/SpringWebApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/filter/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/filter/TimeCostFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/security/HelloWorldController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/security/MyWebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/security/MyWebSecurityConfig2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/springweb/security/SpringWebApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/transaction/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/transaction/CourseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/transaction/JdbcConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/transaction/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/transaction/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/transaction/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/transaction/mapper/CourseMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/transaction/mapper/StudentCourseMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/java/com/feng/transaction/mapper/StudentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/resources/META-INF/spring.factories" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/resources/jdbc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/main/resources/spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-family/spring/src/test/java/com/feng/springcore/LightServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +672,13 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
         <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -417,173 +1049,41 @@
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="[fix] fix all the compile problems">
+      <created>1749638834561</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749638834561</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[fix] fix all the compile problems">
+      <created>1749638861325</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749638861325</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="false" />
-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="false" />
-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="false" />
-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="WindowStateProjectService">
-    <state x="381" y="70" key="#ForkJoinTimeSliceDemo" timestamp="1636471890856">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="381" y="70" key="#ForkJoinTimeSliceDemo/0.0.1440.900@0.0.1440.900" timestamp="1636471890856" />
-    <state x="182" y="23" key="#Project_Structure" timestamp="1638628988300">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="182" y="23" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1638628988300" />
-    <state x="262" y="120" width="1178" height="676" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638629176108">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="262" y="120" width="1178" height="676" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1638629176108" />
-    <state x="533" y="160" key="#com.intellij.ide.util.MemberChooser" timestamp="1638437909311">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="533" y="160" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1638437909311" />
-    <state x="431" y="322" width="515" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1645111722875">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="431" y="322" width="515" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1645111722875" />
-    <state x="268" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1636477382676">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="268" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1636477382676" />
-    <state width="1398" height="222" key="GridCell.Tab.0.bottom" timestamp="1645112336757">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="222" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1645112336757" />
-    <state width="1398" height="255" key="GridCell.Tab.0.bottom/0.23.1387.877@0.23.1387.877" timestamp="1638947522317" />
-    <state width="1398" height="367" key="GridCell.Tab.0.bottom/0.23.1389.877@0.23.1389.877" timestamp="1636736717377" />
-    <state width="1398" height="295" key="GridCell.Tab.0.bottom/0.23.1391.877@0.23.1391.877" timestamp="1638416038187" />
-    <state width="1398" height="295" key="GridCell.Tab.0.bottom/0.23.1393.877@0.23.1393.877" timestamp="1638370689534" />
-    <state width="1398" height="222" key="GridCell.Tab.0.center" timestamp="1645112336754">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="222" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1645112336754" />
-    <state width="1398" height="255" key="GridCell.Tab.0.center/0.23.1387.877@0.23.1387.877" timestamp="1638947522314" />
-    <state width="1398" height="367" key="GridCell.Tab.0.center/0.23.1389.877@0.23.1389.877" timestamp="1636736717375" />
-    <state width="1398" height="295" key="GridCell.Tab.0.center/0.23.1391.877@0.23.1391.877" timestamp="1638416038185" />
-    <state width="1398" height="295" key="GridCell.Tab.0.center/0.23.1393.877@0.23.1393.877" timestamp="1638370689530" />
-    <state width="1398" height="222" key="GridCell.Tab.0.left" timestamp="1645112336753">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="222" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1645112336753" />
-    <state width="1398" height="255" key="GridCell.Tab.0.left/0.23.1387.877@0.23.1387.877" timestamp="1638947522313" />
-    <state width="1398" height="367" key="GridCell.Tab.0.left/0.23.1389.877@0.23.1389.877" timestamp="1636736717374" />
-    <state width="1398" height="295" key="GridCell.Tab.0.left/0.23.1391.877@0.23.1391.877" timestamp="1638416038183" />
-    <state width="1398" height="295" key="GridCell.Tab.0.left/0.23.1393.877@0.23.1393.877" timestamp="1638370689528" />
-    <state width="1398" height="222" key="GridCell.Tab.0.right" timestamp="1645112336756">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="222" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1645112336756" />
-    <state width="1398" height="255" key="GridCell.Tab.0.right/0.23.1387.877@0.23.1387.877" timestamp="1638947522316" />
-    <state width="1398" height="367" key="GridCell.Tab.0.right/0.23.1389.877@0.23.1389.877" timestamp="1636736717376" />
-    <state width="1398" height="295" key="GridCell.Tab.0.right/0.23.1391.877@0.23.1391.877" timestamp="1638416038186" />
-    <state width="1398" height="295" key="GridCell.Tab.0.right/0.23.1393.877@0.23.1393.877" timestamp="1638370689532" />
-    <state width="1398" height="255" key="GridCell.Tab.1.bottom" timestamp="1638981269809">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="255" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1638981269809" />
-    <state width="1398" height="255" key="GridCell.Tab.1.bottom/0.23.1387.877@0.23.1387.877" timestamp="1638947522321" />
-    <state width="1398" height="405" key="GridCell.Tab.1.bottom/0.23.1389.877@0.23.1389.877" timestamp="1638438822218" />
-    <state width="1398" height="295" key="GridCell.Tab.1.bottom/0.23.1391.877@0.23.1391.877" timestamp="1638416038192" />
-    <state width="1398" height="295" key="GridCell.Tab.1.bottom/0.23.1393.877@0.23.1393.877" timestamp="1638374591629" />
-    <state width="1398" height="255" key="GridCell.Tab.1.center" timestamp="1638981269808">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="255" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1638981269808" />
-    <state width="1398" height="255" key="GridCell.Tab.1.center/0.23.1387.877@0.23.1387.877" timestamp="1638947522319" />
-    <state width="1398" height="405" key="GridCell.Tab.1.center/0.23.1389.877@0.23.1389.877" timestamp="1638438822215" />
-    <state width="1398" height="295" key="GridCell.Tab.1.center/0.23.1391.877@0.23.1391.877" timestamp="1638416038190" />
-    <state width="1398" height="295" key="GridCell.Tab.1.center/0.23.1393.877@0.23.1393.877" timestamp="1638374591622" />
-    <state width="1398" height="255" key="GridCell.Tab.1.left" timestamp="1638981269807">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="255" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1638981269807" />
-    <state width="1398" height="255" key="GridCell.Tab.1.left/0.23.1387.877@0.23.1387.877" timestamp="1638947522318" />
-    <state width="1398" height="405" key="GridCell.Tab.1.left/0.23.1389.877@0.23.1389.877" timestamp="1638438822211" />
-    <state width="1398" height="295" key="GridCell.Tab.1.left/0.23.1391.877@0.23.1391.877" timestamp="1638416038189" />
-    <state width="1398" height="295" key="GridCell.Tab.1.left/0.23.1393.877@0.23.1393.877" timestamp="1638374591616" />
-    <state width="1398" height="255" key="GridCell.Tab.1.right" timestamp="1638981269808">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="255" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1638981269808" />
-    <state width="1398" height="255" key="GridCell.Tab.1.right/0.23.1387.877@0.23.1387.877" timestamp="1638947522321" />
-    <state width="1398" height="405" key="GridCell.Tab.1.right/0.23.1389.877@0.23.1389.877" timestamp="1638438822217" />
-    <state width="1398" height="295" key="GridCell.Tab.1.right/0.23.1391.877@0.23.1391.877" timestamp="1638416038191" />
-    <state width="1398" height="295" key="GridCell.Tab.1.right/0.23.1393.877@0.23.1393.877" timestamp="1638374591626" />
-    <state width="1398" height="405" key="GridCell.Tab.2.bottom" timestamp="1638443341911">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="405" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1638443341911" />
-    <state width="1398" height="295" key="GridCell.Tab.2.bottom/0.23.1391.877@0.23.1391.877" timestamp="1638416038198" />
-    <state width="1398" height="295" key="GridCell.Tab.2.bottom/0.23.1393.877@0.23.1393.877" timestamp="1638370689549" />
-    <state width="1398" height="405" key="GridCell.Tab.2.center" timestamp="1638443341909">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="405" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1638443341909" />
-    <state width="1398" height="295" key="GridCell.Tab.2.center/0.23.1391.877@0.23.1391.877" timestamp="1638416038195" />
-    <state width="1398" height="295" key="GridCell.Tab.2.center/0.23.1393.877@0.23.1393.877" timestamp="1638370689546" />
-    <state width="1398" height="405" key="GridCell.Tab.2.left" timestamp="1638443341908">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="405" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1638443341908" />
-    <state width="1398" height="295" key="GridCell.Tab.2.left/0.23.1391.877@0.23.1391.877" timestamp="1638416038194" />
-    <state width="1398" height="295" key="GridCell.Tab.2.left/0.23.1393.877@0.23.1393.877" timestamp="1638370689544" />
-    <state width="1398" height="405" key="GridCell.Tab.2.right" timestamp="1638443341910">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="405" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1638443341910" />
-    <state width="1398" height="295" key="GridCell.Tab.2.right/0.23.1391.877@0.23.1391.877" timestamp="1638416038196" />
-    <state width="1398" height="295" key="GridCell.Tab.2.right/0.23.1393.877@0.23.1393.877" timestamp="1638370689548" />
-    <state x="54" y="224" key="Maven.ArtifactSearchDialog" timestamp="1642165921750">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="54" y="224" key="Maven.ArtifactSearchDialog/0.0.1440.900@0.0.1440.900" timestamp="1642165921750" />
-    <state x="334" y="149" width="795" height="587" key="NewModule_or_Project.wizard" timestamp="1638683705519">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="334" y="149" key="NewModule_or_Project.wizard/0.0.1440.900@0.0.1440.900" timestamp="1638683705519" />
-    <state x="0" y="13" width="1391" height="877" key="SettingsEditor" timestamp="1638368262278">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="0" y="13" width="1440" height="877" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1638368262278" />
-    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1636646164818">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.0.1440.900@0.0.1440.900" timestamp="1636646164818" />
-    <state x="572" y="373" key="VCS.ChangelistChooser" timestamp="1636472278184">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="572" y="373" key="VCS.ChangelistChooser/0.0.1440.900@0.0.1440.900" timestamp="1636472278184" />
-    <state x="306" y="52" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1637286266835">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="306" y="52" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1637286266835" />
-    <state x="458" y="195" key="extract.method.dialog" timestamp="1636472360515">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="458" y="195" key="extract.method.dialog/0.0.1440.900@0.0.1440.900" timestamp="1636472360515" />
-    <state x="420" y="207" width="1006" height="538" key="find.popup" timestamp="1641480028025">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="420" y="207" width="1006" height="538" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1641480028025" />
-    <state x="182" y="164" key="new project wizard" timestamp="1642163981108">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="182" y="164" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1642163981108" />
-    <state x="503" y="223" key="refactoring.ChangeSignatureDialog" timestamp="1636651096915">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="503" y="223" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1636651096915" />
-    <state x="371" y="214" width="677" height="659" key="search.everywhere.popup" timestamp="1638867069659">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="371" y="214" width="677" height="659" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1638867069659" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[fix] fix all the compile problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] fix all the compile problems" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -867,7 +1367,7 @@
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo typeName="org.springframework.context.annotation.ScannedGenericBeanDefinition" fieldName="propertyValues" />
+        <PinnedItemInfo />
       </pinned-members>
     </pin-to-top-manager>
   </component>
