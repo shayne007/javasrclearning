@@ -7,7 +7,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>algorithm</module>
         <module>elasticsearch</module>
         <module>fastdfs</module>
         <module>hdfs</module>
