@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.Cache;
 import org.springframework.cache.transaction.TransactionAwareCacheDecorator;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,6 +27,10 @@ public class CourseService {
     private StudentCourseMapper studentCourseMapper;
 
     @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRES_NEW)
+//	@Transactional(readOnly = true)
+//	@Transactional(timeout = 30) // 30 seconds
+//	@Transactional(noRollbackFor = {Exception.class})
+//	@Transactional(isolation = Isolation.REPEATABLE_READ)
     public void regCourse(Cache cache, int studentId) throws Exception {
         new TransactionAwareCacheDecorator(cache).put(studentId, 1);
         studentCourseMapper.saveStudentCourse(studentId, 1);
