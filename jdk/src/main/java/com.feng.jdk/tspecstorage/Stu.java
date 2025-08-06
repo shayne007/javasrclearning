@@ -1,4 +1,4 @@
-package com.feng.jdk.concurrency.patterns.tspecstorage;
+package com.feng.jdk.tspecstorage;
 
 public class Stu {
     private String name;

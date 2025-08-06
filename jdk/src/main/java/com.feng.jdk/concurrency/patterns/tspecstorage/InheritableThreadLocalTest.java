@@ -4,6 +4,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import com.feng.jdk.tspecstorage.Stu;
+
 /**
  * 直接使用 InheritableThreadLocal 传递对象的引用，变量在线程间共享，有线程安全问题
  *
