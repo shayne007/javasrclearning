@@ -1,4 +1,4 @@
-package com.feng.springcore.lifecycle;
+package com.feng.springcore.lifecycle.disposable;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,13 +11,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BeanConfiguration {
-    /**
-     * 未指定时默认的destroyMethod是shutdown
-     * 
-     * @return
-     */
+
+	/**
+	 * 未指定时默认的destroyMethod是shutdown
+	 */
     @Bean(destroyMethod = "")
-    public LightService getTransmission() {
-        return new LightService();
-    }
+//	@Bean
+	public LightService getTransmission() {
+		return new LightService();
+	}
 }

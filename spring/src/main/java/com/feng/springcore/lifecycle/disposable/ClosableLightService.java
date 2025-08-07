@@ -1,4 +1,4 @@
-package com.feng.springcore.lifecycle;
+package com.feng.springcore.lifecycle.disposable;
 
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 
 @Service
-public class LightService implements Closeable {
+public class ClosableLightService implements Closeable {
     public void start() {
         System.out.println("turn on all lights");
     }
